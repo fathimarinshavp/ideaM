@@ -1,270 +1,151 @@
 "use client";
-import { useState } from "react";
+
+import { useEffect, useState } from "react";
 import Link from "next/link";
-import { ArrowRight, CheckCircle, Phone, Mail, MapPin, Globe } from "lucide-react";
-import styles from "./contact.module.css";
-const interests = [
-  "Digital Marketing Services",
-  "Branding & Identity",
-  "Social Media Management",
-  "Internship Program",
-  "Course Enrollment",
-  "Free Workshop",
-  "Business Consulting",
-  "Other Inquiry",
-];
+import { ArrowRight, Mail, Phone, MapPin, Send } from "lucide-react";
+
+function useReveal() {
+  useEffect(() => {
+    const els = document.querySelectorAll(".reveal");
+    const io = new IntersectionObserver(
+      (entries) => entries.forEach((e) => {
+        if (e.isIntersecting) { e.target.classList.add("visible"); io.unobserve(e.target); }
+      }),
+      { threshold: 0.12 }
+    );
+    els.forEach((el) => io.observe(el));
+    return () => io.disconnect();
+  }, []);
+}
 
 export default function ContactPage() {
-  const [form, setForm] = useState({ name: "", email: "", phone: "", interest: "", message: "" });
-  const [submitted, setSubmitted] = useState(false);
-  const [loading, setLoading] = useState(false);
+  useReveal();
+  const [sent, setSent] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
+  function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    setLoading(true);
-    await new Promise((r) => setTimeout(r, 1200));
-    setSubmitted(true);
-    setLoading(false);
-  };
+    setSent(true);
+  }
 
   return (
-    <div style={{ background: "var(--paper)", paddingTop: "64px" }}>
-
-      {/* ─── Hero ─── */}
-      <section style={{ paddingBlock: "clamp(40px, 6vw, 72px)", borderBottom: "1px solid var(--border)" }}>
-        <div className="container">
-          <span className="eyebrow">Get in Touch</span>
-          <h1
-            className="font-display"
-            style={{ fontSize: "clamp(2.2rem, 5.5vw, 4rem)", color: "var(--ink)", maxWidth: "700px", marginTop: "12px", marginBottom: "20px" }}
-          >
-            Start your digital journey <span style={{ color: "var(--amber)" }}>today.</span>
+    <div>
+      {/* ════ HERO ════ */}
+      <section className="hero-dark">
+        <div className="hero-dark-content">
+          <div className="hero-badge hero-animate">
+            <span className="hero-badge-dot" />
+            Let&apos;s Connect
+          </div>
+          <h1 className="hero-headline headline-reveal">
+            Need Digital Solutions or<br />
+            <span className="amber-mark">Career Guidance?</span>
           </h1>
-          <p style={{ maxWidth: "520px", color: "var(--slate)", lineHeight: 1.65, fontSize: "1.05rem" }}>
-            Whether you&apos;re looking for strategic agency services or career guidance — we&apos;d love to talk. Honest advice, zero hard pitch.
+          <p className="hero-sub hero-animate hero-animate-delay-1">
+         Whether you need creative digital solutions or want to begin your learning journey, our team is ready to help.
           </p>
         </div>
       </section>
 
-      {/* ─── Main Content ─── */}
-      <section style={{ paddingBlock: "64px 80px", borderBottom: "1px solid var(--border)" }}>
+      {/* ════ CONTACT FORM + INFO — light ════ */}
+      <section className="section-light section-py">
         <div className="container">
-        <div className={styles.pageGrid}>
-            {/* Left: Contact Details & Image */}
-            <div>
-              <span className="eyebrow">Contact Information</span>
-              <div style={{ marginTop: "20px", display: "flex", flexDirection: "column", gap: "16px" }}>
+          <div className="grid-2" style={{ gap: "clamp(40px,6vw,80px)", alignItems: "start" }}>
+
+            {/* Left — Info */}
+            <div className="reveal">
+              <span className="eyebrow">Contact Info</span>
+              <h2 className="font-display" style={{ fontSize: "var(--fs-display)", color: "var(--ink)", marginBottom: "24px", marginTop: "6px" }}>
+                Let&apos;s build something<br /><span className="amber-mark">together.</span>
+              </h2>
+              <p style={{ color: "var(--slate)", lineHeight: 1.7, marginBottom: "36px" }}>
+               Have a business idea, project requirement, or learning goal? Reach out to our team and we'll help you find the right path. 
+              </p>
+
+              {/* Contact details */}
+              <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
                 {[
-                  { icon: Phone, label: "Phone", value: "+91 XXXXX XXXXX", href: "tel:+91XXXXXXXXXX" },
-                  { icon: Mail, label: "Email", value: "hello@ideamedia.in", href: "mailto:hello@ideamedia.in" },
-                  { icon: Globe, label: "Website", value: "www.ideamedia.in", href: "/" },
-                  { icon: MapPin, label: "Location", value: "India", href: "#" },
+                  { icon: Mail,    label: "Email",    value: "hello@ideamedia.in" },
+                  { icon: Phone,   label: "Phone",    value: "+91 98765 43210" },
+                  { icon: MapPin,  label: "Location", value: "India — Available Remotely Worldwide" },
                 ].map((c) => {
                   const Icon = c.icon;
                   return (
-                   <div className={styles.contactCard}  key={c.label}>
-                      <div style={{ width: "36px", height: "36px", borderRadius: "8px", background: "rgba(250, 175, 22, 0.12)", color: "var(--amber)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                    <div key={c.label} style={{ display: "flex", gap: "16px", alignItems: "flex-start" }}>
+                      <div style={{ width: "44px", height: "44px", borderRadius: "11px", background: "var(--amber-bg)", color: "var(--amber)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
                         <Icon size={18} />
                       </div>
                       <div>
-                        <span className="font-label" style={{ display: "block", fontSize: "0.65rem", marginBottom: "2px" }}>
-                          {c.label}
-                        </span>
-                        <a
-                          href={c.href}
-                          style={{
-                            color: "var(--ink)",
-                            textDecoration: "none",
-                            fontWeight: 600,
-                            fontSize: "0.925rem",
-                          }}
-                        >
-                          {c.value}
-                        </a>
+                        <div style={{ fontSize: "0.7rem", fontFamily: "'Space Mono',monospace", textTransform: "uppercase", letterSpacing: "0.12em", color: "var(--slate)", marginBottom: "4px" }}>{c.label}</div>
+                        <div style={{ fontWeight: 600, color: "var(--ink)", fontSize: "0.95rem" }}>{c.value}</div>
                       </div>
                     </div>
                   );
                 })}
               </div>
 
-              {/* Consultation Visual Card */}
-            
+              {/* Quick links */}
+              <div style={{ marginTop: "40px", display: "flex", gap: "12px", flexWrap: "wrap" }}>
+                <Link href="/services"   className="btn btn-ghost" style={{ fontSize: "0.85rem", padding: "9px 18px" }}>Our Services</Link>
+                <Link href="/internship" className="btn btn-ghost" style={{ fontSize: "0.85rem", padding: "9px 18px" }}>Internship</Link>
+                <Link href="/courses"    className="btn btn-ghost" style={{ fontSize: "0.85rem", padding: "9px 18px" }}>Courses</Link>
+              </div>
             </div>
 
-            {/* Right: Contact Form */}
-            <div>
-              {submitted ? (
-                <div
-                  style={{
-                    border: "1px solid var(--border)",
-                    borderRadius: "20px",
-                    padding: "48px 32px",
-                    background: "var(--white)",
-                    textAlign: "center",
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                  }}
-                >
-                  <div
-                    style={{
-                      width: "56px",
-                      height: "56px",
-                      borderRadius: "50%",
-                      background: "rgba(250,175,22,0.12)",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      marginBottom: "20px",
-                    }}
-                  >
-                    <CheckCircle size={28} style={{ color: "var(--amber)" }} />
-                  </div>
-                  <h2 className="font-display" style={{ fontSize: "1.75rem", color: "var(--ink)", marginBottom: "10px" }}>
-                    Message Received.
-                  </h2>
-                  <p style={{ color: "var(--slate)", maxWidth: "320px", lineHeight: 1.6, marginBottom: "28px", fontSize: "0.95rem" }}>
-                    Thank you for reaching out! Our team will get back to you within 24 hours.
+            {/* Right — Form */}
+            <div className="reveal reveal-delay-1">
+              {sent ? (
+                <div style={{ padding: "48px 40px", background: "var(--white)", border: "1px solid var(--border)", borderRadius: "20px", textAlign: "center" }}>
+                  <div style={{ fontSize: "3rem", marginBottom: "16px" }}>✅</div>
+                  <h3 className="font-display" style={{ fontSize: "1.5rem", color: "var(--ink)", marginBottom: "12px" }}>Message Sent!</h3>
+                  <p style={{ color: "var(--slate)", lineHeight: 1.65 }}>
+                    Thank you for reaching out. Our team will get back to you within 24 hours.
                   </p>
-                  <button
-                    onClick={() => { setSubmitted(false); setForm({ name: "", email: "", phone: "", interest: "", message: "" }); }}
-                    className="btn btn-ghost"
-                    style={{ fontSize: "0.875rem" }}
-                  >
-                    Send another message
-                  </button>
                 </div>
               ) : (
                 <form
                   onSubmit={handleSubmit}
-                 className={styles.formCard}
+                  style={{ padding: "clamp(24px,4vw,40px)", background: "var(--white)", border: "1px solid var(--border)", borderRadius: "20px", display: "flex", flexDirection: "column", gap: "18px" }}
                 >
-                  <div>
-                    <span className="eyebrow" style={{ marginBottom: "4px" }}>Send a Message</span>
-                    <h2 className="font-display" style={{ fontSize: "1.5rem", color: "var(--ink)" }}>
-                      Tell us what you&apos;re working on.
-                    </h2>
-                  </div>
+                  <h3 className="font-display" style={{ fontSize: "1.3rem", color: "var(--ink)", marginBottom: "4px" }}>
+                    Send us a message
+                  </h3>
 
-                   <div className={styles.formGrid}>
+                  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "14px" }}>
                     <div>
-                      <label style={{ display: "block", color: "var(--slate)", fontSize: "0.75rem", marginBottom: "6px", fontFamily: "'Space Mono', monospace", textTransform: "uppercase", letterSpacing: "0.08em" }}>
-                        Full Name *
-                      </label>
-                      <input
-                        id="contact-name"
-                        name="name"
-                        type="text"
-                        required
-                        value={form.name}
-                        onChange={handleChange}
-                        placeholder="Your name"
-                        className="input-field"
-                      />
+                      <label style={{ display: "block", fontSize: "0.8rem", fontWeight: 600, color: "var(--ink)", marginBottom: "6px" }}>First Name *</label>
+                      <input required className="input-field" placeholder="Jane" />
                     </div>
                     <div>
-                      <label style={{ display: "block", color: "var(--slate)", fontSize: "0.75rem", marginBottom: "6px", fontFamily: "'Space Mono', monospace", textTransform: "uppercase", letterSpacing: "0.08em" }}>
-                        Email *
-                      </label>
-                      <input
-                        id="contact-email"
-                        name="email"
-                        type="email"
-                        required
-                        value={form.email}
-                        onChange={handleChange}
-                        placeholder="you@email.com"
-                        className="input-field"
-                      />
-                    </div>
-                  </div>
-
-                  <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "16px" }}>
-                    <div>
-                      <label style={{ display: "block", color: "var(--slate)", fontSize: "0.75rem", marginBottom: "6px", fontFamily: "'Space Mono', monospace", textTransform: "uppercase", letterSpacing: "0.08em" }}>
-                        Phone
-                      </label>
-                      <input
-                        id="contact-phone"
-                        name="phone"
-                        type="tel"
-                        value={form.phone}
-                        onChange={handleChange}
-                        placeholder="+91 00000 00000"
-                        className="input-field"
-                      />
-                    </div>
-                    <div>
-                      <label style={{ display: "block", color: "var(--slate)", fontSize: "0.75rem", marginBottom: "6px", fontFamily: "'Space Mono', monospace", textTransform: "uppercase", letterSpacing: "0.08em" }}>
-                        I&apos;m interested in
-                      </label>
-                      <select
-                        id="contact-interest"
-                        name="interest"
-                        value={form.interest}
-                        onChange={handleChange}
-                        className="input-field"
-                        style={{ cursor: "pointer" }}
-                      >
-                        <option value="">Select interest...</option>
-                        {interests.map((opt) => (
-                          <option key={opt} value={opt}>{opt}</option>
-                        ))}
-                      </select>
+                      <label style={{ display: "block", fontSize: "0.8rem", fontWeight: 600, color: "var(--ink)", marginBottom: "6px" }}>Last Name *</label>
+                      <input required className="input-field" placeholder="Smith" />
                     </div>
                   </div>
 
                   <div>
-                    <label style={{ display: "block", color: "var(--slate)", fontSize: "0.75rem", marginBottom: "6px", fontFamily: "'Space Mono', monospace", textTransform: "uppercase", letterSpacing: "0.08em" }}>
-                      Your Message *
-                    </label>
-                    <textarea
-                      id="contact-message"
-                      name="message"
-                      required
-                      rows={4}
-                      value={form.message}
-                      onChange={handleChange}
-                      placeholder="Tell us about your project, goals, or questions..."
-                      className="input-field"
-                      style={{ resize: "none" }}
-                    />
+                    <label style={{ display: "block", fontSize: "0.8rem", fontWeight: 600, color: "var(--ink)", marginBottom: "6px" }}>Email Address *</label>
+                    <input required type="email" className="input-field" placeholder="jane@company.com" />
                   </div>
 
-                  <button
-                    id="contact-submit"
-                    type="submit"
-                    disabled={loading}
-                    className="btn btn-primary"
-                    style={{ justifyContent: "center", width: "100%" }}
-                  >
-                    {loading ? (
-                      <>
-                        <span
-                          style={{
-                            width: "16px",
-                            height: "16px",
-                            border: "2px solid rgba(30,33,36,0.3)",
-                            borderTopColor: "var(--ink)",
-                            borderRadius: "50%",
-                            display: "inline-block",
-                            animation: "spin 0.7s linear infinite",
-                          }}
-                        />
-                        Sending...
-                      </>
-                    ) : (
-                      <>Send Message <ArrowRight size={16} /></>
-                    )}
+                  <div>
+                    <label style={{ display: "block", fontSize: "0.8rem", fontWeight: 600, color: "var(--ink)", marginBottom: "6px" }}>I&apos;m interested in</label>
+                    <select className="input-field" style={{ cursor: "pointer" }}>
+                      <option value="">Select an option…</option>
+                      <option>Agency Services (Branding / Marketing)</option>
+                      <option>Internship Program</option>
+                      <option>Courses / Training</option>
+                      <option>Partnership / Collaboration</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label style={{ display: "block", fontSize: "0.8rem", fontWeight: 600, color: "var(--ink)", marginBottom: "6px" }}>Message *</label>
+                    <textarea required className="input-field" rows={5} placeholder="Tell us about your project or what you're looking for…" style={{ resize: "vertical" }} />
+                  </div>
+
+                  <button type="submit" className="btn btn-primary" style={{ width: "100%", justifyContent: "center" }}>
+                    Send Message <Send size={16} />
                   </button>
-
-                  <p style={{ color: "var(--slate)", fontSize: "0.8rem", textAlign: "center", margin: 0 }}>
-                    We respect your privacy and will never share your contact details.
-                  </p>
                 </form>
               )}
             </div>
@@ -272,33 +153,32 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* ─── Bottom CTA ─── */}
-      <section style={{ paddingBlock: "64px" }}>
-        <div className="container" style={{ textAlign: "center" }}>
-          <div style={{ maxWidth: "600px", marginInline: "auto" }}>
-            <h2
-              className="font-display"
-              style={{ fontSize: "clamp(1.75rem, 3.5vw, 2.5rem)", color: "var(--ink)", marginBottom: "16px" }}
-            >
-              The best time to start was yesterday. <br />
-              <span style={{ color: "var(--amber)" }}>The next best time is now.</span>
+      {/* ════ ALTERNATE ENQUIRY PATHS — dark ════ */}
+      <section className="section-dark section-py">
+        <div className="container">
+          <div className="section-header reveal" style={{ textAlign: "center" }}>
+            <span className="eyebrow eyebrow-white">Quick Paths</span>
+            <h2 className="font-display" style={{ fontSize: "var(--fs-h2)", color: "#fff", marginTop: "6px" }}>
+              Not sure where to <span className="amber-mark">start?</span>
             </h2>
-            <p style={{ color: "var(--slate)", fontSize: "1rem", lineHeight: 1.6, marginBottom: "28px" }}>
-              Every great brand and digital career starts with a single decision. Take yours today.
-            </p>
-            <div className={styles.ctaButtons}>
-              <Link href="/services" className="btn btn-primary">
-                Explore Services <ArrowRight size={16} />
-              </Link>
-              <Link href="/internship" className="btn btn-ghost">
-                Join Free Workshop
-              </Link>
-            </div>
+          </div>
+          <div className="grid-3">
+            {[
+              { title: "For Businesses",       desc: "Book a free strategy call to explore how we can grow your brand.", href: "/services",   cta: "See Services" },
+              { title: "For Students",         desc: "Apply for our internship program and start building your career.", href: "/internship", cta: "Apply Now" },
+              { title: "For Course Learners",  desc: "Browse our professional skill tracks and find the right program.", href: "/courses",    cta: "View Courses" },
+            ].map((p, i) => (
+              <div key={p.title} className={`card-dark reveal reveal-delay-${i + 1}`} style={{ textAlign: "center" }}>
+                <h3 className="font-display" style={{ fontSize: "1.1rem", color: "#fff", marginBottom: "10px" }}>{p.title}</h3>
+                <p style={{ color: "rgba(255,255,255,0.5)", fontSize: "0.875rem", lineHeight: 1.65, marginBottom: "20px" }}>{p.desc}</p>
+                <Link href={p.href} className="btn btn-primary" style={{ fontSize: "0.875rem", padding: "10px 22px" }}>
+                  {p.cta} <ArrowRight size={15} />
+                </Link>
+              </div>
+            ))}
           </div>
         </div>
       </section>
-
-      <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
     </div>
   );
 }

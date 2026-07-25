@@ -1,154 +1,90 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
 
-const cols = {
-  Company: [
-    { label: "Home", href: "/" },
-    { label: "About", href: "/about" },
-    { label: "Services", href: "/services" },
-    { label: "Why Us", href: "/why-us" },
-  ],
-  Programs: [
-    { label: "Internship", href: "/internship" },
-    { label: "Courses", href: "/courses" },
-    { label: "Free Workshop", href: "/internship" },
-    { label: "Contact", href: "/contact" },
-  ],
-};
+const links = [
+  { label: "Home",       href: "/" },
+  { label: "About",      href: "/about" },
+  { label: "Services",   href: "/services" },
+  { label: "Internship", href: "/internship" },
+  { label: "Courses",    href: "/courses" },
+  { label: "Contact",    href: "/contact" },
+];
 
 export default function Footer() {
-  const year = new Date().getFullYear();
-
   return (
     <footer
       style={{
         background: "var(--ink)",
-        color: "var(--white)",
-        borderTop: "1px solid rgba(255,255,255,0.06)",
+        color: "rgba(255,255,255,0.6)",
+        borderTop: "1px solid rgba(255,255,255,0.07)",
+        paddingBlock: "clamp(48px,6vw,72px) 28px",
       }}
     >
-      <style>{`.footer-link:hover { color: rgba(255,255,255,0.9) !important; }`}</style>
-      <div className="container" style={{ paddingBlock: "64px 40px" }}>
+      <div className="container">
         {/* Top row */}
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-            gap: "clamp(32px, 5vw, 64px)",
+            gridTemplateColumns: "1fr auto",
+            gap: "40px",
+            alignItems: "start",
             marginBottom: "48px",
           }}
         >
           {/* Brand */}
-          <div>
-            <Link href="/" style={{ display: "inline-flex", alignItems: "center", gap: "10px", textDecoration: "none", marginBottom: "20px" }}>
-              <div style={{ position: "relative", width: "34px", height: "34px", background: "white", borderRadius: "8px", overflow: "hidden", padding: "3px", flexShrink: 0 }}>
-                <Image src="/logo.png" alt="Idea Media" fill sizes="34px" style={{ objectFit: "contain" }} />
-              </div>
-              <span
-                className="font-display"
-                style={{ fontSize: "1.05rem", color: "var(--white)", letterSpacing: "-0.01em" }}
-              >
-                Idea Media
-              </span>
-            </Link>
-            <p style={{ color: "rgba(255,255,255,0.4)", fontSize: "0.875rem", lineHeight: 1.7, maxWidth: "260px", margin: "0 0 24px" }}>
-              A creative branding and digital marketing studio that also runs
-              India&apos;s most practical training and internship programs.
+          <div style={{ maxWidth: "420px" }}>
+            <Link href="/" className="logo-anim footer-logo">
+  <Image
+    src="/logo.png"
+    alt="Idea Media Logo"
+    width={120}
+    height={48}
+  />
+</Link>
+            <p style={{ fontSize: "0.9rem", lineHeight: 1.7, color: "rgba(255,255,255,0.45)" }}>
+              A creative digital agency and practical training school helping businesses grow
+              and building the next generation of digital professionals.
             </p>
-            <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
-              {[
-                { label: "Email", value: "hello@ideamedia.in" },
-                { label: "Phone", value: "+91 XXXXX XXXXX" },
-                { label: "Location", value: "India" },
-              ].map((c) => (
-                <div key={c.label} style={{ display: "flex", gap: "10px" }}>
-                  <span style={{ color: "rgba(255,255,255,0.25)", fontSize: "0.8rem", minWidth: "60px", fontFamily: "'Space Mono', monospace", textTransform: "uppercase", letterSpacing: "0.08em" }}>
-                    {c.label}
-                  </span>
-                  <span style={{ color: "rgba(255,255,255,0.55)", fontSize: "0.8rem" }}>{c.value}</span>
-                </div>
-              ))}
-            </div>
           </div>
 
-          {/* Links */}
-          {Object.entries(cols).map(([section, links]) => (
-            <div key={section}>
-              <span
-                style={{
-                  fontFamily: "'Space Mono', monospace",
-                  fontSize: "0.6875rem",
-                  textTransform: "uppercase",
-                  letterSpacing: "0.12em",
-                  color: "rgba(255,255,255,0.25)",
-                  display: "block",
-                  marginBottom: "20px",
-                }}
-              >
-                {section}
-              </span>
-              <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "12px" }}>
-                {links.map((link) => (
-                  <li key={link.label}>
-                    <Link
-                      href={link.href}
-                      className="footer-link"
-                      style={{
-                        color: "rgba(255,255,255,0.5)",
-                        textDecoration: "none",
-                        fontSize: "0.9rem",
-                        transition: "color 150ms ease",
-                      }}
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-
-        {/* CTA strip */}
-        <div
-          style={{
-            borderTop: "1px solid rgba(255,255,255,0.08)",
-            paddingTop: "40px",
-            marginBottom: "32px",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            flexWrap: "wrap",
-            gap: "20px",
-          }}
-        >
-          <p
-            className="font-display"
-            style={{ fontSize: "clamp(1.1rem, 2vw, 1.5rem)", color: "var(--white)", margin: 0 }}
+          {/* Nav links */}
+          <nav
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              gap: "6px 4px",
+              maxWidth: "360px",
+              justifyContent: "flex-end",
+            }}
           >
-            Start your digital journey today.
-          </p>
-          <Link href="/contact" className="btn btn-primary" style={{ flexShrink: 0 }}>
-            Book a Free Call <ArrowUpRight size={16} />
-          </Link>
+            {links.map((l) => (
+              <Link
+                key={l.href}
+                href={l.href}
+                className="footer-nav-link"
+              >
+                {l.label}
+              </Link>
+            ))}
+          </nav>
         </div>
 
-        {/* Bottom bar */}
-        <div
-          style={{
-            borderTop: "1px solid rgba(255,255,255,0.06)",
-            paddingTop: "24px",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            flexWrap: "wrap",
-            gap: "12px",
-          }}
-        >
-          <p style={{ color: "rgba(255,255,255,0.25)", fontSize: "0.8rem", margin: 0 }}>
-            © {year} Idea Media. All rights reserved.
+        {/* Divider */}
+        <div style={{ borderTop: "1px solid rgba(255,255,255,0.07)", paddingTop: "24px", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "12px" }}>
+          <p style={{ fontSize: "0.8rem", color: "rgba(255,255,255,0.3)" }}>
+            © {new Date().getFullYear()} Idea Media. All rights reserved.
           </p>
+          <div style={{ display: "flex", gap: "20px" }}>
+            {["Privacy Policy", "Terms of Use"].map((t) => (
+              <Link
+                key={t}
+                href="#"
+                className="footer-bottom-link"
+              >
+                {t}
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </footer>

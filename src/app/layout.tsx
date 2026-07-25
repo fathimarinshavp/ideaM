@@ -4,24 +4,22 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Idea Media | Creative Branding & Digital Marketing Agency",
+  title: "Idea Media | Creative Digital Agency & Training School",
   description:
-    "Idea Media is a creative media, branding, and digital marketing company dedicated to helping businesses grow while preparing the next generation of digital professionals through practical training and internships.",
+    "Idea Media is a creative branding and digital marketing agency that also runs a practical training school — helping businesses grow and students build careers.",
   keywords:
-    "digital marketing, branding, social media management, internship, training, graphic design, video editing, AI, India",
+    "digital marketing, branding, social media, internship, training, graphic design, video editing, AI, creative agency",
   openGraph: {
     title: "Idea Media | Empowering Brands. Building Careers.",
     description:
-      "Creative media, branding, and digital marketing company. Helping businesses grow and students build careers.",
+      "Creative media, branding and digital marketing agency. Helping businesses grow and students build careers through practical education.",
     type: "website",
   },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
       <body>
