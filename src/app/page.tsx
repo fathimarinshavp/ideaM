@@ -190,7 +190,11 @@ export default function HomePage() {
   tag: "Media",
 },
             ].map((work, i) => (
-              <div key={work.title} className={`reveal reveal-delay-${i + 1}`} style={{ cursor: "pointer",group: true }}>
+                <div 
+    key={work.title} 
+    className={`reveal reveal-delay-${i + 1}`}
+    style={{ cursor: "pointer" }}
+  >
                 <div style={{ overflow: "hidden", borderRadius: "16px", marginBottom: "16px", aspectRatio: "4/3", position: "relative" }}>
                   <img src={work.img} alt={work.title} style={{ width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.5s ease" }} className="hover-scale" />
                 </div>
