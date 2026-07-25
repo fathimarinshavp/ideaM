@@ -325,6 +325,13 @@ export default function HomePage() {
                 desc: "Industry-calibrated interview prep, direct portfolio reviews, and referral access to our partner network.",
                 badge: "Job Ready Support",
               },
+              {
+  num: "04",
+  icon: Briefcase,
+  title: "Career Workshops",
+  desc: "Industry-focused workshops covering resume building, interview preparation, communication skills, and career guidance.",
+  badge: "Career Preparation",
+},
             ].map((item, idx) => {
               const Icon = item.icon;
               return (

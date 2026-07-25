@@ -27,6 +27,12 @@ const programs = [
     desc: "Our flagship program. Work inside the agency on live client projects, guided by working professionals. Leave with a portfolio and certificate.",
     duration: "3–6 months",
   },
+  {
+  tag: "For Organizations",
+  title: "Corporate Training",
+  desc: "Customized training programs designed for companies to improve employee skills in digital marketing, AI tools, branding, and creative technologies.",
+  duration: "Flexible"
+}
  
 ];
 

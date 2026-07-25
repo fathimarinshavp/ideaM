@@ -27,7 +27,9 @@ const milestones = [
   { year: "2022", event: "Founded as a specialized digital growth & media agency." },
   { year: "2023", event: "Launched live client internship cohort with 50+ students." },
   { year: "2024", event: "Expanded to 4 core skill tracks and 100+ business partnerships." },
-  { year: "2025", event: "500+ students trained with verified industry placement assistance." },
+  { year: "2025", event: "
+
+Building a strong foundation in digital services and practical career training through continuous learning and innovation." },
 ];
 
 export default function AboutPage() {
