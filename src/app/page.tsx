@@ -141,7 +141,7 @@ export default function HomePage() {
             
             >
               <img
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000&q=80"
+                src="/about.png"
                 alt="Idea Media Agency Team"
                 style={{ width: "100%", height: "100%", objectFit: "cover" }}
               />
@@ -169,7 +169,7 @@ export default function HomePage() {
               }}
             >
               <img
-                src="https://images.unsplash.com/photo-1531538606174-0f90ff5dce83?auto=format&fit=crop&w=1000&q=80"
+                src="/about2.png"
                 alt="Idea Media Workplace"
                 style={{ width: "100%", height: "100%", objectFit: "cover" }}
               />
@@ -417,28 +417,28 @@ export default function HomePage() {
       desc: "AI Tools, Prompt Engineering & Automation",
       duration: "8 Weeks",
       image:
-        "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=300&q=80",
+        "/ai.png",
     },
     {
       title: "Digital Marketing",
       desc: "SEO, Google Ads & Social Media",
       duration: "10 Weeks",
       image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=300&q=80",
+        "/digital.png",
     },
     {
       title: "Graphic Design",
       desc: "Branding, UI & Creative Design",
       duration: "12 Weeks",
       image:
-        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=300&q=80",
+        "/graphic.png",
     },
     {
       title: "Video Editing",
       desc: "Premiere Pro, Reels & Motion Graphics",
       duration: "10 Weeks",
       image:
-        "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=300&q=80",
+        "/video.png",
     },
   ].map((course) => (
     <Link

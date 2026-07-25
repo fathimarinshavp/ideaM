@@ -73,7 +73,7 @@ export default function AboutPage() {
             {/* Hero Office Visual Image */}
            <div className={styles.heroImage}>
               <img
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000&q=80"
+                src="/about.png"
                 alt="Idea Media Studio Team"
                 style={{ width: "100%", height: "100%", objectFit: "cover" }}
               />
@@ -106,7 +106,7 @@ export default function AboutPage() {
               {/* Story Visual Image */}
              <div className={styles.imageBox}>
                 <img
-                  src="https://images.unsplash.com/photo-1531538606174-0f90ff5dce83?auto=format&fit=crop&w=1000&q=80"
+                  src="/about2.png"
                   alt="Idea Media Creative Workplace"
                   style={{ width: "100%", height: "100%", objectFit: "cover" }}
                 />

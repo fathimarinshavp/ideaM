@@ -15,7 +15,7 @@ const courses = [
     desc: "Master the tools and workflows shaping every industry — from prompt engineering to business automation.",
     duration: "10 weeks",
 rating: "4.5 ★",
-    Format: "Online + Offline",
+   
     modules: [
       { name: "Prompt Engineering", desc: "Communicate with AI systems effectively across all major LLMs." },
       { name: "AI Tools Mastery", desc: "ChatGPT, Midjourney, Gemini, and 20+ production tools." },
@@ -107,7 +107,7 @@ export default function CoursesPage() {
             {/* Courses Visual Image */}
           <div className={styles.heroImage}>
               <img
-                src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1000&q=80"
+                src="/course1.png"
                 alt="Idea Media Students Learning Design and AI"
                 style={{ width: "100%", height: "100%", objectFit: "cover" }}
               />
@@ -232,7 +232,7 @@ export default function CoursesPage() {
                 }}
               >
                 <img
-                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1000&q=80"
+                  src="/course2.png"
                   alt="Idea Media Learning Workspace"
                   style={{ width: "100%", height: "100%", objectFit: "cover" }}
                 />

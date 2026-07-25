@@ -86,7 +86,7 @@ export default function InternshipPage() {
            
            <div className={styles.heroImage}>
               <img
-                src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1000&q=80"
+                src="/internship1.png"
                 alt="Idea Media Mentorship and Training"
                 style={{ width: "100%", height: "100%", objectFit: "cover" }}
               />
@@ -168,7 +168,7 @@ export default function InternshipPage() {
                 }}
               >
                 <img
-                  src="https://images.unsplash.com/photo-1531497865144-0464ef8fb9a9?auto=format&fit=crop&w=1000&q=80"
+                  src="/internship2.png"
                   alt="Idea Media Team Workshop"
                   style={{ width: "100%", height: "100%", objectFit: "cover" }}
                 />
