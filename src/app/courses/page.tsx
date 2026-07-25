@@ -14,7 +14,7 @@ const courses = [
     title: "Artificial Intelligence",
     desc: "Master the tools and workflows shaping every industry — from prompt engineering to business automation.",
     duration: "10 weeks",
-    students: "120+",
+rating: "4.5 ★",
     Format: "Online + Offline",
     modules: [
       { name: "Prompt Engineering", desc: "Communicate with AI systems effectively across all major LLMs." },
