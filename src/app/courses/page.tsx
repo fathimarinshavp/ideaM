@@ -15,7 +15,7 @@ const courses = [
     desc: "Master the tools and workflows shaping every industry — from prompt engineering to business automation.",
     duration: "10 weeks",
     students: "120+",
-    Format: Online + Offline
+    Format: "Online + Offline",
     modules: [
       { name: "Prompt Engineering", desc: "Communicate with AI systems effectively across all major LLMs." },
       { name: "AI Tools Mastery", desc: "ChatGPT, Midjourney, Gemini, and 20+ production tools." },
