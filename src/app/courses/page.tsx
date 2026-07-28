@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, Clock } from "lucide-react";
-
+import styles from "./courses.module.css";
 function useReveal() {
   useEffect(() => {
     const els = document.querySelectorAll(".reveal");
@@ -80,7 +80,7 @@ export default function CoursesPage() {
   return (
     <div>
       {/* ════ HERO ════ */}
-      <section className="hero-dark">
+      {/* <section className="hero-dark">
         <div className="hero-dark-content">
           <div className="hero-badge hero-animate">
             <span className="hero-badge-dot" />
@@ -99,10 +99,167 @@ export default function CoursesPage() {
             <Link href="/internship" className="btn btn-ghost-dark">View Internship</Link>
           </div>
         </div>
-      </section>
+      </section> */}
+     {/* <section className="courseHero">
 
+  <div className="courseBreadcrumb">
+   
+  </div>
+
+
+  <div className="courseHeroImage">
+
+    <div className="courseHeroOverlay"></div>
+
+
+    <div className="courseHeroContent">
+
+      <span className="courseLabel">
+        COURSES
+      </span>
+
+
+      <h1>
+        Learn Skills.
+        <br/>
+        <span>
+          Create Your Future
+        </span>
+      </h1>
+
+
+      <p>
+        Industry focused courses designed to build
+        practical skills and career opportunities.
+      </p>
+
+
+    </div>
+
+
+  </div>
+
+</section> */}
+{/* <section className={styles.courseHero}>
+
+  <div className={styles.courseBreadcrumb}>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div className={styles.courseHeroImage}>
+
+    <div className={styles.courseHeroOverlay}></div>
+
+    <div className={styles.courseHeroContent}>
+
+      <span className={styles.courseLabel}>
+        COURSES
+      </span>
+
+      <h1>
+        Learn Skills.
+        <br />
+        <span>Create Your Future</span>
+      </h1>
+
+      <p>
+        Industry focused courses designed to build
+        practical skills and career opportunities.
+      </p>
+
+    </div>
+
+  </div>
+
+</section> */}
+
+
+<section className={styles.courseHero}>
+
+  <div className={styles.courseHeroImage}>
+
+    <img
+      src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1600&q=80"
+      alt="Courses Hero"
+      className={styles.heroImage}
+    />
+
+    <div className={styles.courseHeroOverlay}></div>
+
+    <div className={styles.courseHeroContent}>
+
+      <span className={styles.courseLabel}>
+        COURSES
+      </span>
+
+      <h1>
+        Learn Skills.
+        <br />
+        <span>Create Your Future</span>
+      </h1>
+
+      <p>
+        Industry focused courses designed to build
+        practical skills and career opportunities.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+{/* "var(--ink)", */}
       {/* ════ COURSE CARDS — dark theme ════ */}
       <div style={{ background: "var(--ink)", paddingBlock: "20px" }}>
+        <div
+  style={{
+    textAlign: "center",
+    padding: "clamp(32px, 6vw, 70px) 20px clamp(20px, 4vw, 40px)",
+  }}
+>
+  <span
+    style={{
+      display: "inline-block",
+      color: "var(--amber)",
+      fontSize: "clamp(0.8rem, 1.5vw, 0.95rem)",
+      fontWeight: 600,
+      letterSpacing: "2px",
+      textTransform: "uppercase",
+      marginBottom: "10px",
+    }}
+  >
+    Our Courses
+  </span>
+
+  <h2
+    className="font-display"
+    style={{
+      color: "#fff",
+      fontSize: "clamp(2rem, 5vw, 3.2rem)",
+      fontWeight: 700,
+      lineHeight: 1.2,
+      margin: "10px 0 16px",
+    }}
+  >
+    Explore Our <span style={{ color: "var(--amber)" }}>Programs</span>
+  </h2>
+
+  <p
+    style={{
+      maxWidth: "650px",
+      margin: "0 auto",
+      color: "rgba(255,255,255,0.65)",
+      fontSize: "clamp(0.95rem, 2vw, 1.05rem)",
+      lineHeight: 1.7,
+      padding: "0 10px",
+    }}
+  >
+    Industry-focused courses designed to build practical skills and prepare you
+    for a successful career.
+  </p>
+</div>
         {courses.map((course, idx) => (
           <section
             key={course.id}

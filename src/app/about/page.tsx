@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
-
+import styles from "./about.module.css";
 function useReveal() {
   useEffect(() => {
     const els = document.querySelectorAll(".reveal");
@@ -45,7 +45,7 @@ export default function AboutPage() {
   return (
     <div>
       {/* ════ HERO ════ */}
-      <section className="hero-dark">
+      {/* <section className="hero-dark">
         <div className="hero-dark-content">
           <div className="hero-badge hero-animate">
             <span className="hero-badge-dot" />
@@ -63,13 +63,57 @@ export default function AboutPage() {
             <Link href="/internship" className="btn btn-ghost-dark">Join Programs</Link>
           </div>
         </div>
-      </section>
+      </section> */}
+      
+{/* ================= ABOUT HERO ================= */}
 
+<section className={styles.aboutHero}>
+  <div className="container">
+
+    <div className={styles.breadcrumb}>
+      <Link href="/"></Link>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div className={styles.heroBanner}>
+
+      <img
+        src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1600&q=80"
+        alt="About Idea Media"
+        className={styles.bannerImage}
+      />
+
+      <div className={styles.overlay}></div>
+
+      <div className={styles.heroCenter}>
+
+        <span className={styles.heroTag}>
+          ABOUT US
+        </span>
+
+        <h1>
+          Building <span>Ideas</span>
+          <br />
+          Creating <span>Impact</span>
+        </h1>
+
+        <p>
+          Empowering businesses through creativity, technology,
+          and practical learning experiences that inspire growth.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
       {/* ════ STORY — light ════ */}
-      <section className="section-light section-py">
+      {/* <section className="section-light section-py">
         <div className="container">
           <div style={{ display: "grid", gridTemplateColumns: "repeat(12, 1fr)", gap: "clamp(32px, 5vw, 64px)", alignItems: "center" }}>
-            {/* Text */}
+           
             <div className="reveal bento-5">
               <span className="eyebrow">Our Story</span>
               <h2 className="font-display" style={{ fontSize: "clamp(2.5rem, 4vw, 3.5rem)", color: "var(--ink)", marginBottom: "24px", lineHeight: 1.1 }}>
@@ -84,7 +128,7 @@ export default function AboutPage() {
                 mentors on those exact deliverables. Businesses receive creative digital solutions while learners gain hands-on experience through real-world projects.
               </p>
             </div>
-            {/* Image */}
+           
             <div className="reveal reveal-delay-1 bento-7">
            <div className="story-image">
                 <img src="/home1.png.avif" alt="Idea Media Team Collaboration" />
@@ -92,7 +136,62 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+
+
+      {/* ═══════════ OUR STORY ═══════════ */}
+
+<section className={styles.aboutSection}>
+  <div className="container">
+
+    <span className={styles.sectionTag}>OUR STORY</span>
+
+    <h2 className={styles.sectionTitle}>
+      Building Digital Experiences
+      <span> That Inspire Growth.</span>
+    </h2>
+
+    <p className={styles.sectionLead}>
+      Idea Media is a creative agency and learning platform dedicated to helping
+      businesses grow while preparing future professionals through real-world
+      experience.
+    </p>
+
+    <div className={styles.aboutGrid}>
+
+      <div className={styles.aboutImage}>
+        <img
+          src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80"
+          alt="Idea Media Team"
+        />
+      </div>
+
+      <div className={styles.aboutContent}>
+
+        <h3>Our Story</h3>
+
+        <p>
+           Idea Media was founded with a vision to bridge creativity, technology, and
+  practical learning. What started as a passion for building impactful digital
+  solutions has grown into a creative agency dedicated to helping businesses
+  strengthen their online presence and achieve sustainable growth.
+        </p>
+
+        <p>
+        Alongside delivering professional services, we create opportunities for
+  aspiring professionals to gain hands-on experience through real client
+  projects. By combining innovation, collaboration, and continuous learning,
+  we empower both businesses and future talent to succeed in the digital world.
+        </p>
+
+       
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
 
       {/* ════ VISION & MISSION — dark ════ */}
       <section className="section-dark section-py">
@@ -145,9 +244,48 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
+  <section className="section-dark section-py">
+        <div className="container">
+          <div className="why-container">
+           
+            <div className="why-sticky reveal">
+              <span className="eyebrow eyebrow-white">Why Idea Media</span>
+              <h2 className="font-display" style={{ fontSize: "var(--fs-display)", color: "#fff", marginBottom: "14px" }}>
+                Why learners and businesses  <span className="amber-mark">choose us</span>
+              </h2>
+              <p style={{ color: "rgba(255,255,255,0.6)", lineHeight: 1.7, marginBottom: "24px", fontSize: "0.95rem" }}>
+              Everything we do is built around practical experience, measurable results, and long-term career growth.
+              </p>
+              <Link href="/about" className="btn btn-primary">
+                Our Approach <ArrowRight size={16} />
+              </Link>
+            </div>
+           
+            <div style={{ display: "flex", flexDirection: "column" }}>
+              {[
+                { num: "01", label: "Industry Mentors",   desc: "Learn from professionals actively working with clients every day." },
+                { num: "02", label: "Live Client Work",   desc: "Build practical experience by contributing to real agency assignments." },
+                { num: "03", label: "Modern Curriculum",  desc: "Continuously updated with the latest digital marketing, design, and AI practices." },
+                { num: "04", label: "Placement Support",  desc: "Receive portfolio feedback, interview preparation, and placement guidance." },
+              ].map((item) => (
+                <div
+                  key={item.label}
+                  className="reveal"
+                  style={{ display: "grid", gridTemplateColumns: "48px 1fr", gap: "16px", padding: "24px 0", borderBottom: "1px solid rgba(255,255,255,0.1)" }}
+                >
+                  <span style={{ color: "var(--amber)", fontWeight: 700, fontSize: "0.8rem", fontFamily: "'Space Mono',monospace", paddingTop: "2px" }}>{item.num}</span>
+                  <div>
+                    <h3 style={{ fontFamily: "'Space Grotesk',sans-serif", fontWeight: 700, fontSize: "1.2rem", color: "#fff", marginBottom: "8px" }}>{item.label}</h3>
+                    <p style={{ color: "rgba(255,255,255,0.6)", fontSize: "0.95rem", lineHeight: 1.6, margin: 0 }}>{item.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
       {/* ════ MILESTONES — dark ════ */}
-      <section className="section-dark section-py">
+      {/* <section className="section-dark section-py">
         <div className="container">
           <div className="section-header reveal" style={{ textAlign: "center" }}>
             <span className="eyebrow eyebrow-white">Our Journey</span>
@@ -164,10 +302,10 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ════ STORY IMAGE — light ════ */}
-      <section className="section-white section-py">
+      {/* <section className="section-white section-py">
         <div className="container">
           <div style={{ display: "grid", gridTemplateColumns: "repeat(12, 1fr)", gap: "clamp(32px, 5vw, 64px)", alignItems: "center" }}>
            <div className="img-box reveal bento-7">
@@ -187,8 +325,31 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
+      </section> */}
+  <section className="section-white section-py">
+        <div className="container">
+          <div className="creativeGrid">
+           <div className="img-box reveal bento-7">
+              <img src="/creat.avif" alt="Idea Media Creative Workplace" />
+            </div>
+           <div className="creativeContent reveal reveal-delay-1 bento-5">
+              <span className="eyebrow">Behind the Scenes</span>
+              <h2 className="font-display" style={{ fontSize: "clamp(2.5rem, 4vw, 3.5rem)", color: "var(--ink)", marginBottom: "24px", lineHeight: 1.1 }}>
+                Where creativity meets <span className="amber-mark">growth.</span>
+              </h2>
+              <p style={{ color: "var(--slate)", fontSize: "1.1rem", lineHeight: 1.7, marginBottom: "32px" }}>
+              Our workspace connects creativity, technology and learning. Every project becomes an opportunity to create value for clients and build real skills.
+              </p>
+              <Link href="/contact" className="btn btn-primary" style={{ padding: "14px 32px" }}>
+                Get In Touch <ArrowRight size={16} />
+              </Link>
+            </div>
+          </div>
+        </div>
       </section>
+   
 
+ 
       {/* ════ CTA ════ */}
       <section className="section-dark" style={{ paddingBlock: "clamp(64px,8vw,96px)", textAlign: "center" }}>
         <div className="container-narrow">

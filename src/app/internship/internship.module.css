@@ -1,558 +1,1990 @@
-/* =====================================
-   INTERNSHIP PAGE GLOBAL
-===================================== */
+/* =====================================================
+   INTERNSHIP PAGE
+   Premium Agency Theme
+   Black / White / Amber
+===================================================== */
 
-.internship-page {
+
+/* ================= GLOBAL ================= */
+
+.page{
+  background:#ffffff;
+  color:#111111;
   overflow:hidden;
 }
 
 
-/* =====================================
-   HERO
-===================================== */
-
-.hero-dark {
-
-  min-height:620px;
-
-  background:#101214;
-
-  display:flex;
-
-  align-items:center;
-
-  padding:120px 0;
-
+.container{
+  width:min(1200px,90%);
+  margin:auto;
 }
 
 
-.hero-dark-content {
+/* ======================
+ HERO SECTION
+====================== */
 
-  max-width:850px;
 
-}
+/* ==========================
+   INTERNSHIP HERO SECTION
+========================== */
 
 
-.hero-badge {
+/* REMOVE WHITE SPACE */
 
-  display:inline-flex;
+.page{
 
-  align-items:center;
+    width:100%;
 
-  gap:10px;
+    min-height:100vh;
 
-  padding:8px 16px;
+    background:#0B0D11;
 
-  border:1px solid rgba(255,255,255,.12);
-
-  border-radius:50px;
-
-  color:rgba(255,255,255,.7);
-
-  font-size:.75rem;
-
-  font-family:"Space Mono",monospace;
-
-  margin-bottom:30px;
-
-}
-
-
-.hero-badge-dot {
-
-  width:8px;
-
-  height:8px;
-
-  background:var(--amber);
-
-  border-radius:50%;
-
-}
-
-
-.hero-headline {
-
-  color:#fff;
-
-  font-family:"Space Grotesk",sans-serif;
-
-  font-size:clamp(2.8rem,6vw,5rem);
-
-  line-height:1.05;
-
-  letter-spacing:-.04em;
-
-  margin:0 0 24px;
-
-}
-
-
-.amber-mark {
-
-  color:var(--amber);
-
-}
-
-
-.hero-sub {
-
-  max-width:620px;
-
-  color:rgba(255,255,255,.6);
-
-  font-size:1.05rem;
-
-  line-height:1.7;
-
-  margin-bottom:36px;
-
-}
-
-
-.hero-btns {
-
-  display:flex;
-
-  gap:14px;
-
-  flex-wrap:wrap;
-
-}
-
-
-.btn-primary {
-
-  display:inline-flex;
-
-  align-items:center;
-
-  gap:8px;
-
-  background:var(--amber);
-
-  color:#111;
-
-  padding:14px 24px;
-
-  border-radius:8px;
-
-  font-weight:600;
-
-}
-
-
-.btn-ghost-dark {
-
-  display:inline-flex;
-
-  align-items:center;
-
-  padding:14px 24px;
-
-  border:1px solid rgba(255,255,255,.2);
-
-  color:#fff;
-
-  border-radius:8px;
+    overflow:hidden;
 
 }
 
 
 
+.internshipHero{
 
+    width:100%;
 
-/* =====================================
-   STATS
-===================================== */
+    background:#0B0D11;
 
-
-.section-white {
-
-  background:#fff;
+    padding:50px 20px 90px;
 
 }
 
 
-.stats-grid {
+/* Breadcrumb */
 
-  display:grid;
+.breadcrumb{
 
-  grid-template-columns:repeat(4,1fr);
+    display:flex;
 
-  gap:24px;
+    gap:14px;
 
-  padding:40px 0;
+    align-items:center;
 
-  text-align:center;
+    color:#b7bcc7;
 
-}
+    margin-bottom:28px;
 
-
-.stat-number {
-
-  font-size:clamp(1.8rem,4vw,2.8rem);
-
-  font-weight:800;
-
-  color:var(--amber);
+    font-size:15px;
 
 }
 
 
-.stat-label {
+.breadcrumb span:last-child{
 
-  color:var(--slate);
+    color:#F5A623;
 
-  font-size:.75rem;
+}
 
-  text-transform:uppercase;
 
-  letter-spacing:.12em;
+.breadcrumb i{
+
+    font-style:normal;
 
 }
 
 
 
+/* Hero Banner */
 
 
-/* =====================================
-   COMMON SECTIONS
-===================================== */
+.heroBanner{
 
+  width:85%;          /* reduce image width */
+  max-width:1050px;   /* maximum size */
 
-.section-light {
+  height:600px;
 
-  background:#fafaf8;
+  margin:0 auto;
 
-  padding:90px 0;
+  position:relative;
 
-}
+  overflow:hidden;
 
-
-.section-dark {
-
-  background:#101214;
-
-  padding:90px 0;
+  border-radius:28px;
 
 }
 
 
-.section-header {
+.bannerImage{
 
-  margin-bottom:48px;
+    width:100%;
 
-}
+    height:100%;
 
+    object-fit:cover;
 
-.section-header h2 {
-
-  font-family:"Space Grotesk",sans-serif;
-
-  font-size:var(--fs-h2);
-
-}
-
-
-.section-header span {
-
-  color:var(--amber);
-
-  font-size:.75rem;
-
-  text-transform:uppercase;
-
-  letter-spacing:.12em;
+    transition:.8s ease;
 
 }
 
 
 
+.heroBanner:hover .bannerImage{
 
+    transform:scale(1.08);
 
-/* =====================================
-   TRACK CARDS
-===================================== */
-
-
-.grid-2 {
-
-  display:grid;
-
-  grid-template-columns:repeat(2,1fr);
-
-  gap:24px;
-
-}
-
-
-.card-dark {
-
-  background:#fff;
-
-  padding:28px;
-
-  border-radius:18px;
-
-  border:1px solid var(--border);
-
-}
-
-
-.card-dark h3 {
-
-  margin-bottom:10px;
-
-}
-
-
-.card-dark p {
-
-  color:var(--slate);
-
-  line-height:1.6;
-
-}
-
-
-.chip {
-
-  padding:6px 12px;
-
-  border-radius:30px;
-
-  font-size:.7rem;
-
-}
-
-
-.chip-amber {
-
-  background:rgba(240,170,60,.15);
-
-  color:var(--amber);
-
-}
-
-
-.track-icon {
-
-  width:48px;
-
-  height:48px;
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:center;
-
-  background:rgba(240,170,60,.15);
-
-  color:var(--amber);
-
-  border-radius:12px;
+    filter:brightness(1.1);
 
 }
 
 
 
+/* Dark Overlay */
 
 
-/* =====================================
-   HOW PROGRAM WORKS
-===================================== */
+.overlay{
 
+    position:absolute;
 
-.program-step {
+    inset:0;
 
-  display:grid;
-
-  grid-template-columns:56px 1.2fr 1fr;
-
-  gap:28px;
-
-  align-items:center;
-
-  padding:28px 0;
-
-  border-bottom:1px solid rgba(255,255,255,.08);
-
-  transition:.3s;
-
-}
-
-
-.program-step:hover {
-
-  transform:translateX(8px);
-
-}
-
-
-.process-number {
-
-  color:var(--amber);
-
-  font-family:"Space Mono",monospace;
-
-  font-size:.75rem;
-
-  font-weight:700;
-
-}
-
-
-.process-title {
-
-  margin:0;
-
-  color:#fff;
-
-  font-size:clamp(1.1rem,2vw,1.4rem);
-
-  font-weight:700;
-
-}
-
-
-.process-desc {
-
-  margin:0;
-
-  color:rgba(255,255,255,.55);
-
-  font-size:.9rem;
-
-  line-height:1.6;
+    background:rgba(0,0,0,.60);
 
 }
 
 
 
+/* Center Content */
 
 
-/* =====================================
-   INCLUDED
-===================================== */
+.heroCenter{
 
+    position:absolute;
 
-.included-grid {
+    inset:0;
 
-  display:grid;
+    display:flex;
 
-  grid-template-columns:repeat(2,1fr);
+    flex-direction:column;
 
-  gap:12px;
+    justify-content:center;
 
-}
+    align-items:center;
 
+    text-align:center;
 
-.include-item {
+    z-index:2;
 
-  display:flex;
-
-  align-items:center;
-
-  gap:10px;
-
-  padding:14px 16px;
-
-  background:#fff;
-
-  border:1px solid var(--border);
-
-  border-radius:10px;
+    padding:40px;
 
 }
 
 
 
+/* Small Heading */
 
 
-/* =====================================
-   FAQ
-===================================== */
+.heroTag{
 
+    color:#F5A623;
 
-.faq-box {
+    letter-spacing:8px;
 
-  padding:24px;
+    font-size:15px;
 
-  border-radius:14px;
+    font-weight:700;
 
-  background:rgba(255,255,255,.04);
+    margin-bottom:25px;
 
-  border:1px solid rgba(255,255,255,.08);
+    opacity:0;
 
-}
+    transform:translateY(20px);
 
-
-.faq-box h3 {
-
-  color:#fff;
-
-  margin-bottom:10px;
-
-}
-
-
-.faq-box p {
-
-  color:rgba(255,255,255,.55);
-
-  line-height:1.6;
+    animation:fadeUp .8s .2s forwards;
 
 }
 
 
 
+/* Main Heading */
 
 
-/* =====================================
+.heroCenter h1{
+
+    color:white;
+
+    font-size:clamp(3rem,6vw,5.8rem);
+
+    line-height:1.05;
+
+    font-weight:800;
+
+    margin:0 0 25px;
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    animation:fadeUp .9s .4s forwards;
+
+}
+
+
+
+.heroCenter h1 span{
+
+    color:#F5A623;
+
+}
+
+
+
+/* Description */
+
+
+.heroCenter p{
+
+    max-width:760px;
+
+    color:rgba(255,255,255,.85);
+
+    font-size:1.25rem;
+
+    line-height:1.8;
+
+    opacity:0;
+
+    transform:translateY(30px);
+
+    animation:fadeUp .9s .7s forwards;
+
+}
+
+
+
+/* Buttons */
+
+
+.buttons{
+
+    display:flex;
+
+    gap:18px;
+
+    margin-top:35px;
+
+    justify-content:center;
+
+}
+
+
+
+.primaryBtn{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    background:#F5A623;
+
+    color:#111;
+
+    padding:14px 32px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+
+
+.primaryBtn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 15px 35px rgba(245,166,35,.35);
+
+}
+
+
+
+.secondaryBtn{
+
+    padding:14px 32px;
+
+    border-radius:50px;
+
+    border:1px solid rgba(255,255,255,.4);
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+
+
+.secondaryBtn:hover{
+
+    background:white;
+
+    color:#111;
+
+}
+
+
+
+/* Hover Amber Glow */
+
+
+.heroBanner::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    radial-gradient(
+
+    circle at top right,
+
+    rgba(245,166,35,.18),
+
+    transparent 45%
+
+    );
+
+    opacity:0;
+
+    transition:.5s;
+
+}
+
+
+
+.heroBanner:hover::after{
+
+    opacity:1;
+
+}
+
+
+
+/* Shine Effect */
+
+
+.heroBanner::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:50%;
+
+    height:100%;
+
+    background:
+
+    linear-gradient(
+
+    90deg,
+
+    transparent,
+
+    rgba(255,255,255,.18),
+
+    transparent
+
+    );
+
+    transform:skewX(-20deg);
+
+    z-index:3;
+
+}
+
+
+
+.heroBanner:hover::before{
+
+    animation:shine 1.3s;
+
+}
+
+
+
+/* ==========================
+   ANIMATIONS
+========================== */
+
+
+@keyframes fadeUp{
+
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+
+}
+
+
+
+@keyframes heroFloat{
+
+
+0%{
+
+transform:translateY(0);
+
+}
+
+
+50%{
+
+transform:translateY(-8px);
+
+}
+
+
+100%{
+
+transform:translateY(0);
+
+}
+
+
+}
+
+
+
+@keyframes shine{
+
+
+100%{
+
+left:150%;
+
+}
+
+
+}
+
+
+
+/* ==========================
    RESPONSIVE
-===================================== */
+========================== */
+
+
+@media(max-width:768px){
+
+
+.internshipHero{
+
+padding:30px 20px 60px;
+
+}
+
+
+
+.heroBanner{
+
+height:430px;
+
+border-radius:24px;
+
+}
+
+
+
+.heroCenter{
+
+padding:25px;
+
+}
+
+
+
+.heroCenter h1{
+
+font-size:2.5rem;
+
+}
+
+
+
+.heroCenter p{
+
+font-size:1rem;
+
+}
+
+
+
+.heroTag{
+
+font-size:12px;
+
+letter-spacing:5px;
+
+}
+
+
+
+.buttons{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+
+
+.primaryBtn,
+.secondaryBtn{
+
+width:220px;
+
+justify-content:center;
+
+text-align:center;
+
+}
+
+
+
+}
+
+/* ================= HERO ================= */
+
+
+
+/* ================= STATS ================= */
+
+
+/* .stats{
+
+background:white;
+
+padding:50px 0;
+
+}
+
+
+
+.statsGrid{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:22px;
+
+}
+
+
+
+.statCard{
+
+background:#111;
+
+color:white;
+
+border-radius:20px;
+
+padding:30px 20px;
+
+text-align:center;
+
+transition:.35s;
+
+}
+
+
+
+.statCard:hover{
+
+transform:translateY(-8px);
+
+}
+
+
+
+.statCard svg{
+
+width:30px;
+
+height:30px;
+
+color:#f5a623;
+
+margin-bottom:15px;
+
+}
+
+
+
+.statCard h3{
+
+font-size:38px;
+
+margin:5px 0;
+
+font-weight:800;
+
+}
+
+
+
+.statCard p{
+
+font-size:13px;
+
+color:#aaa;
+
+}
+
+
+/* ======================
+ HERO SECTION
+====================== */
+
+
+
+
+
+
+/* =====================
+ RESPONSIVE
+===================== */
+
+
+@media(max-width:900px){
+
+
+.heroBox{
+
+height:550px;
+
+border-radius:25px;
+
+}
+
+
+
+.heroContent h1{
+
+font-size:52px;
+
+}
+
+
+.breadcrumb{
+
+left:25px;
+
+top:25px;
+
+}
+
+
+}
+
+
+
+@media(max-width:600px){
+
+
+.hero{
+
+padding:20px;
+
+}
+
+
+.heroBox{
+
+height:520px;
+
+}
+
+
+
+.heroContent h1{
+
+font-size:38px;
+
+}
+
+
+
+.heroContent p{
+
+font-size:15px;
+
+}
+
+
+
+.buttons{
+
+flex-direction:column;
+
+}
+
+
+
+.primaryBtn,
+.secondaryBtn{
+
+justify-content:center;
+
+}
+
+
+}
+
+
+ /* ==========================
+   INTERNSHIP TRACKS
+========================== */
+
+
+.tracks{
+
+background:#191918;
+
+padding:90px 0 100px;
+color:white;
+overflow:hidden;
+
+}
+
+
+
+/* heading */
+
+.heading{
+
+text-align:center;
+max-width:700px;
+margin:0 auto 55px;
+
+}
+
+
+.heading span{
+
+font-size:12px;
+letter-spacing:3px;
+color:#f5a623;
+font-weight:600;
+
+}
+
+
+.heading h2{
+
+font-size:48px;
+font-weight:600;
+margin:18px 0;
+
+}
+
+
+.heading h2 strong{
+
+color:#f5a623;
+
+}
+
+
+.heading p{
+
+color:#aaa;
+font-size:16px;
+line-height:1.7;
+
+}
+
+
+
+/* GRID */
+
+
+.trackGrid{
+
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:28px;
+
+}
+
+
+
+/* CARD */
+
+
+.trackCard{
+
+background:
+linear-gradient(
+145deg,
+#191918,
+#0d0d0c
+);
+
+border-radius:22px;
+overflow:hidden;
+
+border:1px solid rgba(255,255,255,.08);
+
+transition:.4s ease;
+
+}
+
+
+.trackCard:hover{
+
+transform:translateY(-8px);
+
+border-color:#f5a623;
+
+box-shadow:
+0 20px 50px rgba(0,0,0,.5);
+
+}
+
+
+
+/* IMAGE */
+
+
+.imageBox{
+
+height:170px;
+overflow:hidden;
+
+}
+
+
+.imageBox img{
+
+width:100%;
+height:100%;
+object-fit:cover;
+
+transition:.5s ease;
+
+}
+
+
+.trackCard:hover img{
+
+transform:scale(1.08);
+
+}
+
+
+
+
+/* BODY */
+
+.trackCard{
+  min-height: 0;
+}
+
+.imageBox{
+  height: 90px;   /* reduce image height */
+}
+.trackBody{
+  padding: 16px;   /* reduce content space */
+}
+.trackBody h3{
+  margin-bottom: 8px;
+}
+
+
+.trackBody p{
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+
+
+.duration{
+
+display:inline-block;
+
+font-size:12px;
+padding:6px 14px;
+
+border-radius:30px;
+
+background:rgba(245,166,35,.12);
+
+color:#f5a623;
+
+margin-bottom:15px;
+
+}
+
+
+
+.trackBody h3{
+
+font-size:22px;
+margin-bottom:12px;
+font-weight:600;
+
+}
+
+
+
+.trackBody p{
+
+font-size:14px;
+line-height:1.7;
+color:#aaa;
+
+min-height:70px;
+
+}
+
+
+
+
+.trackBody a{
+
+margin-top:18px;
+
+display:flex;
+align-items:center;
+gap:8px;
+
+color:#f5a623;
+
+font-weight:600;
+
+font-size:14px;
+
+transition:.3s;
+
+}
+
+
+.trackBody a:hover{
+
+gap:14px;
+
+}
+
+
+
+
+/* RESPONSIVE */
+
+
+@media(max-width:1000px){
+
+.trackGrid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+
+
+@media(max-width:650px){
+
+
+.tracks{
+
+padding:70px 20px;
+
+}
+
+
+.heading h2{
+
+font-size:34px;
+
+}
+
+
+.trackGrid{
+
+grid-template-columns:1fr;
+
+}
+
+
+.imageBox{
+
+height:160px;
+
+}
+
+
+}
+
+/* ================= ABOUT ================= */
+
+
+.about{
+
+padding:110px 0;
+
+background:#f7f7f5;
+
+}
+
+
+
+.aboutGrid{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:70px;
+
+align-items:center;
+
+}
+
+
+
+.aboutImage{
+
+height:520px;
+
+overflow:hidden;
+
+border-radius:28px;
+
+}
+
+
+
+.aboutImage img{
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+transition:.6s;
+
+}
+
+
+
+.aboutImage:hover img{
+
+transform:scale(1.08);
+
+}
+
+
+
+
+.aboutContent span,
+.heading span,
+.includedText span,
+.faq span{
+
+color:#f5a623;
+
+font-size:12px;
+
+font-weight:700;
+
+letter-spacing:3px;
+
+}
+
+
+
+.aboutContent h2,
+.heading h2,
+.includedText h2,
+.faq h2{
+
+font-size:48px;
+
+line-height:1.1;
+
+letter-spacing:-2px;
+
+margin:18px 0;
+
+font-weight:800;
+
+}
+
+
+
+.aboutContent p,
+.includedText p{
+
+font-size:17px;
+
+line-height:1.8;
+
+color:#666;
+
+}
+
+
+
+
+.featureList{
+
+margin-top:30px;
+
+display:grid;
+
+gap:16px;
+
+}
+
+
+
+.featureList div{
+
+display:flex;
+
+align-items:center;
+
+gap:12px;
+
+font-weight:600;
+
+}
+
+
+
+.featureList svg{
+
+color:#f5a623;
+
+}
+
+
+
+
+
+
+
+/* ================= TRACKS ================= */
+
+
+/* ===============================
+   INTERNSHIP TRACK CARDS
+================================ */
+
+
+.trackGrid{
+
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:32px;
+
+}
+
+
+
+.trackCard{
+
+position:relative;
+
+height:490px;
+
+border-radius:28px;
+
+overflow:hidden;
+
+cursor:pointer;
+
+background:#111;
+
+display:flex;
+
+align-items:flex-end;
+
+transition:.4s ease;
+
+}
+
+
+
+.trackCard::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:
+linear-gradient(
+180deg,
+rgba(0,0,0,.05) 20%,
+rgba(0,0,0,.85) 100%
+);
+
+z-index:1;
+
+}
+
+
+
+.trackCard img{
+
+position:absolute;
+
+inset:0;
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+transition:.7s ease;
+
+}
+
+
+
+
+.trackCard:hover img{
+
+transform:scale(1.12);
+
+}
+
+
+
+
+.trackCard:hover{
+
+transform:translateY(-10px);
+
+}
+
+
+
+
+
+/* CARD CONTENT */
+
+.trackBody{
+
+position:relative;
+
+z-index:2;
+
+padding:32px;
+
+color:white;
+
+width:100%;
+
+}
+
+
+
+
+/* DURATION BADGE */
+
+.trackBody small{
+
+display:inline-flex;
+
+background:#f5a623;
+
+color:#111;
+
+padding:10px 18px;
+
+border-radius:50px;
+
+font-size:13px;
+
+font-weight:800;
+
+letter-spacing:.5px;
+
+margin-bottom:22px;
+
+}
+
+
+
+
+
+.trackBody h3{
+
+font-size:32px;
+
+line-height:1.1;
+
+font-weight:800;
+
+color:white;
+
+margin-bottom:14px;
+
+letter-spacing:-1px;
+
+}
+
+
+
+
+
+.trackBody p{
+
+font-size:16px;
+
+line-height:1.6;
+
+color:rgba(255,255,255,.85);
+
+max-width:350px;
+
+margin-bottom:25px;
+
+}
+
+
+
+
+
+.trackBody a{
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+font-size:16px;
+
+font-weight:700;
+
+color:#f5a623;
+
+transition:.3s;
+
+}
+
+
+
+
+.trackBody a:hover{
+
+gap:16px;
+
+}
+
+
+
+
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+
+@media(max-width:1100px){
+
+
+.trackGrid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+
+}
+
+
+
+@media(max-width:700px){
+
+
+.trackGrid{
+
+grid-template-columns:1fr;
+
+}
+
+
+.trackCard{
+
+height:420px;
+
+}
+
+
+
+.trackBody h3{
+
+font-size:26px;
+
+}
+
+
+}
+
+
+
+
+/* ================= JOURNEY ================= */
+
+
+/* =================================
+   LEARNING JOURNEY
+================================= */
+
+
+.journey{
+
+padding:120px 0;
+
+background:#ffffff;
+
+}
+
+
+
+.journey .heading{
+
+text-align:center;
+
+max-width:700px;
+
+margin:auto;
+
+}
+
+
+
+.journey .heading p{
+
+color:#666;
+
+line-height:1.7;
+
+margin-top:15px;
+
+}
+
+
+
+
+.timeline{
+
+position:relative;
+
+max-width:850px;
+
+margin:70px auto 0;
+
+display:flex;
+
+flex-direction:column;
+
+gap:35px;
+
+}
+
+
+
+.timeline::before{
+
+content:"";
+
+position:absolute;
+
+left:32px;
+
+top:0;
+
+bottom:0;
+
+width:2px;
+
+background:#f5a623;
+
+}
+
+
+
+
+
+.step{
+
+position:relative;
+
+display:flex;
+
+align-items:flex-start;
+
+gap:30px;
+
+padding:35px;
+
+background:#111;
+
+border-radius:24px;
+
+margin-left:60px;
+
+transition:.4s;
+
+}
+
+
+
+.step:hover{
+
+transform:translateX(10px);
+
+box-shadow:0 20px 50px rgba(0,0,0,.15);
+
+}
+
+
+
+
+.stepNumber{
+
+position:absolute;
+
+left:-65px;
+
+top:35px;
+
+width:65px;
+
+height:65px;
+
+border-radius:50%;
+
+background:#f5a623;
+
+color:#111;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-weight:900;
+
+font-size:18px;
+
+border:6px solid white;
+
+}
+
+
+
+
+.stepContent h3{
+
+font-size:24px;
+
+color:white;
+
+margin-bottom:10px;
+
+}
+
+
+
+.stepContent p{
+
+color:#b5b5b5;
+
+line-height:1.7;
+
+font-size:15px;
+
+}
+
+
+
+
+@media(max-width:700px){
+
+.timeline::before{
+
+left:25px;
+
+}
+
+
+.step{
+
+margin-left:45px;
+
+padding:25px;
+
+}
+
+
+
+.stepNumber{
+
+left:-55px;
+
+width:50px;
+
+height:50px;
+
+font-size:14px;
+
+}
+
+}
+/* ================= INCLUDED ================= */
+
+
+.included{
+
+padding:110px 0;
+
+background:#f7f7f5;
+
+}
+
+
+
+.includedGrid{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:70px;
+
+align-items:center;
+
+}
+
+
+
+
+.includeCards{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:15px;
+
+}
+
+
+
+.includeCard{
+
+background:white;
+
+padding:20px;
+
+border-radius:16px;
+
+display:flex;
+
+align-items:center;
+
+gap:12px;
+
+border:1px solid #eee;
+
+font-weight:600;
+
+}
+
+
+
+.includeCard svg{
+
+color:#f5a623;
+
+flex-shrink:0;
+
+}
+
+
+
+
+
+
+
+/* ================= FAQ ================= */
+
+
+.faq{
+
+background:#111;
+
+padding:110px 0;
+
+color:white;
+
+}
+
+
+
+.faqGrid{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:70px;
+
+}
+
+
+
+.faq h2{
+
+color:white;
+
+}
+
+
+
+.faq strong{
+
+color:#f5a623;
+
+}
+
+
+
+.faqList{
+
+display:grid;
+
+gap:20px;
+
+}
+
+
+
+.faqItem{
+
+background:#1b1b1b;
+
+padding:25px;
+
+border-radius:18px;
+
+border:1px solid rgba(255,255,255,.1);
+
+}
+
+
+
+.faqItem h3{
+
+font-size:18px;
+
+margin-bottom:10px;
+
+}
+
+
+
+.faqItem p{
+
+color:#aaa;
+
+line-height:1.7;
+
+}
+
+
+
+
+
+
+
+/* ================= CTA ================= */
+
+
+.cta{
+
+padding:100px 0;
+
+text-align:center;
+
+}
+
+
+
+.ctaBox{
+
+max-width:850px;
+
+margin:auto;
+
+}
+
+
+
+.cta h2{
+
+font-size:55px;
+
+line-height:1.1;
+
+}
+
+
+
+.cta strong{
+
+color:#f5a623;
+
+}
+
+
+
+.cta p{
+
+font-size:18px;
+
+color:#666;
+
+line-height:1.7;
+
+margin:25px 0 40px;
+
+}
+
+
+
+
+
+
+
+/* ================= ANIMATION ================= */
+
+
+.statCard,
+.trackCard,
+.includeCard,
+.faqItem{
+
+animation:fadeUp .6s ease both;
+
+}
+
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+
+
+
+
+
+
+/* ================= RESPONSIVE ================= */
 
 
 @media(max-width:1000px){
 
 
-.hero-dark{
+.statsGrid{
 
- padding:90px 0;
-
-}
-
-
-.stats-grid{
-
- grid-template-columns:repeat(2,1fr);
+grid-template-columns:repeat(2,1fr);
 
 }
 
 
-.grid-2{
+.aboutGrid,
+.includedGrid,
+.faqGrid{
 
- grid-template-columns:1fr;
-
-}
-
-
-.program-step{
-
- grid-template-columns:50px 1fr;
-
- gap:20px;
+grid-template-columns:1fr;
 
 }
 
 
-.process-desc{
 
- grid-column:2;
+.trackGrid{
 
- margin-top:-8px;
+grid-template-columns:1fr;
+
+}
+
+
+
+.aboutImage{
+
+height:400px;
 
 }
 
@@ -565,261 +1997,128 @@
 @media(max-width:600px){
 
 
-.hero-dark{
+.container{
 
- min-height:auto;
-
- padding:70px 0;
-
-}
-
-
-.hero-headline{
-
- font-size:2.5rem;
-
-}
-
-
-.hero-sub{
-
- font-size:.95rem;
-
-}
-
-
-.hero-btns{
-
- flex-direction:column;
-
- align-items:flex-start;
-
-}
-
-
-.stats-grid{
-
- grid-template-columns:1fr;
-
- gap:30px;
-
-}
-
-
-.section-light,
-.section-dark{
-
- padding:60px 0;
-
-}
-
-
-.program-step{
-
- display:flex;
-
- flex-direction:column;
-
- align-items:flex-start;
-
- gap:12px;
-
- padding:22px 0;
-
-}
-
-
-.process-number{
-
- font-size:.7rem;
-
-}
-
-
-.process-title{
-
- font-size:1.15rem;
-
-}
-
-
-.process-desc{
-
- font-size:.85rem;
-
- line-height:1.7;
-
-}
-
-
-.program-step:hover{
-
- transform:none;
-
-}
-
-
-.included-grid{
-
- grid-template-columns:1fr;
+width:92%;
 
 }
 
 
 
-}
-/* ==========================================
-   HOW THE PROGRAM WORKS
-   OLD DESKTOP STYLE + RESPONSIVE ONLY
-========================================== */
+.hero{
 
-
-/* Desktop (your original style) */
-
-.program-step {
-  display: grid;
-  grid-template-columns: 56px 1.2fr 1fr;
-  gap: 28px;
-  align-items: center;
-
-  padding: 28px 0;
-
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-
-  transition: transform .3s ease;
-}
-
-
-.program-step:hover {
-  transform: translateX(8px);
-}
-
-
-.process-number {
-  color: var(--amber);
-  font-family: "Space Mono", monospace;
-  font-size: .75rem;
-  font-weight: 700;
-}
-
-
-.process-title {
-  margin: 0;
-
-  color: #fff;
-
-  font-family: "Space Grotesk", sans-serif;
-
-  font-weight: 700;
-
-  font-size: clamp(1.1rem,2vw,1.4rem);
-
-  letter-spacing: -0.02em;
-}
-
-
-.process-desc {
-
-  margin: 0;
-
-  color: rgba(255,255,255,.55);
-
-  font-size: .9rem;
-
-  line-height: 1.6;
+min-height:80vh;
 
 }
 
 
 
-/* ==========================================
-   TABLET
-========================================== */
+.heroContent{
 
-@media (max-width: 900px) {
-
-
-  .program-step {
-
-    grid-template-columns: 50px 1fr;
-
-    gap: 20px;
-
-    padding: 26px 0;
-
-  }
-
-
-  .process-desc {
-
-    grid-column: 2;
-
-    margin-top: -8px;
-
-  }
-
+padding:80px 0;
 
 }
 
 
 
+.hero h1{
 
-/* ==========================================
-   MOBILE
-========================================== */
+font-size:45px;
 
-@media (max-width:600px) {
+letter-spacing:-1px;
 
-
-  .program-step {
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: flex-start;
-
-    gap: 12px;
-
-    padding: 22px 0;
-
-  }
+}
 
 
 
-  .process-number {
+.hero p{
 
-    font-size: .7rem;
+font-size:16px;
 
-  }
-
-
-
-  .process-title {
-
-    font-size: 1.15rem;
-
-  }
+}
 
 
 
-  .process-desc {
+.statsGrid{
 
-    margin: 0;
+grid-template-columns:1fr;
 
-    font-size: .85rem;
-
-    line-height: 1.7;
-
-  }
+}
 
 
 
-  .program-step:hover {
+.statCard h3{
 
-    transform: none;
+font-size:32px;
 
-  }
+}
+
+
+
+.about,
+.tracks,
+.journey,
+.included,
+.faq{
+
+padding:70px 0;
+
+}
+
+
+
+.aboutContent h2,
+.heading h2,
+.includedText h2,
+.faq h2{
+
+font-size:34px;
+
+}
+
+
+
+.trackCard img{
+
+height:220px;
+
+}
+
+
+
+.includeCards{
+
+grid-template-columns:1fr;
+
+}
+
+
+
+.timeline{
+
+padding-left:35px;
+
+}
+
+
+
+.stepNumber{
+
+width:45px;
+
+height:45px;
+
+margin-left:-58px;
+
+}
+
+
+
+.cta h2{
+
+font-size:38px;
+
+}
 
 
 }

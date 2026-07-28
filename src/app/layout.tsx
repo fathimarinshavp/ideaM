@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { Manrope } from "next/font/google";
 
 export const metadata: Metadata = {
   title: "Idea Media | Creative Digital Agency & Training School",
@@ -16,6 +17,12 @@ export const metadata: Metadata = {
     type: "website",
   },
 };
+
+const manrope = Manrope({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+  variable: "--font-manrope",
+});
 
 export default function RootLayout({
   children,

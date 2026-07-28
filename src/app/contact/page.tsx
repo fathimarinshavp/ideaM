@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { ArrowRight, Mail, Phone, MapPin, Send } from "lucide-react";
-
+import styles from "./contact.module.css";
 function useReveal() {
   useEffect(() => {
     const els = document.querySelectorAll(".reveal");
@@ -30,21 +30,49 @@ export default function ContactPage() {
   return (
     <div>
       {/* ════ HERO ════ */}
-      <section className="hero-dark">
-        <div className="hero-dark-content">
-          <div className="hero-badge hero-animate">
-            <span className="hero-badge-dot" />
-            Let&apos;s Connect
-          </div>
-          <h1 className="hero-headline headline-reveal">
-            Need Digital Solutions or<br />
-            <span className="amber-mark">Career Guidance?</span>
-          </h1>
-          <p className="hero-sub hero-animate hero-animate-delay-1">
-         Whether you need creative digital solutions or want to begin your learning journey, our team is ready to help.
-          </p>
-        </div>
-      </section>
+   {/* ================= HERO ================= */}
+
+<section className={styles.contactHero}>
+
+  <div className={styles.contactBreadcrumb}>
+    <Link href="/"></Link>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div className={styles.heroBanner}>
+
+    <img
+      src="https://media.istockphoto.com/id/2189341261/photo/contact-us-customer-service-channel-concept-using-laptop-and-virtual-screen-icons-of-customer.webp?a=1&b=1&s=612x612&w=0&k=20&c=xOzJmztmuMH3LHntVCS6Sk-9-irx_rWBHusMbPO_Kms="
+      alt="Contact"
+      className={styles.bannerImage}
+    />
+
+    <div className={styles.overlay}></div>
+
+    <div className={styles.heroCenter}>
+
+      <span className={styles.heroTag}>
+        CONTACT US
+      </span>
+
+      <h1>
+        Let's Build
+        <br />
+        <span>Together.</span>
+      </h1>
+
+      <p>
+        Whether you're looking for creative digital solutions,
+        internships, or professional courses, our team is ready
+        to help you take the next step.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
 
       {/* ════ CONTACT FORM + INFO — light ════ */}
       <section className="section-light section-py">

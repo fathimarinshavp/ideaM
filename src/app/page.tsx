@@ -7,6 +7,14 @@ import {
   CheckCircle2, GraduationCap, Briefcase, Award, MonitorPlay, Sparkles
 } from "lucide-react";
 
+import { ChevronLeft, ChevronRight } from "lucide-react";
+
+import { Navigation } from "swiper/modules";
+
+
+import "swiper/css";
+import "swiper/css/navigation";
+import { Swiper, SwiperSlide } from "swiper/react";
 /* ── Scroll reveal hook ── */
 function useReveal() {
   useEffect(() => {
@@ -45,6 +53,9 @@ function TypewriterSuffix() {
     return () => { if (timer.current) clearTimeout(timer.current); };
   }, [displayed, deleting, idx]);
 
+
+
+  
   return (
     <span>
       <span style={{ color: "var(--amber)" }}>{displayed}</span>
@@ -52,18 +63,42 @@ function TypewriterSuffix() {
     </span>
   );
 }
+const services = [
+  {
+    title: "Branding & Identity",
+    category: "Creative",
+    image: "https://images.unsplash.com/photo-1611241893603-3c359704e0ee?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bG9nbyUyMGRlc2lnbnxlbnwwfHwwfHx8MA%3D%3D",
+  },
+  {
+    title: "Marketing Solutions",
+    category: "Marketing",
+    image: "https://media.istockphoto.com/id/2153931453/photo/indian-hindu-gen-z-professional-colleagues-ladies-working-together-at-indoor-job-office-place.jpg?s=1024x1024&w=is&k=20&c=r3S6sg1Sdg5wN1m0ghvQcKVywhBctzz52wsPuDoPxUw=",
+  },
+  {
+    title: "Digital Marketing & SEO",
+    category: "SEO",
+    image: "https://media.istockphoto.com/id/2187866123/photo/team-collaboration-at-a-business-meeting-with-data-analysis.jpg?s=1024x1024&w=is&k=20&c=VFQCVXXJ5GZZny6J8RYJgAGYMoY8SgHss90ULi5Ss2o=",
+  },
+  {
+    title: "Creative Design & Motion",
+    category: "Design",
+    image: "https://plus.unsplash.com/premium_photo-1683147638125-fd31a506a429?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGRlc2lnbnxlbnwwfHwwfHx8MA%3D%3D",
+  },
+];
 
 export default function HomePage() {
+  
   useReveal();
 
   return (
+    
     <div>
       {/* ════════════ HERO — dark, centered, pill badge ════════════ */}
-      <section className="hero-dark" style={{ minHeight: "85vh", display: "flex", alignItems: "center", justifyContent: "center" }}>
+      {/* <section className="hero-dark" style={{ minHeight: "85vh", display: "flex", alignItems: "center", justifyContent: "center" }}>
         <div className="hero-dark-content" style={{ width: "100%" }}>
           <div className="hero-badge hero-animate">
             <span className="hero-badge-dot" />
-            Digital Agency &amp; Training School
+          Digital Solutions & Career Training
           </div>
 
           <h1 className="hero-headline headline-reveal">
@@ -84,8 +119,174 @@ export default function HomePage() {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
+      {/* <section className="hero-dark">
+  
+  <div className="hero-bg"></div>
 
+
+  <div className="hero-overlay"></div>
+
+  
+  <div className="hero-dark-content">
+    <div className="hero-badge hero-animate">
+      <span className="hero-badge-dot" />
+      Digital Solutions & Career Training
+    </div>
+
+    <h1 className="hero-headline headline-reveal">
+      We help you <br />
+      <TypewriterSuffix />
+    </h1>
+
+    <p
+      className="hero-sub hero-animate hero-animate-delay-1"
+      style={{ fontSize: "1.15rem" }}
+    >
+      A creative agency and digital learning studio helping businesses grow
+      while preparing the next generation of designers, marketers, and creators
+      through practical, industry-focused training.
+    </p>
+
+    <div className="hero-btns hero-animate hero-animate-delay-2">
+      <Link href="/services" className="btn btn-primary">
+        Explore Services <ArrowRight size={16} />
+      </Link>
+
+      <Link href="/internship" className="btn btn-ghost-dark">
+        Join Program <ArrowUpRight size={16} />
+      </Link>
+    </div>
+  </div>
+</section> */}
+{/* <section className="hero-home">
+
+  <div className="container">
+
+    <div className="hero-image-box">
+
+      <img
+        src="https://plus.unsplash.com/premium_photo-1683121344366-64ebe7fc6f88?q=80&w=1136&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="Digital Agency"
+        className="hero-image"
+      />
+
+      <div className="hero-overlay"></div>
+
+
+      <div className="hero-content">
+
+        <span className="hero-tag">
+          DIGITAL SOLUTIONS & CAREER TRAINING
+        </span>
+
+
+        <h1>
+          We help you 
+          <span>Build Brands </span>
+          <br />
+          Create Growth
+        </h1>
+
+
+        <p>
+          A creative agency helping businesses grow through branding,
+          marketing, technology and practical digital training.
+        </p>
+
+
+        <div className="hero-buttons">
+
+         
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section> */}
+{/* <section className="hero-home">
+
+  <div className="hero-bg">
+    <img
+      src="https://plus.unsplash.com/premium_photo-1683121344366-64ebe7fc6f88?q=80&w=1600&auto=format&fit=crop"
+      alt="Digital Agency"
+    />
+  </div>
+
+  <div className="hero-dark-overlay"></div>
+
+
+  <div className="hero-content">
+
+    
+
+
+    <div className="hero-tag">
+      DIGITAL SOLUTIONS & CAREER TRAINING
+    </div>
+
+
+    <h1>
+      We help you <br/>
+      <span>Build Brands.</span>
+      <br/>
+      Create Growth
+    </h1>
+
+
+    <p>
+      A creative agency helping businesses grow through branding,
+      marketing, technology and practical digital training.
+    </p>
+
+
+  
+
+
+  </div>
+
+</section> */}
+
+
+<section className="homeHero">
+
+  <div className="homeHeroImage">
+    <img
+      src="https://plus.unsplash.com/premium_photo-1683121344366-64ebe7fc6f88?q=80&w=1600&auto=format&fit=crop"
+      alt="Digital Agency"
+    />
+  </div>
+
+  <div className="homeHeroOverlay"></div>
+
+  <div className="container">
+
+    <div className="homeHeroContent">
+
+      <span className="homeHeroBadge">
+        DIGITAL SOLUTIONS & CAREER TRAINING
+      </span>
+
+      <h1>
+        We help you <br />
+        <span>Build Brands.</span><br />
+        Create Growth
+      </h1>
+
+      <p>
+        A creative agency helping businesses grow through branding,
+        marketing, technology and practical digital training.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
       {/* ════════════ MARQUEE — trust ticker ════════════ */}
       <div
         className="section-white"
@@ -105,7 +306,7 @@ export default function HomePage() {
       </div>
 
       {/* ════════════ WHO WE ARE — Redesigned Bento Grid ════════════ */}
-      <section className="section-light section-py">
+      {/* <section className="section-light section-py">
         <div className="container">
           <div className="section-header reveal" style={{ textAlign: "center", marginBottom: "64px" }}>
             <span className="eyebrow">Who We Are</span>
@@ -115,50 +316,367 @@ export default function HomePage() {
             </h2>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(12, 1fr)", gap: "24px" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(12, 1fr)", gap: "24px" }}> */}
             {/* Main Image */}
-            <div className="reveal bento-8">
+            {/* <div className="reveal bento-8">
               <div className="story-image" style={{ height: "400px", borderRadius: "24px" }}>
                 <img src="/home1.png.avif" alt="Idea Media Workplace" />
               </div>
-            </div>
+            </div> */}
             
             {/* Core Mission */}
-            <div className="card reveal reveal-delay-1 bento-4" style={{ background: "var(--amber)", borderColor: "var(--amber)", display: "flex", flexDirection: "column", justifyContent: "center" }}>
+            {/* <div className="card reveal reveal-delay-1 bento-4" style={{ background: "var(--amber)", borderColor: "var(--amber)", display: "flex", flexDirection: "column", justifyContent: "center" }}>
               <h3 className="font-display" style={{ fontSize: "2rem", color: "var(--ink)", lineHeight: 1.1, marginBottom: "16px" }}>Learn from professionals.</h3>
               <p style={{ color: "rgba(30,33,36,0.8)", fontSize: "0.95rem" }}>
                
                We combine agency experience with practical training, giving every learner the opportunity to build a portfolio that employers actually value.
               </p>
-            </div>
+            </div> */}
 
             {/* Stats */}
-            <div className="card reveal bento-4" style={{ display: "flex", alignItems: "center", gap: "24px" }}>
+            {/* <div className="card reveal bento-4" style={{ display: "flex", alignItems: "center", gap: "24px" }}>
               <div>
                 <div style={{ fontSize: "3.5rem", fontWeight: 800, fontFamily: "'Space Grotesk',sans-serif", color: "var(--ink)", lineHeight: 1 }}>50+</div>
                 <div className="eyebrow" style={{ margin: 0, marginTop: "8px" }}>Live Projects</div>
               </div>
-            </div>
+            </div> */}
             
-            <div className="card reveal reveal-delay-1 bento-4" style={{ display: "flex", alignItems: "center", gap: "24px" }}>
+            {/* <div className="card reveal reveal-delay-1 bento-4" style={{ display: "flex", alignItems: "center", gap: "24px" }}>
               <div>
                 <div style={{ fontSize: "3.5rem", fontWeight: 800, fontFamily: "'Space Grotesk',sans-serif", color: "var(--ink)", lineHeight: 1 }}>100+</div>
                 <div className="eyebrow" style={{ margin: 0, marginTop: "8px" }}>Trained Creators</div>
               </div>
-            </div>
+            </div> */}
 
             {/* Secondary Image */}
-            <div className="reveal reveal-delay-2 bento-4">
+            {/* <div className="reveal reveal-delay-2 bento-4">
               <div className="story-image" style={{ height: "100%", minHeight: "180px", borderRadius: "24px" }}>
                 <img src="/home2.avif" alt="Team meeting" />
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+
+
+      {/* <section className="services-dark">
+
+<div className="container">
+
+<div className="services-top">
+
+<div>
+
+<span className="service-label">
+Agency Capabilities
+</span>
+
+<h2 className="service-heading">
+
+Digital Services
+
+<br/>
+
+<span>Built for Growth</span>
+
+</h2>
+
+</div>
+
+<Link
+href="/services"
+className="service-view"
+>
+
+View All Services
+
+<ArrowRight size={18}/>
+
+</Link>
+
+</div>
+
+<div className="services-main">
+
+<div className="services-side">
+
+<div className="service-line"></div>
+
+<div className="socials">
+
+<a href="#">IN</a>
+
+<a href="#">FB</a>
+
+<a href="#">IG</a>
+
+</div>
+
+<div className="service-line"></div>
+
+<div className="slider-buttons">
+
+<button className="service-prev">
+<ChevronLeft size={22}/>
+</button>
+
+<button className="service-next">
+<ChevronRight size={22}/>
+</button>
+
+</div>
+
+</div>
+
+<div className="services-slider">
+
+<Swiper
+
+modules={[Navigation]}
+
+slidesPerView={2}
+
+spaceBetween={35}
+
+navigation={{
+prevEl:".service-prev",
+nextEl:".service-next",
+}}
+
+breakpoints={{
+
+0:{
+slidesPerView:1,
+},
+
+992:{
+slidesPerView:2,
+},
+
+}}
+
+>
+
+{services.map((item, index) => (
+  <SwiperSlide key={index}>
+
+    <Link href="/services" className="service-slide">
+
+      <div className="service-image">
+
+        <img
+          src={item.image}
+          alt={item.title}
+        />
+
+      </div>
+
+      <div className="service-content">
+
+        <span>{item.category}</span>
+
+        <h3>{item.title}</h3>
+
+        <ArrowUpRight size={20} />
+
+      </div>
+
+    </Link>
+
+  </SwiperSlide>
+))}</Swiper>
+
+</div>
+
+</div>
+
+</div>
+
+</section> */}
+
+{/* <section className="services-dark">
+  <div className="container">
+
+    <div className="services-top">
+
+      <div>
+        <span className="service-label">
+          Agency Capabilities
+        </span>
+
+        <h2 className="service-heading">
+          Digital Services
+          <br />
+          <span>Built for Growth</span>
+        </h2>
+      </div>
+
+      <Link href="/services" className="service-view">
+        View All Services
+        <ArrowRight size={18} />
+      </Link>
+
+    </div>
+
+    <div className="services-main">
+
+      <div className="services-side">
+
+        <div className="service-line"></div>
+
+        <div className="socials">
+          <a href="#">IN</a>
+          <a href="#">FB</a>
+          <a href="#">IG</a>
+        </div>
+
+        <div className="service-line"></div>
+
+        <div className="slider-buttons">
+
+          <button className="service-prev">
+            <ChevronLeft size={22} />
+          </button>
+
+          <button className="service-next">
+            <ChevronRight size={22} />
+          </button>
+
+        </div>
+
+      </div>
+
+      <div className="services-slider">
+
+        <Swiper
+          modules={[Navigation]}
+          slidesPerView={2}
+          spaceBetween={35}
+          navigation={{
+            prevEl: ".service-prev",
+            nextEl: ".service-next",
+          }}
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+            },
+            992: {
+              slidesPerView: 2,
+            },
+          }}
+        >
+
+          {services.map((item, index) => (
+
+            <SwiperSlide key={index}>
+
+              <Link href="/services" className="service-slide">
+
+                <div className="service-image">
+
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                  />
+
+                  <div className="service-content">
+
+                    <div>
+
+                      <span>{item.category}</span>
+
+                      <h3>{item.title}</h3>
+
+                    </div>
+
+                    <div className="service-arrow">
+
+                      <ArrowUpRight size={20} />
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </Link>
+
+            </SwiperSlide>
+
+          ))}
+
+        </Swiper>
+
+      </div>
+
+    </div>
+
+  </div>
+</section> */}
+
+      <section className=" section-py">
+  <div className="container">
+
+    <div className="about-dark-grid">
+
+      {/* Image */}
+      <div className="about-dark-image reveal">
+
+        <img 
+          src="/home1.png.avif" 
+          alt="Idea Media Team"
+        />
+
+      
+
+
+        
+
+      </div>
+
+
+      {/* Content */}
+      <div className="about-dark-content reveal reveal-delay-1">
+
+        <span className="dark-eyebrow">
+          ABOUT US
+        </span>
+
+
+        <h2>
+          Idea <span>Media</span>
+        </h2>
+
+
+        <p className="dark-lead">
+          Idea Media stands at the forefront of digital solutions,
+          helping businesses grow with creative strategies while
+          empowering students through practical training and real
+          project experience.
+        </p>
+
+
+        <p>
+          We combine technology, creativity, and industry-focused
+          learning to build future-ready professionals and powerful
+          digital experiences.
+        </p>
+
+
+        <Link href="/about" className="dark-link">
+          Learn More →
+        </Link>
+
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
 
       {/* ════════════ LATEST WORKS (NEW) ════════════ */}
-      <section className="section-dark section-py">
+      {/* <section className="section-dark section-py portfolio-section">
         <div className="container">
           <div className="section-header-row">
             <div className="reveal">
@@ -204,10 +722,10 @@ export default function HomePage() {
             ))}
           </div>
         </div>
-      </section>
+      </section>  */}
 
       {/* ════════════ SERVICES (ADDED BACK) ════════════ */}
-      <section className="section-dark section-py" style={{ borderTop: "1px solid rgba(255,255,255,0.05)" }}>
+      {/* <section className="section-dark section-py" style={{ borderTop: "1px solid rgba(255,255,255,0.05)" }}>
         <div className="container">
           <div className="section-header-row">
             <div className="reveal">
@@ -241,8 +759,287 @@ export default function HomePage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
+
+     {/* <section className="services-dark">
+  <div className="container">
+
+    <div className="services-top">
+
+      <div>
+        <span className="service-label">
+          Agency Capabilities
+        </span>
+
+        <h2 className="service-heading">
+          Digital Services
+          <br />
+          <span>Built for Growth</span>
+        </h2>
+      </div>
+
+      <Link href="/services" className="service-view">
+        View All Services
+        <ArrowRight size={18} />
+      </Link>
+
+    </div>
+
+<div className="services-main">
+
+  <div className="services-slider">
+
+<Swiper
+  modules={[Navigation]}
+  navigation={{
+    prevEl: ".service-prev",
+    nextEl: ".service-next",
+  }}
+  spaceBetween={30}
+  slidesPerView={1}
+  breakpoints={{
+    992:{
+      slidesPerView:2,
+      spaceBetween:30,
+    },
+  }}
+>
+      {services.map((item,index)=>(
+
+        <SwiperSlide key={index}>
+
+          <Link href="/services" className="service-slide">
+
+            <div className="service-image">
+
+              <img
+                src={item.image}
+                alt={item.title}
+              />
+
+              <div className="service-content">
+
+                <div>
+                  <span>{item.category}</span>
+                  <h3>{item.title}</h3>
+                </div>
+
+                <div className="service-arrow">
+                  <ArrowUpRight size={20}/>
+                </div>
+
+              </div>
+
+            </div>
+
+          </Link>
+
+        </SwiperSlide>
+
+      ))}
+
+    </Swiper>
+
+  </div>
+
+
+  <div className="slider-buttons">
+
+    <button className="service-prev">
+      <ChevronLeft size={22}/>
+    </button>
+
+    <button className="service-next">
+      <ChevronRight size={22}/>
+    </button>
+
+  </div>
+
+</div>
+  </div>
+</section> */}
+
+<section className="services-dark-new">
+
+  <div className="container">
+
+    <div className="services-header-new">
+
+      <div>
+
+        <span className="service-label-new">
+          Agency Capabilities
+        </span>
+
+
+        <h2>
+          Digital Services
+          <br />
+          <span>Built for Growth</span>
+        </h2>
+
+      </div>
+
+
+      <Link 
+        href="/services" 
+        className="service-view-new"
+      >
+        View All Services
+        <ArrowRight size={18}/>
+      </Link>
+
+
+    </div>
+
+
+
+    <div className="services-wrapper-new">
+
+
+      <div className="services-slider-new">
+
+
+        <Swiper
+
+          modules={[Navigation]}
+
+          navigation={{
+            prevEl: ".service-prev-new",
+            nextEl: ".service-next-new",
+          }}
+
+          slidesPerView={1}
+
+          spaceBetween={25}
+
+
+          breakpoints={{
+
+            768:{
+              slidesPerView:1,
+              spaceBetween:25,
+            },
+
+
+            1024:{
+              slidesPerView:2,
+              spaceBetween:30,
+            },
+
+
+            1400:{
+              slidesPerView:2,
+              spaceBetween:35,
+            }
+
+          }}
+
+        >
+
+
+        {
+          services.map((item,index)=>(
+
+            <SwiperSlide key={index}>
+
+
+              <Link
+                href="/services"
+                className="service-card-new"
+              >
+
+
+                <div className="service-image-new">
+
+
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                  />
+
+
+                </div>
+
+
+
+                <div className="service-overlay-new">
+
+
+
+                  <div>
+
+
+                    <span>
+                      {item.category}
+                    </span>
+
+
+                    <h3>
+                      {item.title}
+                    </h3>
+
+
+                  </div>
+
+
+
+                  <div className="service-arrow-new">
+
+                    <ArrowUpRight size={22}/>
+
+                  </div>
+
+
+                </div>
+
+
+              </Link>
+
+
+            </SwiperSlide>
+
+          ))
+        }
+
+
+        </Swiper>
+
+
+      </div>
+
+
+
+      <div className="service-buttons-new">
+
+
+        <button className="service-prev-new">
+
+          <ChevronLeft size={22}/>
+
+        </button>
+
+
+
+        <button className="service-next-new">
+
+          <ChevronRight size={22}/>
+
+        </button>
+
+
+      </div>
+
+
+
+    </div>
+
+
+  </div>
+
+
+</section>
       {/* ════════════ INTERNSHIP & TRAINING — Redesigned ════════════ */}
     <section className="section-dark section-py">
   <div className="container">
@@ -362,10 +1159,10 @@ export default function HomePage() {
       </section>
 
       {/* ════════════ WHY IDEA MEDIA ════════════ */}
-      <section className="section-dark section-py">
+      {/* <section className="section-dark section-py">
         <div className="container">
           <div className="why-container">
-            {/* Sticky left */}
+           
             <div className="why-sticky reveal">
               <span className="eyebrow eyebrow-white">Why Idea Media</span>
               <h2 className="font-display" style={{ fontSize: "var(--fs-display)", color: "#fff", marginBottom: "14px" }}>
@@ -378,7 +1175,7 @@ export default function HomePage() {
                 Our Approach <ArrowRight size={16} />
               </Link>
             </div>
-            {/* Scrolling right */}
+           
             <div style={{ display: "flex", flexDirection: "column" }}>
               {[
                 { num: "01", label: "Industry Mentors",   desc: "Learn from professionals actively working with clients every day." },
@@ -401,10 +1198,10 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ════════════ CTA ════════════ */}
-      <section className="section-white" style={{ paddingBlock: "clamp(80px,10vw,120px)", textAlign: "center" }}>
+      {/* <section className="section-white" style={{ paddingBlock: "clamp(80px,10vw,120px)", textAlign: "center" }}>
         <div className="container-narrow">
           <div className="reveal">
             <span className="eyebrow" style={{ marginBottom: "20px" }}>Ready to Start?</span>
@@ -425,7 +1222,49 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+
+      <section className="cta-split">
+  <div className="container">
+    <div className="cta-split-grid reveal">
+
+      <div className="cta-left">
+        <span className="eyebrow eyebrow-amber">Let's Talk</span>
+
+        <h2 className="cta-title">
+          Ready to create your
+          <span> next big project?</span>
+        </h2>
+
+        <p>
+          From custom software and websites to digital marketing and
+          internship programs, we're here to help you grow with confidence.
+        </p>
+      </div>
+
+      <div className="cta-right">
+        <Link href="/contact" className="cta-action">
+          <div>
+            <h3>Start Your Project</h3>
+            <span>Let's discuss your ideas</span>
+          </div>
+
+          <ArrowUpRight size={26} />
+        </Link>
+
+        <Link href="/internship" className="cta-action">
+          <div>
+            <h3>Join Our Internship</h3>
+            <span>Build real-world experience</span>
+          </div>
+
+          <ArrowUpRight size={26} />
+        </Link>
+      </div>
+
+    </div>
+  </div>
+</section>
     </div>
   );
 }

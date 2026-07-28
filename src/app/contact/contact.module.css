@@ -173,3 +173,328 @@
   }
 
 }
+
+
+.contactHero{
+    background:#0B0D11;
+    padding:50px 0 90px;
+}
+
+.contactBreadcrumb{
+    width:88%;
+    max-width:1300px;
+    margin:0 auto 28px;
+    display:flex;
+    align-items:center;
+    gap:14px;
+    color:#b7bcc7;
+    font-size:15px;
+
+    opacity:0;
+    transform:translateY(-20px);
+    animation:fadeDown .8s ease forwards;
+}
+
+.contactBreadcrumb a{
+    color:#fff;
+    text-decoration:none;
+}
+
+.heroBanner{
+    position:relative;
+
+    width:88%;
+    max-width:1300px;
+
+    height:650px;
+
+    margin:auto;
+
+    overflow:hidden;
+
+    border-radius:36px;
+
+    animation:heroFloat 8s ease-in-out infinite;
+}
+
+.bannerImage{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+
+    transition:
+    transform .8s ease,
+    filter .6s ease;
+}
+
+.heroBanner:hover .bannerImage{
+    transform:scale(1.08);
+    filter:brightness(1.08);
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.58);
+
+    animation:overlayFade 1.2s ease;
+}
+
+.heroCenter{
+    position:absolute;
+    inset:0;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    z-index:2;
+
+    padding:40px;
+}
+
+.heroTag{
+    color:#F5A623;
+
+    letter-spacing:8px;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    margin-bottom:24px;
+
+    opacity:0;
+    transform:translateY(20px);
+    animation:fadeUp .8s .2s forwards;
+}
+
+.heroCenter h1{
+    color:#fff;
+
+    font-size:clamp(3rem,6vw,5.8rem);
+
+    line-height:1.05;
+
+    font-weight:800;
+
+    margin-bottom:24px;
+
+    opacity:0;
+    transform:translateY(40px);
+    animation:fadeUp .9s .45s forwards;
+}
+
+.heroCenter h1 span{
+    color:#F5A623;
+}
+
+.heroCenter p{
+    color:rgba(255,255,255,.85);
+
+    font-size:1.25rem;
+
+    line-height:1.8;
+
+    max-width:760px;
+
+    opacity:0;
+    transform:translateY(35px);
+    animation:fadeUp .9s .7s forwards;
+}
+
+/* Shine */
+
+.heroBanner::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-120%;
+
+    width:55%;
+    height:100%;
+
+    background:
+    linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,.15),
+    transparent);
+
+    transform:skewX(-20deg);
+
+    z-index:3;
+}
+
+.heroBanner:hover::before{
+    animation:shine 1.4s;
+}
+
+/* Amber Glow */
+
+.heroBanner::after{
+
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background:
+    radial-gradient(
+    circle at top right,
+    rgba(245,166,35,.18),
+    transparent 45%);
+
+    opacity:0;
+
+    transition:.6s;
+}
+
+.heroBanner:hover::after{
+    opacity:1;
+}
+
+/* ================= Animations ================= */
+
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(35px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+@keyframes fadeDown{
+
+from{
+opacity:0;
+transform:translateY(-25px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+@keyframes heroFloat{
+
+0%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-8px);
+}
+
+100%{
+transform:translateY(0);
+}
+
+}
+
+@keyframes overlayFade{
+
+from{
+opacity:0;
+}
+
+to{
+opacity:1;
+}
+
+}
+
+@keyframes shine{
+
+100%{
+left:150%;
+}
+
+}
+
+/* ================= Responsive ================= */
+
+@media(max-width:992px){
+
+.heroBanner{
+height:520px;
+width:92%;
+}
+
+.heroCenter h1{
+font-size:3rem;
+}
+
+.heroCenter p{
+font-size:1rem;
+}
+
+}
+
+@media(max-width:768px){
+
+.contactHero{
+padding:30px 0 60px;
+}
+
+.heroBanner{
+height:420px;
+border-radius:22px;
+width:94%;
+}
+
+.heroCenter{
+padding:24px;
+}
+
+.heroCenter h1{
+font-size:2.4rem;
+}
+
+.heroCenter p{
+font-size:.95rem;
+line-height:1.6;
+}
+
+.heroTag{
+font-size:12px;
+letter-spacing:5px;
+}
+
+.contactBreadcrumb{
+width:94%;
+font-size:14px;
+}
+
+}
+
+@media(max-width:480px){
+
+.heroBanner{
+height:340px;
+}
+
+.heroCenter h1{
+font-size:2rem;
+}
+
+.heroCenter p{
+font-size:.88rem;
+}
+
+}

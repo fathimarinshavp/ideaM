@@ -6,13 +6,21 @@
   align-items: center;
 }
 
-.heroImage {
-  width: 100%;
-  height: clamp(260px, 32vw, 380px);
-  border-radius: 20px;
+.courseHeroImage {
+  position: relative;
+  width: 88%;
+  max-width: 1300px;
+  height: 650px;
+  margin: 0 auto;
   overflow: hidden;
-  border: 1px solid var(--border);
-  box-shadow: 0 16px 36px -10px rgba(30,33,36,0.08);
+  border-radius: 36px;
+
+  /* Background Image */
+   background: url("https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1600&q=80")
+    center center / cover no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .heroImage img {
@@ -194,5 +202,407 @@
   .includeItems {
     grid-template-columns:1fr;
   }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.courseHero{
+    background:#0B0D11;
+    padding:50px 0 90px;
+}
+
+.courseBreadcrumb{
+    display:flex;
+    gap:14px;
+    align-items:center;
+    color:#b7bcc7;
+    margin-bottom:28px;
+    font-size:15px;
+}
+
+.courseHeroImage{
+    position:relative;
+    height:650px;
+    overflow:hidden;
+    border-radius:36px;
+
+    /* Floating Animation */
+    animation:heroFloat 8s ease-in-out infinite;
+}
+
+.courseHeroImage::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-120%;
+    width:55%;
+    height:100%;
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.15),
+        transparent
+    );
+    transform:skewX(-20deg);
+    z-index:3;
+}
+
+.courseHeroImage:hover::before{
+    animation:shine 1.4s;
+}
+
+.courseHeroImage::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:radial-gradient(
+        circle at top right,
+        rgba(245,166,35,.18),
+        transparent 45%
+    );
+    opacity:0;
+    transition:.6s;
+}
+
+.courseHeroImage:hover::after{
+    opacity:1;
+}
+
+
+
+.courseHeroOverlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.58);
+    animation:overlayFade 1.2s ease;
+}
+
+.courseHeroContent{
+    position:absolute;
+    inset:0;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px;
+    z-index:2;
+}
+
+.courseLabel{
+    color:#F5A623;
+    letter-spacing:8px;
+    font-size:15px;
+    font-weight:700;
+    margin-bottom:24px;
+
+    opacity:0;
+    transform:translateY(20px);
+    animation:fadeUp .8s .2s forwards;
+}
+
+.courseHeroContent h1{
+    color:#fff;
+    font-size:clamp(3rem,6vw,5.8rem);
+    line-height:1.05;
+    font-weight:800;
+    margin-bottom:24px;
+
+    opacity:0;
+    transform:translateY(40px);
+    animation:fadeUp .9s .45s forwards;
+}
+
+.courseHeroContent h1 span{
+    color:#F5A623;
+}
+
+.courseHeroContent p{
+    max-width:760px;
+    color:rgba(255,255,255,.85);
+    font-size:1.25rem;
+    line-height:1.8;
+
+    opacity:0;
+    transform:translateY(35px);
+    animation:fadeUp .9s .7s forwards;
+}
+
+/* Image Hover */
+
+.courseHeroImage{
+    transition:transform .8s ease;
+}
+
+.courseHeroImage:hover{
+    transform:scale(1.02);
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.courseHero{
+    padding:30px 0 70px;
+}
+
+.courseHeroImage{
+    height:420px;
+    border-radius:22px;
+}
+
+.courseHeroContent{
+    padding:24px;
+}
+
+.courseHeroContent h1{
+    font-size:2.5rem;
+}
+
+.courseHeroContent p{
+    font-size:1rem;
+}
+
+.courseLabel{
+    letter-spacing:5px;
+    font-size:12px;
+}
+
+}
+
+/* ==========================
+   KEYFRAMES
+========================== */
+/* ==========================
+   COURSE HERO
+========================== */
+
+.courseHero{
+    background:#0b0d11;
+    padding:40px 20px 90px;
+}
+
+.courseHeroImage{
+    position:relative;
+    width:90%;
+    max-width:1400px;
+    height:650px;
+    margin:auto;
+    overflow:hidden;
+    border-radius:32px;
+    margin-top: 40px;
+}
+
+.heroImage{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:transform .8s ease;
+}
+
+.courseHeroImage:hover .heroImage{
+    transform:scale(1.05);
+}
+
+.courseHeroOverlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        rgba(0,0,0,.55),
+        rgba(0,0,0,.55)
+    );
+}
+
+.courseHeroContent{
+    position:absolute;
+    inset:0;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px;
+    z-index:2;
+}
+
+.courseLabel{
+    display:inline-block;
+    color:#f5a623;
+    letter-spacing:6px;
+    font-size:.85rem;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.courseHeroContent h1{
+    color:#fff;
+    font-size:clamp(3rem,6vw,5.5rem);
+    line-height:1.05;
+    font-weight:800;
+    margin-bottom:24px;
+}
+
+.courseHeroContent h1 span{
+    color:#f5a623;
+}
+
+.courseHeroContent p{
+    max-width:720px;
+    color:rgba(255,255,255,.88);
+    font-size:1.2rem;
+    line-height:1.8;
+}
+@keyframes fadeUp{
+from{
+    opacity:0;
+    transform:translateY(35px);
+}
+to{
+    opacity:1;
+    transform:translateY(0);
+}
+}
+
+@keyframes heroFloat{
+0%{
+    transform:translateY(0);
+}
+50%{
+    transform:translateY(-8px);
+}
+100%{
+    transform:translateY(0);
+}
+}
+
+@keyframes overlayFade{
+from{
+    opacity:0;
+}
+to{
+    opacity:1;
+}
+}
+
+@keyframes shine{
+100%{
+    left:150%;
+}
+}
+
+
+
+
+
+
+
+@media (max-width:1024px){
+
+.courseHero{
+    padding:35px 20px 70px;
+}
+
+.courseHeroImage{
+    height:560px;
+}
+
+.courseHeroContent h1{
+    font-size:4rem;
+}
+
+.courseHeroContent p{
+    max-width:620px;
+    font-size:1.08rem;
+}
+
+}
+
+
+
+@media (max-width:768px){
+
+.courseHero{
+    padding:25px 18px 60px;
+}
+
+.courseHeroImage{
+    height:430px;
+    border-radius:24px;
+}
+
+.courseHeroContent{
+    padding:25px;
+}
+
+.courseLabel{
+    font-size:.75rem;
+    letter-spacing:4px;
+    margin-bottom:16px;
+}
+
+.courseHeroContent h1{
+    font-size:2.7rem;
+    line-height:1.15;
+    margin-bottom:18px;
+}
+
+.courseHeroContent p{
+    font-size:1rem;
+    max-width:500px;
+    line-height:1.7;
+}
+
+}
+
+
+
+@media (max-width:576px){
+
+.courseHero{
+    padding:20px 15px 50px;
+}
+
+.courseHeroImage{
+    height:340px;
+    border-radius:18px;
+}
+
+.courseHeroContent{
+    padding:20px;
+}
+
+.courseLabel{
+    font-size:.68rem;
+    letter-spacing:3px;
+    margin-bottom:14px;
+}
+
+.courseHeroContent h1{
+    font-size:2rem;
+    line-height:1.2;
+    margin-bottom:15px;
+}
+
+.courseHeroContent p{
+    font-size:.92rem;
+    line-height:1.6;
+    max-width:100%;
+}
 
 }

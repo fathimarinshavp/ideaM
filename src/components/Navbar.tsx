@@ -38,13 +38,13 @@ export default function Navbar() {
         }}>
 
           {/* ── Logo ── */}
-          <Link href="/" className="logo-anim" style={{ display: "flex", alignItems: "center", textDecoration: "none" }}>
+          <Link href="/"   className="logo-anim navbar-logo" style={{ display: "flex", alignItems: "center", textDecoration: "none" }}>
            <Image
-  src="/logo.png"
+  src="/transpa.png"
   alt="Idea Media Logo"
-  width={90}
+  width={150}
   height={28}
-  className="footer-logo-img"
+className="navbar-logo-img"
 />
           </Link>
 
