@@ -1,11 +1,4 @@
-/* =====================================================
-   INTERNSHIP PAGE
-   Premium Agency Theme
-   Black / White / Amber
-===================================================== */
 
-
-/* ================= GLOBAL ================= */
 
 .page{
   background:#ffffff;
@@ -20,17 +13,7 @@
 }
 
 
-/* ======================
- HERO SECTION
-====================== */
 
-
-/* ==========================
-   INTERNSHIP HERO SECTION
-========================== */
-
-
-/* REMOVE WHITE SPACE */
 
 .page{
 
@@ -585,99 +568,7 @@ text-align:center;
 
 }
 
-/* ================= HERO ================= */
 
-
-
-/* ================= STATS ================= */
-
-
-/* .stats{
-
-background:white;
-
-padding:50px 0;
-
-}
-
-
-
-.statsGrid{
-
-display:grid;
-
-grid-template-columns:repeat(4,1fr);
-
-gap:22px;
-
-}
-
-
-
-.statCard{
-
-background:#111;
-
-color:white;
-
-border-radius:20px;
-
-padding:30px 20px;
-
-text-align:center;
-
-transition:.35s;
-
-}
-
-
-
-.statCard:hover{
-
-transform:translateY(-8px);
-
-}
-
-
-
-.statCard svg{
-
-width:30px;
-
-height:30px;
-
-color:#f5a623;
-
-margin-bottom:15px;
-
-}
-
-
-
-.statCard h3{
-
-font-size:38px;
-
-margin:5px 0;
-
-font-weight:800;
-
-}
-
-
-
-.statCard p{
-
-font-size:13px;
-
-color:#aaa;
-
-}
-
-
-/* ======================
- HERO SECTION
-====================== */
 
 
 
@@ -2120,5 +2011,572 @@ font-size:38px;
 
 }
 
+
+}
+
+
+
+/* ===================================
+   FINAL RESPONSIVE FIX
+=================================== */
+
+
+/* TABLET */
+
+@media(max-width:1000px){
+
+
+.container{
+    width:92%;
+}
+
+
+
+/* HERO */
+
+.heroBanner{
+
+    width:90%;
+    height:520px;
+
+}
+
+
+.heroCenter h1{
+
+    font-size:3.5rem;
+
+}
+
+
+
+/* TRACKS */
+
+.trackGrid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+
+
+.trackCard{
+
+    height:430px;
+
+}
+
+
+
+/* ABOUT */
+
+.aboutGrid,
+.includedGrid,
+.faqGrid{
+
+    grid-template-columns:1fr;
+
+    gap:40px;
+
+}
+
+
+
+.aboutImage{
+
+    height:420px;
+
+}
+
+
+
+/* JOURNEY */
+
+.timeline{
+
+    max-width:700px;
+
+}
+
+
+
+}
+
+
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+
+
+.container{
+
+    width:92%;
+
+}
+
+
+/* HERO */
+
+
+.internshipHero{
+
+    padding:30px 15px 60px;
+
+}
+
+
+
+.heroBanner{
+
+    width:100%;
+    height:450px;
+    border-radius:20px;
+
+}
+
+
+.heroCenter{
+
+    padding:20px;
+
+}
+
+
+.heroTag{
+
+    font-size:11px;
+    letter-spacing:4px;
+
+}
+
+
+.heroCenter h1{
+
+    font-size:2.4rem;
+
+}
+
+
+.heroCenter p{
+
+    font-size:15px;
+
+}
+
+
+
+.buttons{
+
+    flex-direction:column;
+    width:100%;
+
+}
+
+
+
+.primaryBtn,
+.secondaryBtn{
+
+    width:220px;
+    justify-content:center;
+
+}
+
+
+
+/* TRACKS */
+
+
+.tracks{
+
+    padding:70px 0;
+
+}
+
+
+
+.heading h2{
+
+    font-size:32px;
+
+}
+
+
+
+.trackGrid{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.trackCard{
+
+    height:420px;
+
+}
+
+
+
+/* ABOUT */
+
+
+.about,
+.journey,
+.included,
+.faq,
+.cta{
+
+    padding:70px 0;
+
+}
+
+
+
+.aboutContent h2,
+.includedText h2,
+.faq h2{
+
+    font-size:34px;
+
+}
+
+
+
+.aboutImage{
+
+    height:350px;
+
+}
+
+
+
+/* INCLUDE */
+
+.includeCards{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+/* JOURNEY */
+
+
+.timeline{
+
+    padding-left:0;
+
+}
+
+
+.step{
+
+    margin-left:40px;
+    padding:25px;
+
+}
+
+
+.stepNumber{
+
+    width:45px;
+    height:45px;
+    left:-55px;
+
+}
+
+
+
+
+/* FAQ */
+
+
+.faqGrid{
+
+    gap:30px;
+
+}
+
+
+
+/* CTA */
+
+
+.cta h2{
+
+    font-size:36px;
+
+}
+
+
+}
+
+
+
+/* SMALL MOBILE */
+
+
+@media(max-width:400px){
+
+
+.heroCenter h1{
+
+    font-size:2rem;
+
+}
+
+
+.trackCard{
+
+    height:380px;
+
+}
+
+
+.trackBody{
+
+    padding:22px;
+
+}
+
+
+.trackBody h3{
+
+    font-size:24px;
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+/* =========================
+        FAQ SECTION
+========================= */
+
+.faq{
+  background:#111;
+  padding:110px 0;
+  color:white;
+}
+
+
+.faqGrid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+  align-items:start;
+}
+
+
+/* LEFT CONTENT */
+
+.faqGrid > div:first-child span{
+
+  color:#f5a623;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:3px;
+  display:inline-block;
+  margin-bottom:20px;
+
+}
+
+
+.faq h2{
+
+  color:white;
+  font-size:48px;
+  line-height:1.15;
+  font-weight:800;
+  margin:15px 0;
+
+}
+
+
+.faq h2 strong{
+
+  color:#f5a623;
+  display:block;
+
+}
+
+
+
+/* FAQ LIST */
+
+.faqList{
+
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+
+}
+
+
+.faqItem{
+
+  background:#1b1b1b;
+  padding:28px;
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,.08);
+  transition:.3s ease;
+
+}
+
+
+.faqItem:hover{
+
+  border-color:#f5a623;
+  transform:translateY(-5px);
+
+}
+
+
+.faqItem h3{
+
+  color:white;
+  font-size:18px;
+  line-height:1.4;
+  margin-bottom:12px;
+
+}
+
+
+.faqItem p{
+
+  color:#aaa;
+  font-size:15px;
+  line-height:1.7;
+  margin:0;
+
+}
+
+
+
+/* =========================
+        TABLET
+========================= */
+
+@media(max-width:900px){
+
+
+.faq{
+
+  padding:80px 0;
+
+}
+
+
+.faqGrid{
+
+  grid-template-columns:1fr;
+  gap:45px;
+
+}
+
+
+.faqGrid > div:first-child{
+
+  text-align:center;
+
+}
+
+
+.faq h2{
+
+  font-size:38px;
+
+}
+
+
+}
+
+
+
+/* =========================
+        MOBILE
+========================= */
+
+@media(max-width:600px){
+
+
+.faq{
+
+  padding:65px 20px;
+
+}
+
+
+.faq h2{
+
+  font-size:30px;
+  line-height:1.2;
+
+}
+
+
+.faqGrid{
+
+  gap:35px;
+
+}
+
+
+.faqItem{
+
+  padding:20px;
+  border-radius:15px;
+
+}
+
+
+.faqItem h3{
+
+  font-size:16px;
+
+}
+
+
+.faqItem p{
+
+  font-size:14px;
+
+}
+
+
+}
+
+
+
+/* SMALL MOBILE */
+
+@media(max-width:400px){
+
+
+.faq h2{
+
+  font-size:26px;
+
+}
+
+
+.faqItem{
+
+  padding:18px;
+
+}
 
 }

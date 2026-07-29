@@ -129,13 +129,13 @@
 
   .contactImage {
     height: 200px;
-    border-radius: 14px;
+    border-radius: 12px;
   }
 
 
   .formCard {
     padding: 20px 16px;
-    border-radius: 16px;
+    border-radius: 10px;
   }
 
 
@@ -495,6 +495,176 @@ font-size:2rem;
 
 .heroCenter p{
 font-size:.88rem;
+}
+
+}
+
+
+
+/* CONTACT */
+
+.contactWrapper{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:70px;
+align-items:center;
+}
+
+.contactLeft{
+display:flex;
+flex-direction:column;
+}
+
+.contactCard{
+display:flex;
+align-items:flex-start;
+gap:18px;
+padding:18px;
+margin-bottom:18px;
+border-radius:18px;
+background:#fff;
+border:1px solid rgba(0,0,0,.08);
+transition:.35s;
+}
+
+.contactCard:hover{
+transform:translateY(-5px);
+box-shadow:0 20px 40px rgba(0,0,0,.08);
+}
+
+.contactIcon{
+width:54px;
+height:54px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:16px;
+background:#fff4df;
+color:#f5a623;
+flex-shrink:0;
+}
+
+.contactForm{
+background:#fff;
+padding:40px;
+border-radius:24px;
+box-shadow:0 25px 60px rgba(0,0,0,.08);
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.formGrid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:16px;
+}
+
+/* QUICK PATHS */
+
+.pathGrid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+margin-top:60px;
+}
+
+.pathCard{
+background:#13161d;
+border:1px solid rgba(255,255,255,.08);
+border-radius:24px;
+padding:40px 28px;
+text-align:center;
+transition:.35s;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+min-height:320px;
+}
+
+.pathCard:hover{
+transform:translateY(-10px);
+border-color:#f5a623;
+box-shadow:0 25px 60px rgba(245,166,35,.18);
+}
+
+.pathCard h3{
+color:#fff;
+margin-bottom:15px;
+font-size:1.35rem;
+}
+
+.pathCard p{
+color:rgba(255,255,255,.65);
+line-height:1.8;
+margin-bottom:30px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:992px){
+
+.contactWrapper{
+grid-template-columns:1fr;
+gap:50px;
+}
+
+.pathGrid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:768px){
+
+.formGrid{
+grid-template-columns:1fr;
+}
+
+.contactForm{
+padding:28px;
+}
+
+.pathGrid{
+grid-template-columns:1fr;
+gap:20px;
+}
+
+.contactCard{
+padding:16px;
+}
+
+.contactIcon{
+width:48px;
+height:48px;
+}
+
+}
+
+@media(max-width:480px){
+
+.contactWrapper{
+gap:35px;
+}
+
+.contactForm{
+padding:22px;
+border-radius:18px;
+}
+
+.pathCard{
+padding:28px 20px;
+min-height:auto;
+}
+
+.contactCard{
+gap:12px;
+}
+
+.contactIcon{
+width:42px;
+height:42px;
+border-radius:12px;
 }
 
 }

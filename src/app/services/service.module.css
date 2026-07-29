@@ -1,87 +1,3 @@
-/* /* .serviceGrid {
-  display:grid;
-  grid-template-columns: minmax(280px, 0.9fr) minmax(300px, 1.1fr);
-  gap:32px;
-  align-items:start;
-}
-
-
-.itemList {
-  display:flex;
-  flex-direction:column;
-  gap:16px;
-}
-
-
-.processGrid {
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:24px;
-}
-
-
-
-.itemList > div {
-  transition: transform .25s ease;
-}
-
-.itemList > div:hover {
-  transform:translateY(-3px);
-}
-
-
-
-
-@media(max-width:1000px){
-
-  .serviceGrid {
-    grid-template-columns:1fr;
-  }
-
-
-  .processGrid {
-    grid-template-columns:repeat(2,1fr);
-  }
-
-}
-
-
-
-
-@media(max-width:600px){
-
-  .serviceGrid {
-    gap:24px;
-  }
-
-
-  .processGrid {
-    grid-template-columns:1fr;
-    gap:16px;
-  }
-
-
-  .itemList > div {
-    padding:16px !important;
-  }
-
-
-  .itemList svg {
-    display:none;
-  }
-
-}
-.serviceCard{
-  padding:clamp(20px,4vw,40px);
-  background:var(--white);
-  border-radius:20px;
-} */
-
-
-/* .services-page{
-background:#090b10;
-} */
-
 
 .page{
     /* background:#0b0b0b; */
@@ -101,19 +17,9 @@ background:#090b10;
 .hero{
 
     position:relative;
-    /* padding:120px 0 80px; */
+   
      padding: 50px 0 40px; 
-    /* background:#090b10; */
-      /* background:black */
-/* radial-gradient(circle at top right,
-rgba(245,166,35,.10),
-transparent 30%),
-
-radial-gradient(circle at bottom left,
-rgba(245,166,35,.05),
-transparent 35%),
-
-#1E2124; */
+  
    background:
     linear-gradient(
         90deg,
@@ -381,27 +287,6 @@ transparent 35%),
 }
 
 
-
-/* .cardImage{
-
-    height:420px;
-
-    overflow:hidden;
-
-}
-
-
-
-.cardImage img{
-
-    width:90%;
-    height:90%;
-
-    object-fit:cover;
-
-    transition:.6s ease;
-
-} */
 
 
 .serviceImage{
@@ -937,16 +822,7 @@ transparent 35%),
 .services {
   background: white;
   padding: 120px 0;
-  /* background:
-radial-gradient(circle at top right,
-rgba(245,166,35,.10),
-transparent 30%),
 
-radial-gradient(circle at bottom left,
-rgba(245,166,35,.05),
-transparent 35%),
-
-#1E2124; */
 }
 
 .sectionHeader {
@@ -983,219 +859,6 @@ transparent 35%),
   font-size: 1rem;
 }
 
-/* =========================
-   SERVICE ROW
-========================= */
-
-/* .serviceSection {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: center;
-  margin-bottom: 110px;
-}
-
-.reverse {
-  direction: rtl;
-}
-
-.reverse > * {
-  direction: ltr;
-}
-
-
-.serviceImage {
-  position: relative;
-  overflow: hidden;
-  border-radius: 28px;
-  height: 520px;
-  box-shadow: 0 30px 70px rgba(0, 0, 0, .45);
-}
-
-.serviceImage img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: .8s ease;
-}
-
-.serviceSection:hover .serviceImage img {
-  transform: scale(1.08);
-}
-
-.serviceImage::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    180deg,
-    transparent,
-    rgba(0,0,0,.18)
-  );
-  z-index: 2;
-}
-
-
-.serviceImage::after {
-  content: "";
-  position: absolute;
-  top: 18px;
-  left: 18px;
-  right: 18px;
-  bottom: 18px;
-  border: 2px solid rgba(245,166,35,.55);
-  border-radius: 20px;
-  opacity: 0;
-  transition: .45s;
-  z-index: 3;
-}
-
-.serviceSection:hover .serviceImage::after {
-  opacity: 1;
-}
-
-
-.serviceContent{
-    max-width:520px;
-}
-.number {
-  font-size: 5rem;
-  font-weight: 800;
-  color: rgba(245,166,35,.18);
-  display: block;
-  line-height: 1;
-  margin-bottom: 10px;
-  transition: .4s;
-}
-
-.serviceSection:hover .number {
-  color: rgba(245,166,35,.35);
-}
-
-.line {
-  width: 70px;
-  height: 4px;
-  background: #f5a623;
-  border-radius: 20px;
-  margin: 22px 0 28px;
-}
-
-.serviceContent h3 {
-  color: #fff;
-  font-size: clamp(2rem,3vw,2.8rem);
-  line-height: 1.2;
-  margin-bottom: 22px;
-  font-weight: 700;
-  transition: .35s;
-}
-
-.serviceSection:hover h3 {
-  color: #f5a623;
-}
-
-.serviceContent p {
-  color: #aab2bd;
-  font-size: 1rem;
-  line-height: 1.9;
-  max-width: 520px;
-  margin-bottom: 35px;
-}
-
-
-.serviceBtn {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  text-decoration: none;
-  color: #fff;
-  font-weight: 600;
-  transition: .35s;
-}
-
-.serviceBtn svg {
-  transition: .35s;
-  color: #f5a623;
-}
-
-.serviceBtn:hover {
-  color: #f5a623;
-}
-
-.serviceBtn:hover svg {
-  transform: translateX(6px) rotate(45deg);
-}
-
-.serviceContent::before {
-  content: "";
-  position: absolute;
-  left: -25px;
-  top: 0;
-  width: 3px;
-  height: 0;
-  background: #f5a623;
-  transition: .5s;
-}
-
-.serviceSection:hover .serviceContent::before {
-  height: 100%;
-}
-
-
-
-@media (max-width: 992px) {
-
-  .serviceSection {
-    grid-template-columns: 1fr;
-    gap: 45px;
-    margin-bottom: 80px;
-  }
-
-  .reverse {
-    direction: ltr;
-  }
-
-  .serviceImage {
-    height: 380px;
-  }
-
-  .sectionHeader {
-    margin-bottom: 70px;
-  }
-}
-
-@media (max-width: 768px) {
-
-  .services {
-    padding: 80px 0;
-  }
-
-  .sectionHeader h2 {
-    font-size: 2.3rem;
-  }
-
-  .serviceImage {
-    height: 260px;
-    border-radius: 20px;
-  }
-
-  .number {
-    font-size: 3.5rem;
-  }
-
-  .serviceContent h3 {
-    font-size: 1.8rem;
-  }
-
-  .serviceContent p {
-    font-size: .95rem;
-    line-height: 1.8;
-  }
-
-  .line {
-    width: 55px;
-    margin: 18px 0 22px;
-  }
-} */
 
 
 
@@ -1348,4 +1011,267 @@ transparent 35%),
   .serviceContent {
     max-width: 100%;
   }
+}
+
+
+
+
+
+
+/* =========================
+   SERVICES RESPONSIVE
+========================= */
+
+.services {
+  padding: 100px 0;
+  background: #1a1a19;
+}
+
+
+.sectionHeader {
+  max-width: 650px;
+  margin: 0 auto 80px;
+  text-align: center;
+}
+
+
+.serviceRow {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+  padding: 60px 0;
+  border-top: 1px solid #2b2b2b;
+}
+
+
+.serviceRow.reverse {
+  flex-direction: row-reverse;
+}
+
+
+/* IMAGE */
+
+.serviceImage {
+  flex: 1;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+
+.serviceImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: .5s ease;
+}
+
+
+.serviceImage:hover img {
+  transform: scale(1.05);
+}
+
+
+
+/* CONTENT */
+
+.serviceContent {
+  flex: 1;
+  max-width: 500px;
+}
+
+
+.serviceNumber {
+  color: #f5a623;
+  font-size: 14px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 15px;
+}
+
+
+.serviceContent h3 {
+  color: white;
+  font-size: clamp(24px,3vw,34px);
+  margin-bottom: 18px;
+}
+
+
+.serviceContent p {
+  color: #999;
+  line-height: 1.8;
+  font-size: 15px;
+  margin-bottom: 25px;
+}
+
+
+.readMore {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #f5a623;
+  text-decoration: none;
+}
+
+
+/* =========================
+      TABLET
+========================= */
+
+@media(max-width:992px){
+
+  .services{
+    padding:80px 0;
+  }
+
+
+  .serviceRow,
+  .serviceRow.reverse{
+
+    flex-direction: column;
+    gap:35px;
+    padding:45px 0;
+
+  }
+
+
+  .serviceImage{
+
+    width:100%;
+    max-width:700px;
+
+  }
+
+
+  .serviceContent{
+
+    max-width:700px;
+    width:100%;
+
+  }
+
+
+}
+
+
+
+/* =========================
+      MOBILE
+========================= */
+
+@media(max-width:600px){
+
+
+  .services{
+    padding:60px 20px;
+  }
+
+
+  .sectionHeader{
+
+    margin-bottom:50px;
+
+  }
+
+
+  .sectionHeader h2{
+
+    font-size:28px;
+    line-height:1.3;
+
+  }
+
+
+  .sectionHeader p{
+
+    font-size:14px;
+
+  }
+
+
+  .serviceRow{
+
+    padding:35px 0;
+    gap:25px;
+
+  }
+
+
+  .serviceImage{
+
+    aspect-ratio:16 / 11;
+    border-radius:16px;
+
+  }
+
+
+  .serviceContent{
+
+    text-align:center;
+
+  }
+
+
+  .serviceNumber{
+
+    font-size:13px;
+
+  }
+
+
+  .serviceContent h3{
+
+    font-size:23px;
+
+  }
+
+
+  .serviceContent p{
+
+    font-size:14px;
+    line-height:1.7;
+
+  }
+
+
+  .readMore{
+
+    justify-content:center;
+
+  }
+
+}
+
+
+
+/* =========================
+      SMALL MOBILE
+========================= */
+
+@media(max-width:400px){
+
+
+  .services{
+
+    padding:50px 15px;
+
+  }
+
+
+  .sectionHeader h2{
+
+    font-size:24px;
+
+  }
+
+
+  .serviceContent h3{
+
+    font-size:21px;
+
+  }
+
+
 }

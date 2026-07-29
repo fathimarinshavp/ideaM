@@ -77,7 +77,7 @@ export default function ContactPage() {
       {/* ════ CONTACT FORM + INFO — light ════ */}
       <section className="section-light section-py">
         <div className="container">
-          <div className="grid-2" style={{ gap: "clamp(40px,6vw,80px)", alignItems: "start" }}>
+        <div className={styles.contactWrapper}>
 
             {/* Left — Info */}
             <div className="reveal">
@@ -95,11 +95,11 @@ export default function ContactPage() {
                   { icon: Mail,    label: "Email",    value: "hello@ideamedia.in" },
                   { icon: Phone,   label: "Phone",    value: "+91 98765 43210" },
                   { icon: MapPin,  label: "Location", value: "India — Available Remotely Worldwide" },
-                ].map((c) => {
-                  const Icon = c.icon;
-                  return (
-                    <div key={c.label} style={{ display: "flex", gap: "16px", alignItems: "flex-start" }}>
-                      <div style={{ width: "44px", height: "44px", borderRadius: "11px", background: "var(--amber-bg)", color: "var(--amber)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+               ].map((c) => {
+  const Icon = c.icon;
+  return (
+    <div key={c.label} className={styles.contactCard}>
+                      <div className={styles.contactIcon}>  
                         <Icon size={18} />
                       </div>
                       <div>
@@ -130,15 +130,15 @@ export default function ContactPage() {
                   </p>
                 </div>
               ) : (
-                <form
-                  onSubmit={handleSubmit}
-                  style={{ padding: "clamp(24px,4vw,40px)", background: "var(--white)", border: "1px solid var(--border)", borderRadius: "20px", display: "flex", flexDirection: "column", gap: "18px" }}
-                >
+               <form
+onSubmit={handleSubmit}
+className={styles.contactForm}
+>
                   <h3 className="font-display" style={{ fontSize: "1.3rem", color: "var(--ink)", marginBottom: "4px" }}>
                     Send us a message
                   </h3>
 
-                  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "14px" }}>
+               <div className={styles.formGrid}>
                     <div>
                       <label style={{ display: "block", fontSize: "0.8rem", fontWeight: 600, color: "var(--ink)", marginBottom: "6px" }}>First Name *</label>
                       <input required className="input-field" placeholder="Jane" />
@@ -190,21 +190,7 @@ export default function ContactPage() {
               Not sure where to <span className="amber-mark">start?</span>
             </h2>
           </div>
-          <div className="grid-3">
-            {[
-              { title: "For Businesses",       desc: "Book a free strategy call to explore how we can grow your brand.", href: "/services",   cta: "See Services" },
-              { title: "For Students",         desc: "Apply for our internship program and start building your career.", href: "/internship", cta: "Apply Now" },
-              { title: "For Course Learners",  desc: "Browse our professional skill tracks and find the right program.", href: "/courses",    cta: "View Courses" },
-            ].map((p, i) => (
-              <div key={p.title} className={`card-dark reveal reveal-delay-${i + 1}`} style={{ textAlign: "center" }}>
-                <h3 className="font-display" style={{ fontSize: "1.1rem", color: "#fff", marginBottom: "10px" }}>{p.title}</h3>
-                <p style={{ color: "rgba(255,255,255,0.5)", fontSize: "0.875rem", lineHeight: 1.65, marginBottom: "20px" }}>{p.desc}</p>
-                <Link href={p.href} className="btn btn-primary" style={{ fontSize: "0.875rem", padding: "10px 22px" }}>
-                  {p.cta} <ArrowRight size={15} />
-                </Link>
-              </div>
-            ))}
-          </div>
+        
         </div>
       </section>
     </div>
