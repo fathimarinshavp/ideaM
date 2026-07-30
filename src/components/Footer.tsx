@@ -1,190 +1,118 @@
-
-
 import Link from "next/link";
+import { Mail, Phone, MapPin } from "lucide-react";
 import Image from "next/image";
 import {
-  FaInstagram,
   FaFacebookF,
+  FaInstagram,
   FaLinkedinIn,
-  FaArrowRight,
-  FaPhoneAlt,
-  FaEnvelope,
-  FaMapMarkerAlt,
+  FaYoutube,
 } from "react-icons/fa";
-
-const quickLinks = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Services", href: "/services" },
-  { label: "Internship", href: "/internship" },
-  { label: "Courses", href: "/courses" },
-  { label: "Contact", href: "/contact" },
-];
-
-const services = [
-  "Digital Marketing",
-  "Branding",
-  "Web Development",
-  "Graphic Design",
-  "Video Editing",
-  "UI/UX Design",
-];
 
 export default function Footer() {
   return (
     <footer className="footer">
-      {/* ================= CTA ================= */}
-
-      
-
-      {/* ================= MAIN ================= */}
 
       <div className="container">
 
         <div className="footer-grid">
 
-        
-<div className="footer-brand-section">
+          {/* Company */}
 
-  <Link href="/" className="footer-brand-logo">
-    <Image
-      src="/white.png"
-      alt="Idea Media"
-      width={140}
-      height={55}
-      className="footer-brand-image"
-      priority
-    />
-  </Link>
+          <div className="footer-col">
 
-  <p className="footer-brand-text">
-    Idea Media is a creative digital agency delivering branding,
-    marketing, web development and industry-focused training
-    programs that empower businesses and future professionals.
-  </p>
+          <div className="footer-logo">
 
-  <div className="footer-brand-social">
-
-    <Link href="/" className="footer-brand-social-link">
-      <FaInstagram />
-    </Link>
-
-    <Link href="/" className="footer-brand-social-link">
-      <FaFacebookF />
-    </Link>
-
-    <Link href="/" className="footer-brand-social-link">
-      <FaLinkedinIn />
-    </Link>
-
-  </div>
+  <Image
+    src="/transpa.png"
+    alt="Idea Media Logo"
+    width={180}
+    height={110}
+    className="footer-logo-img"
+    priority
+  />
 
 </div>
+
+            <p>
+              Helping businesses grow through branding, web development,
+              digital marketing, and creative media while empowering
+              students through practical internships and professional
+              training.
+            </p>
+
+        <div className="footer-social">
+  <a href="#"><FaFacebookF size={18} /></a>
+  <a href="#"><FaInstagram size={18} /></a>
+  <a href="#"><FaLinkedinIn size={18} /></a>
+  <a href="#"><FaYoutube size={18} /></a>
+</div>
+
+          </div>
+
           {/* Quick Links */}
 
-          <div>
+          <div className="footer-col">
 
-            <h4 className="footer-title">
-              Quick Links
-            </h4>
+            <h3>Quick Links</h3>
 
-            <div className="footer-links">
-
-              {quickLinks.map((item) => (
-                <Link key={item.href} href={item.href}>
-                  {item.label}
-                </Link>
-              ))}
-
-            </div>
+            <Link href="/">Home</Link>
+            <Link href="/about">About</Link>
+            <Link href="/services">Services</Link>
+            <Link href="/internship">Internship</Link>
+            <Link href="/courses">Courses</Link>
+            <Link href="/contact">Contact</Link>
 
           </div>
 
           {/* Services */}
 
-          <div>
+          <div className="footer-col">
 
-            <h4 className="footer-title">
-              Services
-            </h4>
+            <h3>Services</h3>
 
-            <div className="footer-links">
-
-              {services.map((service) => (
-                <Link
-                  href="/services"
-                  key={service}
-                >
-                  {service}
-                </Link>
-              ))}
-
-            </div>
+            <span>Branding</span>
+            <span>Web Development</span>
+            <span>Digital Marketing</span>
+            <span>SEO</span>
+            <span>Graphic Design</span>
+            <span>Video Editing</span>
 
           </div>
 
           {/* Contact */}
 
-          <div>
+          <div className="footer-col">
 
-            <h4 className="footer-title">
-              Contact
-            </h4>
+            <h3>Contact</h3>
 
             <div className="footer-contact">
 
               <p>
-                <FaPhoneAlt />
-                +91 98765 43210
-              </p>
-
-              <p>
-                <FaEnvelope />
-                hello@ideamedia.in
-              </p>
-
-              <p>
-                <FaMapMarkerAlt />
+                <MapPin size={18} />
                 Malappuram, Kerala
               </p>
 
-            </div>
+              <p>
+                <Phone size={18} />
+                +91 XXXXX XXXXX
+              </p>
 
-            <Link
-              href="/contact"
-              className="footer-contact-btn"
-            >
-              Contact Us
-            </Link>
+              <p>
+                <Mail size={18} />
+                info@ideamedia.in
+              </p>
+
+            </div>
 
           </div>
 
         </div>
 
-        {/* ================= BOTTOM ================= */}
-
         <div className="footer-bottom">
 
           <p>
-            © {new Date().getFullYear()} Idea Media.
-            All Rights Reserved.
+            © {new Date().getFullYear()} Idea Media. All Rights Reserved.
           </p>
-
-          <div className="footer-bottom-links">
-
-            <Link href="#">
-              Privacy Policy
-            </Link>
-
-            <Link href="#">
-              Terms & Conditions
-            </Link>
-
-            <Link href="#">
-              Sitemap
-            </Link>
-
-          </div>
 
         </div>
 
