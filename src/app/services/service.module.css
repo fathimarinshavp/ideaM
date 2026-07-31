@@ -1463,3 +1463,861 @@
     color:#fbbf24;
 
 }
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   FINAL RESPONSIVE SERVICES PAGE
+===================================================== */
+
+
+/* GLOBAL IMAGE FIX */
+
+.page img{
+    max-width:100%;
+}
+
+
+
+/* ================= HERO RESPONSIVE ================= */
+
+
+@media(max-width:1200px){
+
+    .banner{
+        height:500px;
+    }
+
+    .bannerContent h1{
+        font-size:3.5rem;
+    }
+
+
+    .hero{
+        padding:40px 0;
+    }
+
+}
+
+
+
+/* ================= TABLET ================= */
+
+
+@media(max-width:992px){
+
+
+    .hero{
+        padding:35px 0;
+    }
+
+
+    .banner{
+
+        height:450px;
+        border-radius:22px;
+
+    }
+
+
+    .bannerContent{
+
+        padding:30px;
+
+    }
+
+
+    .bannerContent span{
+
+        letter-spacing:5px;
+
+    }
+
+
+    .bannerContent h1{
+
+        font-size:3rem;
+
+    }
+
+
+    .bannerContent p{
+
+        font-size:1rem;
+
+    }
+
+
+
+
+    /* SERVICES */
+
+
+    .services{
+
+        padding:80px 0;
+
+    }
+
+
+
+    .sectionHeader{
+
+        max-width:600px;
+        margin-bottom:60px;
+
+    }
+
+
+    .sectionHeader h2{
+
+        font-size:38px;
+
+    }
+
+
+    .sectionHeader p{
+
+        font-size:16px;
+
+    }
+
+
+
+    .serviceRow,
+    .serviceRow.reverse{
+
+
+        display:flex;
+        flex-direction:column;
+
+        gap:35px;
+
+        padding:45px 0;
+
+    }
+
+
+
+    .serviceImage{
+
+        width:100%;
+
+        height:auto;
+
+        aspect-ratio:16/10;
+
+        border-radius:20px;
+
+    }
+
+
+
+    .serviceImage img{
+
+        height:100%;
+        width:100%;
+        object-fit:cover;
+
+    }
+
+
+
+
+    .serviceContent{
+
+        max-width:100%;
+
+    }
+
+
+
+    .serviceContent h3{
+
+        font-size:32px;
+
+    }
+
+
+    .serviceContent p{
+
+        font-size:16px;
+
+    }
+
+
+}
+
+
+
+
+
+
+/* ================= MOBILE ================= */
+
+
+@media(max-width:768px){
+
+
+
+    .page{
+
+        overflow:hidden;
+
+    }
+
+
+
+    /* HERO */
+
+
+    .hero{
+
+        padding:25px 15px;
+
+    }
+
+
+
+    .banner{
+
+        height:380px;
+
+        border-radius:18px;
+
+    }
+
+
+
+    .bannerContent{
+
+        justify-content:center;
+
+        text-align:center;
+
+        padding:20px;
+
+    }
+
+
+
+    .bannerContent span{
+
+        font-size:.7rem;
+
+        letter-spacing:4px;
+
+    }
+
+
+
+    .bannerContent h1{
+
+        font-size:2.3rem;
+
+        line-height:1.2;
+
+        margin:15px 0;
+
+    }
+
+
+
+    .bannerContent p{
+
+        font-size:.9rem;
+
+    }
+
+
+
+
+
+    .heroGlow{
+
+        width:300px;
+        height:300px;
+
+        right:-120px;
+        top:-100px;
+
+    }
+
+
+
+
+
+    /* SERVICE HEADER */
+
+
+    .services{
+
+        padding:60px 15px;
+
+    }
+
+
+
+    .sectionHeader{
+
+        margin-bottom:45px;
+
+    }
+
+
+
+    .sectionHeader span{
+
+        font-size:11px;
+
+        letter-spacing:3px;
+
+    }
+
+
+
+    .sectionHeader h2{
+
+        font-size:28px;
+
+        line-height:1.25;
+
+    }
+
+
+
+    .sectionHeader p{
+
+        font-size:14px;
+
+        line-height:1.7;
+
+    }
+
+
+
+
+
+
+    /* SERVICE ROW */
+
+
+    .serviceRow,
+    .serviceRow.reverse{
+
+        padding:35px 0;
+
+        gap:25px;
+
+    }
+
+
+
+
+    .serviceImage{
+
+        aspect-ratio:16/11;
+
+        border-radius:16px;
+
+    }
+
+
+
+
+    .serviceContent{
+
+        text-align:center;
+
+    }
+
+
+
+    .serviceNumber{
+
+        font-size:13px;
+
+        letter-spacing:2px;
+
+    }
+
+
+
+
+    .serviceContent h3{
+
+        font-size:24px;
+
+        margin:15px 0;
+
+    }
+
+
+
+    .serviceContent p{
+
+        font-size:14px;
+
+        line-height:1.7;
+
+    }
+
+
+
+
+    .readMore{
+
+        justify-content:center;
+
+        font-size:14px;
+
+    }
+
+
+
+}
+
+
+
+
+
+
+
+/* ================= SMALL MOBILE ================= */
+
+
+@media(max-width:480px){
+
+
+
+    .banner{
+
+        height:320px;
+
+    }
+
+
+
+    .bannerContent h1{
+
+        font-size:2rem;
+
+    }
+
+
+
+    .bannerContent p{
+
+        display:none;
+
+    }
+
+
+
+
+    .sectionHeader h2{
+
+        font-size:24px;
+
+    }
+
+
+
+    .serviceContent h3{
+
+        font-size:21px;
+
+    }
+
+
+
+    .serviceContent p{
+
+        font-size:13px;
+
+    }
+
+
+
+    .serviceRow{
+
+        border-bottom:1px solid rgba(255,255,255,.08);
+
+    }
+
+
+}
+
+
+
+
+
+/* ================= VERY SMALL DEVICES ================= */
+
+
+@media(max-width:360px){
+
+
+    .banner{
+
+        height:280px;
+
+    }
+
+
+
+    .bannerContent h1{
+
+        font-size:1.7rem;
+
+    }
+
+
+
+    .services{
+
+        padding-left:12px;
+        padding-right:12px;
+
+    }
+
+
+    .serviceContent h3{
+
+        font-size:19px;
+
+    }
+
+} 
+
+
+
+/* ================= SERVICES ================= */
+
+.services{
+    background:#0b0d11;
+    padding:100px 0;
+    color:white;
+}
+
+
+.sectionHeader{
+    max-width:750px;
+    margin:0 auto 80px;
+    text-align:center;
+}
+
+
+.sectionHeader span{
+    color:#f5a623;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:4px;
+}
+
+
+.sectionHeader h2{
+    margin-top:20px;
+    font-size:52px;
+    line-height:1.2;
+    color:#fff;
+}
+
+
+.sectionHeader p{
+    margin-top:20px;
+    color:#9ca3af;
+    font-size:18px;
+    line-height:1.7;
+}
+
+
+
+/* CARD ROW */
+
+.serviceRow{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    align-items:center;
+
+    gap:70px;
+
+    padding:70px 0;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+
+
+.serviceRow.reverse .serviceImage{
+    order:2;
+}
+
+
+.serviceRow.reverse .serviceContent{
+    order:1;
+}
+
+
+
+/* IMAGE CARD */
+
+
+.serviceImage{
+
+    width:100%;
+
+    height:400px;
+
+    overflow:hidden;
+
+    border-radius:24px;
+
+}
+
+
+.serviceImage img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:.5s ease;
+
+}
+
+
+
+.serviceImage:hover img{
+
+    transform:scale(1.05);
+
+}
+
+
+
+
+
+/* CONTENT */
+
+
+.serviceContent{
+
+    width:100%;
+
+    max-width:520px;
+
+}
+
+
+
+.serviceNumber{
+
+    color:#f5a623;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    letter-spacing:3px;
+
+}
+
+
+
+.serviceContent h3{
+
+    color:white;
+
+    font-size:38px;
+
+    margin:20px 0;
+
+    line-height:1.25;
+
+}
+
+
+
+.serviceContent p{
+
+    color:#9ca3af;
+
+    font-size:17px;
+
+    line-height:1.8;
+
+}
+
+
+
+.readMore{
+
+    margin-top:25px;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:#f5a623;
+
+    text-decoration:none;
+
+}
+
+
+
+
+
+/* ================= TABLET ================= */
+
+@media(max-width:992px){
+
+
+    .serviceRow,
+    .serviceRow.reverse{
+
+        grid-template-columns:1fr;
+
+        gap:35px;
+
+        padding:50px 0;
+
+    }
+
+
+    .serviceRow.reverse .serviceImage,
+    .serviceRow.reverse .serviceContent{
+
+        order:initial;
+
+    }
+
+
+
+    .serviceImage{
+
+        height:350px;
+
+    }
+
+
+
+    .serviceContent{
+
+        max-width:100%;
+
+    }
+
+
+}
+
+
+
+
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width:600px){
+
+
+    .services{
+
+        padding:60px 15px;
+
+    }
+
+
+
+    .sectionHeader{
+
+        margin-bottom:45px;
+
+    }
+
+
+
+    .sectionHeader h2{
+
+        font-size:28px;
+
+    }
+
+
+
+    .sectionHeader p{
+
+        font-size:14px;
+
+    }
+
+
+
+    .serviceRow{
+
+        padding:35px 0;
+
+        gap:25px;
+
+    }
+
+
+
+    .serviceImage{
+
+        height:230px;
+
+        border-radius:18px;
+
+    }
+
+
+
+    .serviceContent{
+
+        text-align:center;
+
+    }
+
+
+
+    .serviceContent h3{
+
+        font-size:24px;
+
+    }
+
+
+
+    .serviceContent p{
+
+        font-size:14px;
+
+    }
+
+
+
+    .readMore{
+
+        justify-content:center;
+
+    }
+
+}
