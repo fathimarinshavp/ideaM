@@ -668,3 +668,745 @@ border-radius:12px;
 }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   CONTACT DARK SECTION
+========================================= */
+
+.contactSection{
+
+    background:#0b0d11;
+
+    padding:100px 0;
+
+    color:white;
+
+}
+
+
+
+.contactLayout{
+
+    display:grid;
+
+    grid-template-columns:0.9fr 1.1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+
+
+/* =========================================
+   LEFT INFO
+========================================= */
+
+
+.contactInfo{
+
+    max-width:520px;
+
+}
+
+
+
+.contactBadge{
+
+    display:inline-block;
+
+    color:#f5a623;
+
+    letter-spacing:5px;
+
+    font-size:.75rem;
+
+    font-weight:700;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.contactInfo h2{
+
+    color:white;
+
+    font-size:clamp(2.5rem,5vw,4.5rem);
+
+    line-height:1.1;
+
+    font-weight:800;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.contactInfo h2 span{
+
+    color:#f5a623;
+
+}
+
+
+
+.contactInfo p{
+
+    color:rgba(255,255,255,.65);
+
+    line-height:1.8;
+
+    font-size:1rem;
+
+    margin-bottom:40px;
+
+}
+
+
+
+/* INFO CARDS */
+
+.infoCards{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+}
+
+
+
+.infoCard{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    padding:18px 20px;
+
+    background:#12151c;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:18px;
+
+    transition:.35s ease;
+
+}
+
+
+
+.infoCard:hover{
+
+    transform:translateX(8px);
+
+    border-color:#f5a623;
+
+}
+
+
+
+.infoIcon{
+
+    width:55px;
+
+    height:55px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:16px;
+
+    background:rgba(245,166,35,.12);
+
+    color:#f5a623;
+
+}
+
+
+
+.infoCard span{
+
+    display:block;
+
+    color:rgba(255,255,255,.5);
+
+    font-size:.75rem;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+    margin-bottom:5px;
+
+}
+
+
+
+.infoCard strong{
+
+    color:white;
+
+    font-size:.95rem;
+
+}
+
+
+
+.quickLinks{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-top:35px;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+.quickLinks a{
+
+    color:#f5a623;
+
+    border:1px solid rgba(245,166,35,.4);
+
+    padding:10px 20px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    font-size:.85rem;
+
+    transition:.3s;
+
+}
+
+
+
+.quickLinks a:hover{
+
+    background:#f5a623;
+
+    color:#111;
+
+}
+
+
+
+
+
+
+/* =========================================
+   FORM BOX
+========================================= */
+
+
+.formBox{
+
+    background:#12151c;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:28px;
+
+    padding:40px;
+
+    box-shadow:0 30px 80px rgba(0,0,0,.4);
+
+}
+
+
+
+.formHeader h3{
+
+    color:white;
+
+    font-size:1.8rem;
+
+    margin-bottom:8px;
+
+}
+
+
+
+.formHeader p{
+
+    color:rgba(255,255,255,.55);
+
+    margin-bottom:30px;
+
+}
+
+
+
+.modernForm{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+
+
+.twoInput{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:16px;
+
+}
+
+
+
+.modernForm input,
+.modernForm select,
+.modernForm textarea{
+
+    width:100%;
+
+    padding:15px 18px;
+
+    background:#0b0d11;
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:14px;
+
+    color:white;
+
+    outline:none;
+
+    font-size:.95rem;
+
+    transition:.3s;
+
+}
+
+
+
+.modernForm input:focus,
+.modernForm select:focus,
+.modernForm textarea:focus{
+
+    border-color:#f5a623;
+
+}
+
+
+
+.modernForm textarea{
+
+    resize:none;
+
+}
+
+
+
+.modernForm button{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#f5a623;
+
+    color:#111;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+
+.modernForm button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 15px 30px rgba(245,166,35,.3);
+
+}
+
+
+
+
+
+/* =========================================
+   QUICK PATH SECTION
+========================================= */
+
+
+.pathSection{
+
+    background:#0b0d11;
+
+    padding:90px 0;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+
+
+.pathHeader{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+
+
+.pathHeader span{
+
+    color:#f5a623;
+
+    letter-spacing:5px;
+
+    font-size:.75rem;
+
+    font-weight:700;
+
+}
+
+
+
+.pathHeader h2{
+
+    color:white;
+
+    font-size:clamp(2.5rem,5vw,4rem);
+
+    line-height:1.1;
+
+    margin-top:20px;
+
+}
+
+
+
+.pathHeader h2 span{
+
+    color:#f5a623;
+
+}
+
+
+
+
+.pathGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:28px;
+
+}
+
+
+
+.pathCard{
+
+    background:#12151c;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    padding:40px 30px;
+
+    border-radius:25px;
+
+    min-height:280px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    transition:.4s;
+
+}
+
+
+
+.pathCard:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#f5a623;
+
+    box-shadow:0 25px 60px rgba(245,166,35,.15);
+
+}
+
+
+
+.pathCard h3{
+
+    color:white;
+
+    font-size:1.5rem;
+
+}
+
+
+
+.pathCard p{
+
+    color:rgba(255,255,255,.6);
+
+    line-height:1.8;
+
+}
+
+
+
+.pathCard a{
+
+    color:#f5a623;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+}
+
+
+
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+
+@media(max-width:992px){
+
+
+.contactLayout{
+
+    grid-template-columns:1fr;
+
+    gap:50px;
+
+}
+
+
+
+.contactInfo{
+
+    max-width:100%;
+
+}
+
+
+
+.pathGrid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+
+}
+
+
+
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+
+@media(max-width:768px){
+
+
+.contactSection{
+
+    padding:70px 0;
+
+}
+
+
+
+.contactLayout{
+
+    gap:35px;
+
+}
+
+
+
+.formBox{
+
+    padding:25px;
+
+    border-radius:20px;
+
+}
+
+
+
+.twoInput{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.contactInfo h2{
+
+    font-size:2.3rem;
+
+}
+
+
+
+.infoCard{
+
+    padding:15px;
+
+}
+
+
+
+.quickLinks a{
+
+    width:100%;
+
+    text-align:center;
+
+}
+
+
+
+.pathSection{
+
+    padding:70px 0;
+
+}
+
+
+
+.pathGrid{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.pathCard{
+
+    padding:30px 22px;
+
+    min-height:240px;
+
+}
+
+
+
+}
+
+
+
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+
+@media(max-width:400px){
+
+
+.contactInfo h2{
+
+    font-size:2rem;
+
+}
+
+
+
+.formBox{
+
+    padding:20px;
+
+}
+
+
+
+.infoIcon{
+
+    width:45px;
+
+    height:45px;
+
+}
+
+
+
+.pathCard h3{
+
+    font-size:1.25rem;
+
+}
+
+
+}
+
+

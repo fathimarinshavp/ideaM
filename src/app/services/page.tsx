@@ -17,6 +17,7 @@ import styles from "./service.module.css";
 
 const services = [
   {
+    slug: "branding-identity",
     title: "Branding & Identity",
     image: "https://images.unsplash.com/photo-1611241893603-3c359704e0ee?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bG9nbyUyMGRlc2lnbnxlbnwwfHwwfHx8MA%3D%3D",
     desc:
@@ -24,6 +25,7 @@ const services = [
   },
 
   {
+    slug: "marketing-solutions",
     title: "Marketing Solutions",
     image: "https://media.istockphoto.com/id/2153931453/photo/indian-hindu-gen-z-professional-colleagues-ladies-working-together-at-indoor-job-office-place.jpg?s=1024x1024&w=is&k=20&c=r3S6sg1Sdg5wN1m0ghvQcKVywhBctzz52wsPuDoPxUw=",
     desc:
@@ -31,6 +33,7 @@ const services = [
   },
 
   {
+     slug: "digital-marketing-seo",
     title: "Digital Marketing & SEO",
     image: "https://media.istockphoto.com/id/2187866123/photo/team-collaboration-at-a-business-meeting-with-data-analysis.jpg?s=1024x1024&w=is&k=20&c=VFQCVXXJ5GZZny6J8RYJgAGYMoY8SgHss90ULi5Ss2o=",
     desc:
@@ -38,6 +41,7 @@ const services = [
   },
 
   {
+    slug: "creative-design-motion",
     title: "Creative Design & Motion",
     image: "https://plus.unsplash.com/premium_photo-1683147638125-fd31a506a429?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGRlc2lnbnxlbnwwfHwwfHx8MA%3D%3D",
     desc:
@@ -45,6 +49,7 @@ const services = [
   },
 
   {
+      slug: "business-consulting",
     title: "Business Consulting",
     image: "https://images.unsplash.com/photo-1556155092-490a1ba16284?auto=format&fit=crop&w=1600&q=80",
     desc:
@@ -133,7 +138,7 @@ alt="Gewan Services"
 <div className={styles.overlay}></div>
 
 
-
+{/* 
 <div className={styles.bannerContent}>
 
 <span>
@@ -151,8 +156,22 @@ Technology solutions that help businesses grow
 </p>
 
 
-</div>
+</div> */}
+<div className={styles.bannerContent}>
 
+<span className={styles.serviceLabel}>
+  SERVICES
+</span>
+
+<h1>
+  Solutions We <strong>Provide</strong>
+</h1>
+
+<p>
+  Technology solutions that help businesses grow
+</p>
+
+</div>
 
 
 </div>
@@ -276,73 +295,6 @@ Read More
 
 
 
-{/* ================= SERVICES ================= */}
-
-{/* ===================== SERVICES ===================== */}
-
-{/* <section className={styles.services}>
-  <div className="container">
-
-    <div className={styles.sectionHeader}>
-      <span>OUR SERVICES</span>
-
-      <h2>
-       
-      
-          Going beyond what’s possible
-      </h2>
-
-     
-    </div>
-
-    {services.map((service, index) => (
-      <div
-        key={index}
-        className={`${styles.serviceSection} ${
-          index % 2 !== 0 ? styles.reverse : ""
-        }`}
-      >
-        
-
-        <div className={styles.serviceImage}>
-
-          <img
-            src={service.image}
-            alt={service.title}
-          />
-
-        </div>
-
-    
-
-        <div className={styles.serviceContent}>
-
-          <span className={styles.number}>
-            {(index + 1).toString().padStart(2, "0")}
-          </span>
-
-          <div className={styles.line}></div>
-
-          <h3>{service.title}</h3>
-
-          <p>{service.desc}</p>
-
-          <Link
-            href="/contact"
-            className={styles.serviceBtn}
-          >
-            Explore Service
-
-            <ArrowUpRight size={18}/>
-          </Link>
-
-        </div>
-
-      </div>
-    ))}
-
-  </div>
-</section> */}
 
 <section className={styles.services}>
   <div className="container">
@@ -386,10 +338,13 @@ Read More
             {service.desc}
           </p>
 
-          <Link href="/contact" className={styles.readMore}>
-            Read More
-            <ArrowUpRight size={18} />
-          </Link>
+         <Link
+  href={`/services/${service.slug}`}
+  className={styles.readMore}
+>
+  Read More
+  <ArrowUpRight size={18} />
+</Link>
 
         </div>
 

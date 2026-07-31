@@ -1,0 +1,778 @@
+/* =====================================
+   INTERNSHIP DETAILS PAGE
+===================================== */
+
+.internship-detail{
+
+    background:#050505;
+    color:white;
+    min-height:100vh;
+
+}
+
+
+
+/* =====================================
+   HERO SECTION
+===================================== */
+
+
+.internship-hero{
+
+    padding:120px 0;
+    overflow:hidden;
+
+}
+
+
+
+.internship-container{
+
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+
+    align-items:center;
+
+    gap:70px;
+
+}
+
+
+
+/* =====================================
+   IMAGE
+===================================== */
+
+
+.internship-image{
+
+    height:620px;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+
+
+.internship-image img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+}
+
+
+
+.internship-image::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+        180deg,
+        transparent 30%,
+        rgba(0,0,0,.85)
+    );
+
+}
+
+
+
+.image-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    rgba(245,166,35,.15);
+
+    z-index:1;
+
+}
+
+
+
+/* IMAGE TITLE */
+
+
+.internship-image h2{
+
+    position:absolute;
+
+    bottom:45px;
+
+    left:40px;
+
+    right:40px;
+
+    z-index:3;
+
+
+    font-size:42px;
+
+    line-height:1.2;
+
+    font-weight:800;
+
+    color:white;
+
+    text-shadow:
+    0 10px 40px black;
+
+}
+
+
+
+.internship-image h2::before{
+
+    content:"";
+
+    display:block;
+
+    width:55px;
+
+    height:3px;
+
+    background:#f5a623;
+
+    margin-bottom:20px;
+
+}
+
+
+
+/* =====================================
+ CONTENT
+===================================== */
+
+
+.internship-content span{
+
+    display:inline-block;
+
+    color:#f5a623;
+
+    font-size:14px;
+
+    letter-spacing:4px;
+
+    font-weight:600;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.internship-content h1{
+
+    font-size:58px;
+
+    line-height:1.15;
+
+    font-weight:800;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.internship-content p{
+
+    color:#a0a0a0;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    max-width:550px;
+
+    margin-bottom:40px;
+
+}
+
+
+
+.internship-content a{
+
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:16px 35px;
+
+    border-radius:50px;
+
+    background:#f5a623;
+
+    color:#000;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+
+
+.internship-content a:hover{
+
+    background:white;
+
+    transform:translateY(-4px);
+
+}
+
+
+
+
+
+/* =====================================
+ WHY CHOOSE SECTION
+===================================== */
+
+
+.choose-section{
+
+    padding:100px 0;
+
+    background:#080808;
+
+}
+
+
+
+.container{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+}
+
+
+
+
+/* HEADER */
+
+
+.choose-title span{
+
+    color:#f5a623;
+
+    font-size:14px;
+
+    letter-spacing:3px;
+
+}
+
+
+
+.choose-title h2{
+
+    margin-top:20px;
+
+    font-size:48px;
+
+    line-height:1.2;
+
+    font-weight:800;
+
+}
+
+
+
+.choose-title strong{
+
+    color:#f5a623;
+
+}
+
+
+
+
+
+/* =====================================
+ CARDS
+===================================== */
+
+
+.choose-grid{
+
+    margin-top:60px;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+
+}
+
+
+
+.choose-card{
+
+    padding:35px 30px;
+
+    background:#080d13;
+
+    border:1px solid #1c2938;
+
+    border-radius:20px;
+
+    transition:.35s ease;
+
+}
+
+
+
+.choose-card:hover{
+
+    border-color:#f5a623;
+
+    transform:translateY(-8px);
+
+}
+
+
+
+
+
+/* ICON */
+
+
+.icon{
+
+    width:60px;
+
+    height:60px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:
+    rgba(245,166,35,.1);
+
+    border-radius:15px;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.icon svg{
+
+    width:32px;
+
+    height:32px;
+
+    color:#f5a623;
+
+}
+
+
+
+
+
+.choose-card h3{
+
+    font-size:24px;
+
+    margin-bottom:12px;
+
+}
+
+
+
+.choose-card p{
+
+    color:#9299a6;
+
+    line-height:1.7;
+
+    font-size:15px;
+
+}
+
+
+
+
+/* =====================================
+ LAPTOP
+===================================== */
+
+
+@media(max-width:1100px){
+
+
+.internship-hero{
+
+    padding:100px 0;
+
+}
+
+
+
+.internship-container{
+
+    gap:45px;
+
+}
+
+
+
+.internship-image{
+
+    height:520px;
+
+}
+
+
+
+.internship-image h2{
+
+    font-size:36px;
+
+}
+
+
+
+.internship-content h1{
+
+    font-size:45px;
+
+}
+
+
+
+.internship-content p{
+
+    font-size:16px;
+
+}
+
+
+
+.choose-title h2{
+
+    font-size:40px;
+
+}
+
+
+}
+
+
+
+
+
+/* =====================================
+ TABLET
+===================================== */
+
+
+@media(max-width:768px){
+
+
+.internship-hero{
+
+    padding:80px 0;
+
+}
+
+
+
+.internship-container{
+
+    width:90%;
+
+    grid-template-columns:1fr;
+
+    gap:45px;
+
+}
+
+
+
+.internship-image{
+
+    height:450px;
+
+}
+
+
+
+.internship-image h2{
+
+    font-size:34px;
+
+    left:30px;
+
+    bottom:35px;
+
+}
+
+
+
+.internship-content h1{
+
+    font-size:38px;
+
+}
+
+
+
+.internship-content p{
+
+    font-size:16px;
+
+}
+
+
+
+.choose-section{
+
+    padding:70px 0;
+
+}
+
+
+
+.choose-title h2{
+
+    font-size:34px;
+
+}
+
+
+
+.choose-grid{
+
+    grid-template-columns:1fr;
+
+    margin-top:40px;
+
+}
+
+
+
+.choose-card{
+
+    padding:30px;
+
+}
+
+
+
+}
+
+
+
+
+
+/* =====================================
+ MOBILE
+===================================== */
+
+
+@media(max-width:480px){
+
+
+
+.internship-hero{
+
+    padding:60px 0;
+
+}
+
+
+
+.internship-container{
+
+    width:92%;
+
+}
+
+
+
+.internship-image{
+
+    height:330px;
+
+    border-radius:20px;
+
+}
+
+
+
+.internship-image h2{
+
+    font-size:25px;
+
+    left:20px;
+
+    right:20px;
+
+    bottom:25px;
+
+}
+
+
+
+.internship-image h2::before{
+
+    width:35px;
+
+    margin-bottom:12px;
+
+}
+
+
+
+.internship-content span{
+
+    font-size:11px;
+
+    letter-spacing:2px;
+
+}
+
+
+
+.internship-content h1{
+
+    font-size:30px;
+
+}
+
+
+
+.internship-content p{
+
+    font-size:10px;
+
+    line-height:1.7;
+
+}
+
+
+
+.internship-content a{
+
+    padding:14px 28px;
+
+    font-size:14px;
+
+}
+
+
+
+.choose-section{
+
+    padding:55px 0;
+
+}
+
+
+
+.container{
+
+    width:92%;
+
+}
+
+
+
+.choose-title h2{
+
+    font-size:28px;
+
+}
+
+
+
+.choose-grid{
+
+    gap:18px;
+
+}
+
+
+
+.choose-card{
+
+    padding:25px 20px;
+
+    border-radius:16px;
+
+}
+
+
+
+.icon{
+
+    width:50px;
+
+    height:50px;
+
+}
+
+
+
+.icon svg{
+
+    width:26px;
+
+    height:26px;
+
+}
+
+
+
+.choose-card h3{
+
+    font-size:20px;
+
+}
+
+
+
+.choose-card p{
+
+    font-size:10px;
+
+}
+
+
+
+}

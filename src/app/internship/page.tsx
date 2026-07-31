@@ -19,46 +19,56 @@ import {
 import styles from "./internship.module.css";
 
 
-
-
-
-
-
-
-
-
-
-
 const tracks = [
 
 {
+slug:"digital-marketing",
+
 title:"Digital Marketing",
+
 duration:"3 Months",
-image:"https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZGlnaXRhbCUyMG1hcmtldGluZ3xlbnwwfHwwfHx8MA%3D%3D",
+
+image:"https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600",
+
 desc:"Learn SEO, Google Ads, Meta Ads, content strategy and digital campaigns."
 },
 
 
 {
+slug:"graphic-design",
+
 title:"Graphic Design",
+
 duration:"3 Months",
-image:"https://media.istockphoto.com/id/2177184303/photo/white-man-programmer-or-it-specialist-software-developer-with-glasses-working-late-into-the.webp?a=1&b=1&s=612x612&w=0&k=20&c=XLBlBQCGyuWBaJTbzG7bntaoYBB-GdTiI6z4Co5mjAg=",
+
+image:"https://images.unsplash.com/photo-1611241893603-3c359704e0ee?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGdyYXBoaWMlMjBkZXNpZ258ZW58MHx8MHx8fDA%3D",
+
 desc:"Build creative skills in branding, UI design and visual communication."
 },
 
 
 {
+slug:"video-editing",
+
 title:"Video Editing",
+
 duration:"3 Months",
-image:"https://plus.unsplash.com/premium_photo-1682146717223-874ac7dcc607?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8dmlkZW8lMjBlZGl0aW5nfGVufDB8fDB8fHww",
+
+image:"https://plus.unsplash.com/premium_photo-1682146717223-874ac7dcc607?w=600",
+
 desc:"Create professional videos, reels and motion graphics."
 },
 
 
 {
+slug:"ai-automation",
+
 title:"AI & Automation",
+
 duration:"2 Months",
-image:"https://media.istockphoto.com/id/1515913422/photo/a-data-analyst-using-technology-ai-for-working-tool-for-data-analysis-chatbot-chat-with-ai.jpg?s=612x612&w=0&k=20&c=oOKLdZJpcsrUbNrnGVf8TwoIdYud4mWoBkx1A3PdXI0=",
+
+image:"https://media.istockphoto.com/id/1515913422/photo/a-data-analyst-using-technology-ai-for-working-tool-for-data-analysis-chatbot-chat-with-ai.jpg",
+
 desc:"Explore AI tools, automation workflows and productivity systems."
 }
 
@@ -570,9 +580,7 @@ alt={item.title}
 {item.desc}
 </p>
 
-
-
-<Link href="/contact">
+<Link href={`/internship/${item.slug}`}>
 
 Explore
 

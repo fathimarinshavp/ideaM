@@ -75,11 +75,11 @@ export default function ContactPage() {
 </section>
 
       {/* ════ CONTACT FORM + INFO — light ════ */}
-      <section className="section-light section-py">
+      {/* <section className="section-light section-py">
         <div className="container">
         <div className={styles.contactWrapper}>
 
-            {/* Left — Info */}
+            
             <div className="reveal">
               <span className="eyebrow">Contact Info</span>
               <h2 className="font-display" style={{ fontSize: "var(--fs-display)", color: "var(--ink)", marginBottom: "24px", marginTop: "6px" }}>
@@ -89,7 +89,7 @@ export default function ContactPage() {
                Have a business idea, project requirement, or learning goal? Reach out to our team and we'll help you find the right path. 
               </p>
 
-              {/* Contact details */}
+              
               <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
                 {[
                   { icon: Mail,    label: "Email",    value: "hello@ideamedia.in" },
@@ -111,7 +111,7 @@ export default function ContactPage() {
                 })}
               </div>
 
-              {/* Quick links */}
+              
               <div style={{ marginTop: "40px", display: "flex", gap: "12px", flexWrap: "wrap" }}>
                 <Link href="/services"   className="btn btn-ghost" style={{ fontSize: "0.85rem", padding: "9px 18px" }}>Our Services</Link>
                 <Link href="/internship" className="btn btn-ghost" style={{ fontSize: "0.85rem", padding: "9px 18px" }}>Internship</Link>
@@ -119,7 +119,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Right — Form */}
+            
             <div className="reveal reveal-delay-1">
               {sent ? (
                 <div style={{ padding: "48px 40px", background: "var(--white)", border: "1px solid var(--border)", borderRadius: "20px", textAlign: "center" }}>
@@ -179,10 +179,10 @@ className={styles.contactForm}
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ════ ALTERNATE ENQUIRY PATHS — dark ════ */}
-      <section className="section-dark section-py">
+      {/* <section className="section-dark section-py">
         <div className="container">
           <div className="section-header reveal" style={{ textAlign: "center" }}>
             <span className="eyebrow eyebrow-white">Quick Paths</span>
@@ -192,7 +192,328 @@ className={styles.contactForm}
           </div>
         
         </div>
-      </section>
+      </section> */}
+
+      <section className={styles.contactSection}>
+
+<div className="container">
+
+<div className={styles.contactLayout}>
+
+
+{/* LEFT INFO */}
+
+<div className={`${styles.contactInfo} reveal`}>
+
+<span className={styles.contactBadge}>
+CONTACT INFO
+</span>
+
+
+<h2>
+Let's create
+<br/>
+<span>something great.</span>
+</h2>
+
+
+<p>
+Have a project idea, business requirement, or want to start your learning journey?
+Our team is ready to guide you with the right solution.
+</p>
+
+
+
+<div className={styles.infoCards}>
+
+
+{[
+{
+icon:Mail,
+title:"Email",
+value:"hello@ideamedia.in"
+},
+{
+icon:Phone,
+title:"Phone",
+value:"+91 98765 43210"
+},
+{
+icon:MapPin,
+title:"Location",
+value:"India — Worldwide Remote"
+}
+
+].map((item)=>{
+
+const Icon=item.icon;
+
+return(
+
+<div 
+className={styles.infoCard}
+key={item.title}
+>
+
+<div className={styles.infoIcon}>
+<Icon size={22}/>
+</div>
+
+
+<div>
+
+<span>
+{item.title}
+</span>
+
+<strong>
+{item.value}
+</strong>
+
+</div>
+
+
+</div>
+
+)
+
+})}
+
+
+</div>
+
+
+
+<div className={styles.quickLinks}>
+
+
+<Link href="/services">
+Services
+</Link>
+
+<Link href="/internship">
+Internship
+</Link>
+
+<Link href="/courses">
+Courses
+</Link>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+{/* FORM */}
+
+<div className={`${styles.formBox} reveal reveal-delay-1`}>
+
+
+<div className={styles.formHeader}>
+
+<h3>
+Send a Message
+</h3>
+
+<p>
+Tell us what you need. We'll get back soon.
+</p>
+
+</div>
+
+
+<form
+onSubmit={handleSubmit}
+className={styles.modernForm}
+>
+
+
+<div className={styles.twoInput}>
+
+
+<input
+required
+placeholder="First Name"
+/>
+
+
+<input
+required
+placeholder="Last Name"
+/>
+
+
+</div>
+
+
+
+<input
+required
+type="email"
+placeholder="Email Address"
+/>
+
+
+
+
+<select>
+
+<option>
+Select Service
+</option>
+
+<option>
+Digital Marketing
+</option>
+
+<option>
+Branding
+</option>
+
+<option>
+Internship
+</option>
+
+<option>
+Courses
+</option>
+
+</select>
+
+
+
+
+<textarea
+rows={5}
+placeholder="Your message..."
+required
+/>
+
+
+<button type="submit">
+
+Send Message
+
+<Send size={18}/>
+
+</button>
+
+
+
+</form>
+
+
+</div>
+
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+{/* QUICK PATH */}
+
+<section className={styles.pathSection}>
+
+
+<div className="container">
+
+
+<div className={styles.pathHeader}>
+
+
+<span>
+QUICK PATHS
+</span>
+
+
+<h2>
+Choose your
+<br/>
+<span>next step.</span>
+</h2>
+
+
+</div>
+
+
+
+<div className={styles.pathGrid}>
+
+
+<div className={styles.pathCard}>
+
+<h3>
+Business Growth
+</h3>
+
+<p>
+Need branding, marketing or creative solutions?
+</p>
+
+<Link href="/services">
+Explore Services →
+</Link>
+
+
+</div>
+
+
+
+<div className={styles.pathCard}>
+
+<h3>
+Start Learning
+</h3>
+
+<p>
+Build practical skills through industry focused courses.
+</p>
+
+<Link href="/courses">
+View Courses →
+</Link>
+
+
+</div>
+
+
+
+<div className={styles.pathCard}>
+
+<h3>
+Career Opportunity
+</h3>
+
+<p>
+Join our internship program and gain real experience.
+</p>
+
+<Link href="/internship">
+Apply Now →
+</Link>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</section>
     </div>
   );
 }

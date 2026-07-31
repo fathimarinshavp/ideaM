@@ -470,29 +470,19 @@ className={styles.moduleItem}
 
 <div className={styles.courseActions}>
 
-
 <Link
-
-href="/contact"
-
-className="btn btn-primary"
-
+  href="/contact"
+  className={styles.enrollBtn}
 >
+  Enrol in Course
 
-Enrol in Course
-
-<ArrowRight size={15}/>
-
+  <ArrowRight size={16}/>
 </Link>
 
 
-
 <span className={styles.courseNote}>
-
-Flexible timings · Live & online options
-
+  Flexible timings · Live & online options
 </span>
-
 
 </div>
 
@@ -722,7 +712,7 @@ className={styles.includedCard}
 {/* CTA */}
 
 
-<section className={styles.ctaSection}>
+{/* <section className={styles.ctaSection}>
 
 
 <div className="container-narrow">
@@ -802,9 +792,76 @@ View Internship
 </div>
 
 
+</section> */}
+
+<section className={styles.internshipCta}>
+
+  <div className={styles.internshipCtaContainer}>
+
+
+    <div className={styles.internshipCtaContent}>
+
+
+      <span className={styles.internshipCtaTag}>
+        START YOUR JOURNEY
+      </span>
+
+
+      <h2>
+
+        Ready to build skills
+        <br />
+
+        <span>
+          for your future career?
+        </span>
+
+      </h2>
+
+
+
+      <p>
+        Join our industry-focused internship programs and gain
+        practical experience, expert mentorship, and career-ready skills.
+      </p>
+
+
+
+      <div className={styles.internshipCtaButtons}>
+
+
+        <Link
+          href="/contact"
+          className={styles.internshipPrimaryBtn}
+        >
+
+          Apply Now
+
+          <ArrowRight size={18}/>
+
+        </Link>
+
+
+
+        <Link
+          href="/internship"
+          className={styles.internshipSecondaryBtn}
+        >
+
+          Explore Internships
+
+        </Link>
+
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
 </section>
-
-
 
 
 </div>

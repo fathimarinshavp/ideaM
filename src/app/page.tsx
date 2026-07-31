@@ -105,7 +105,7 @@ export default function HomePage() {
 
    
 
-<section className="hero">
+{/* <section className="hero">
 
 
   <div className="hero-container">
@@ -159,9 +159,47 @@ export default function HomePage() {
 
   </div>
 
+</section> */}
+<section className="hero">
+
+  <div className="hero-banner">
+
+
+    <div className="hero-overlay"></div>
+
+
+    <div className="hero-content">
+
+
+      <span className="hero-label">
+        CREATIVE DIGITAL AGENCY
+      </span>
+
+
+      <h1 className="hero-title">
+
+        Empowering Brands.
+        <br />
+
+        <span>
+          Building Digital Futures.
+        </span>
+
+      </h1>
+
+
+      <p className="hero-subtitle">
+        Creative solutions that help businesses grow
+      </p>
+
+
+    </div>
+
+
+  </div>
+
+
 </section>
-
-
 {/* <section className="why-section">
   <div className="container">
 

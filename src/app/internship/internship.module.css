@@ -2580,3 +2580,400 @@ font-size:38px;
 }
 
 }
+
+
+
+
+
+
+
+
+
+
+/* =====================================
+   GLOBAL INTERNSHIP DARK THEME FIX
+===================================== */
+
+.page{
+
+    background:#070707;
+    color:#fff;
+
+}
+
+
+/* =====================================
+        COMMON HEADINGS
+===================================== */
+
+.heading span,
+.aboutContent span,
+.includedText span,
+.faq span{
+
+    color:#f5a623;
+
+}
+
+
+.heading h2,
+.aboutContent h2,
+.includedText h2,
+.faq h2{
+
+    color:#fff;
+
+}
+
+
+.heading h2 strong,
+.aboutContent h2 strong,
+.includedText h2 strong,
+.faq h2 strong{
+
+    color:#f5a623;
+
+}
+
+
+.heading p,
+.aboutContent p,
+.includedText p{
+
+    color:#999;
+
+}
+
+
+
+/* =====================================
+        ABOUT SECTION DARK
+===================================== */
+
+
+.about{
+
+    background:#070707;
+
+    padding:110px 0;
+
+}
+
+
+
+.aboutImage{
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    border:1px solid rgba(245,166,35,.2);
+
+}
+
+
+
+.aboutContent h2{
+
+    color:white;
+
+}
+
+
+
+.featureList div{
+
+    color:#ddd;
+
+}
+
+
+
+.featureList svg{
+
+    color:#f5a623;
+
+}
+
+
+
+
+
+/* =====================================
+        LEARNING JOURNEY DARK
+===================================== */
+
+
+.journey{
+
+    background:#0b0b0b;
+
+    padding:120px 0;
+
+}
+
+
+
+.journey .heading p{
+
+    color:#999;
+
+}
+
+
+
+.timeline::before{
+
+    background:#f5a623;
+
+}
+
+
+
+.step{
+
+    background:#141414;
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+
+
+.step:hover{
+
+    border-color:#f5a623;
+
+    box-shadow:
+    0 20px 50px rgba(245,166,35,.15);
+
+}
+
+
+
+.stepNumber{
+
+    background:#f5a623;
+
+    color:#111;
+
+    border-color:#0b0b0b;
+
+}
+
+
+
+.stepContent h3{
+
+    color:#fff;
+
+}
+
+
+
+.stepContent p{
+
+    color:#999;
+
+}
+
+
+
+
+/* =====================================
+        INCLUDED SECTION DARK
+===================================== */
+
+
+.included{
+
+    background:#070707;
+
+}
+
+
+
+.includeCards{
+
+    gap:20px;
+
+}
+
+
+
+.includeCard{
+
+    background:#141414;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:white;
+
+}
+
+
+
+.includeCard:hover{
+
+    border-color:#f5a623;
+
+}
+
+
+
+.includeCard svg{
+
+    color:#f5a623;
+
+}
+
+
+
+
+
+/* =====================================
+        FAQ DARK PREMIUM
+===================================== */
+
+
+.faq{
+
+    background:#050505;
+
+    padding:110px 0;
+
+}
+
+
+
+.faqItem{
+
+    background:#121212;
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+
+
+.faqItem:hover{
+
+    border-color:#f5a623;
+
+}
+
+
+
+.faqItem h3{
+
+    color:#fff;
+
+}
+
+
+
+.faqItem p{
+
+    color:#999;
+
+}
+
+
+
+
+
+/* =====================================
+        CTA DARK
+===================================== */
+
+
+.cta{
+
+    background:#070707;
+
+}
+
+
+
+.cta h2{
+
+    color:white;
+
+}
+
+
+
+.cta p{
+
+    color:#999;
+
+}
+
+
+
+.cta strong{
+
+    color:#f5a623;
+
+}
+
+
+
+
+
+/* =====================================
+        CARD GLOW EFFECT
+===================================== */
+
+
+.trackCard,
+.step,
+.includeCard,
+.faqItem{
+
+    transition:.35s ease;
+
+}
+
+
+
+.trackCard:hover,
+.step:hover,
+.includeCard:hover{
+
+    transform:translateY(-8px);
+
+}
+
+
+
+/* =====================================
+        MOBILE FIX
+===================================== */
+
+
+@media(max-width:700px){
+
+
+.about,
+.journey,
+.included,
+.faq,
+.cta{
+
+    padding:70px 0;
+
+}
+
+
+.heading h2,
+.aboutContent h2,
+.includedText h2,
+.faq h2{
+
+    font-size:32px;
+
+}
+
+
+}
