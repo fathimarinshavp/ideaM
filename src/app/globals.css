@@ -9762,3 +9762,184 @@ margin-top: 60px;
     border-radius:10px;
     transition:0.3s ease;
 }
+
+
+/*==============================
+        SIMPLE CTA CARD
+==============================*/
+
+.cta-section{
+    background:#0b0d11;
+    padding:80px 0;
+}
+
+.cta-card{
+    max-width:850px;
+    margin:auto;
+    background:#15181d;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:24px;
+    padding:55px 40px;
+    text-align:center;
+    transition:.35s ease;
+}
+
+.cta-card:hover{
+    border-color:#F5A623;
+    transform:translateY(-5px);
+}
+
+.cta-icon{
+    width:70px;
+    height:70px;
+    margin:0 auto 20px;
+    border-radius:50%;
+    background:#F5A623;
+    color:#111;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.cta-tag{
+    display:inline-block;
+    color:#F5A623;
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:2px;
+    margin-bottom:18px;
+}
+
+.cta-card h2{
+    color:#fff;
+    font-size:clamp(2rem,4vw,3rem);
+    line-height:1.25;
+    margin-bottom:18px;
+}
+
+.cta-card h2 span{
+    color:#F5A623;
+}
+
+.cta-card p{
+    max-width:620px;
+    margin:0 auto 35px;
+    color:#9ca3af;
+    line-height:1.8;
+    font-size:15px;
+}
+
+.cta-buttons{
+    display:flex;
+    justify-content:center;
+    gap:16px;
+    flex-wrap:wrap;
+}
+
+.cta-primary,
+.cta-secondary{
+    padding:14px 28px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:600;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    transition:.3s;
+}
+
+.cta-primary{
+    background:#F5A623;
+    color:#111;
+}
+
+.cta-primary:hover{
+    transform:translateY(-3px);
+}
+
+.cta-secondary{
+    border:1px solid #3b3f46;
+    color:#fff;
+}
+
+.cta-secondary:hover{
+    border-color:#F5A623;
+    color:#F5A623;
+}
+
+/*==============================
+        RESPONSIVE
+==============================*/
+
+@media(max-width:768px){
+
+    .cta-section{
+        padding:60px 15px;
+    }
+
+    .cta-card{
+        padding:40px 25px;
+    }
+
+    .cta-card h2{
+        font-size:2rem;
+    }
+
+    .cta-buttons{
+        flex-direction:column;
+    }
+
+    .cta-primary,
+    .cta-secondary{
+        width:100%;
+        justify-content:center;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .cta-card{
+        padding:30px 20px;
+    }
+
+    .cta-icon{
+        width:60px;
+        height:60px;
+    }
+
+    .cta-card h2{
+        font-size:1.7rem;
+    }
+
+    .cta-card p{
+        font-size:14px;
+    }
+
+}
+
+
+
+
+.cta-card{
+    max-width:850px;
+    margin:auto;
+    background:#15181d;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:24px;
+    padding:50px 40px;
+    text-align:center;
+}
+
+.cta-tag{
+    display:inline-block;
+    padding:8px 18px;
+    border:1px solid rgba(245,166,35,.3);
+    border-radius:30px;
+    color:#F5A623;
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:2px;
+    margin-bottom:20px;
+    text-transform:uppercase;
+}

@@ -105,61 +105,7 @@ export default function HomePage() {
 
    
 
-{/* <section className="hero">
 
-
-  <div className="hero-container">
-
-<div className="hero-text">
-
-  <div className="hero-chip">
-    ✦ Creative Digital Agency
-  </div>
-
-  <h1 className="hero-heading">
-    Empowering Brands.
-    <br />
-    <span>Building Digital Futures.</span>
-  </h1>
-
-  <p className="hero-description">
-    Idea Media helps businesses grow through creative branding,
-    digital marketing, web development, and innovative media
-    solutions while empowering students through practical
-    training and career-focused internships.
-  </p>
-
-  <div className="hero-actions">
-
-    <Link href="/services" className="gold-btn">
-      Explore Services
-      <ArrowRight size={18}/>
-    </Link>
-
-    <Link href="/internship" className="outline-btn">
-      Join Internship
-    </Link>
-
-  </div>
-
-</div>
-
-
-
-
-    <div className="hero-image">
-
-    
-
-   
-
-    </div>
-
-
-
-  </div>
-
-</section> */}
 <section className="hero">
 
   <div className="hero-banner">
@@ -200,124 +146,11 @@ export default function HomePage() {
 
 
 </section>
-{/* <section className="why-section">
-  <div className="container">
 
-    <div className="why-header">
-      <span className="section-tag">
-        Why Idea Media
-      </span>
-
-      <h2>
-        We Create Digital
-        <br />
-        <span>Experiences That Grow Brands</span>
-      </h2>
-
-      <p>
-        At Idea Media, we combine creativity, technology, and strategy
-        to build powerful digital solutions that help businesses grow
-        and connect with their audience.
-      </p>
-    </div>
-
-
-    <div className="why-grid">
-
-      <div className="why-card">
-        <div className="why-number">
-          01
-        </div>
-
-        <h3>
-          Creative Strategy
-        </h3>
-
-        <p>
-          We develop unique strategies that transform ideas into
-          impactful digital experiences.
-        </p>
-      </div>
-
-
-      <div className="why-card">
-        <div className="why-number">
-          02
-        </div>
-
-        <h3>
-          Modern Solutions
-        </h3>
-
-        <p>
-          From branding to web development, we create solutions
-          designed for today's digital world.
-        </p>
-      </div>
-
-
-      <div className="why-card">
-        <div className="why-number">
-          03
-        </div>
-
-        <h3>
-          Growth Focused
-        </h3>
-
-        <p>
-          Every project is built with a focus on performance,
-          visibility, and business growth.
-        </p>
-      </div>
-
-
-    </div>
-
-  </div>
-</section> */}
 
 <section className="about-section">
 
 
-  {/* Small Marquee */}
-
-  {/* <div className="about-marquee">
-
-    <div className="marquee-track">
-
-      {[
-        "Branding",
-        "SEO",
-        "Video Editing",
-        "Graphic Design",
-        "AI Tools",
-        "Meta Ads",
-        "Social Media",
-        "Web Design",
-        "Internship",
-
-        "Branding",
-        "SEO",
-        "Video Editing",
-        "Graphic Design",
-        "AI Tools",
-        "Meta Ads",
-        "Social Media",
-        "Web Design",
-        "Internship"
-
-      ].map((item,index)=>(
-
-        <span className="marquee-item" key={index}>
-          {item}
-        </span>
-
-      ))}
-
-    </div>
-
-  </div> */}
 
 
 
@@ -325,7 +158,7 @@ export default function HomePage() {
 <section className="media-about-section">
 
 
-  {/* Skill Marquee */}
+
 
  
 
@@ -401,33 +234,7 @@ export default function HomePage() {
 
 
 <div className="services-container">
-{/* <div className="services-top">
 
-<span className="section-label">
-  Our Services
-</span>
-
-<h2 className="section-heading">
-  Digital Solutions.
-  <br/>
-  <span>
-    That Drive Growth.
-  </span>
-</h2>
-
-
-<p className="section-description">
-  We provide creative digital solutions including branding,
-  marketing, web development, and media services to help
-  businesses grow.
-</p>
-
-
-<a href="/services" className="section-link">
-  View Services →
-</a>
-
-</div> */}
 <div className="service-header">
 
   <div className="service-header-left">
@@ -565,298 +372,8 @@ alt={service.title}
 
 </section>
 
-{/* <section className="training-section">
 
-  <div className="container">
 
-
-    <div className="training-header">
-
-      <span className="section-tag">
-        Internship & Training
-      </span>
-
-
-      <h2>
-        Learn.
-        <br />
-        <span>Practice. Grow.</span>
-      </h2>
-
-
-      <p>
-        Idea Media provides practical training programs designed
-        to help students become industry-ready through mentorship,
-        live projects, and real-world experience.
-      </p>
-
-    </div>
-
-
-
-    <div className="training-grid">
-
-
-      <div className="training-card">
-
-        <div className="training-icon">
-          <GraduationCap size={32}/>
-        </div>
-
-        <h3>
-          Industry Training
-        </h3>
-
-        <p>
-          Learn professional skills with structured,
-          practical learning programs.
-        </p>
-
-      </div>
-
-
-
-      <div className="training-card">
-
-        <div className="training-icon">
-          <BriefcaseBusiness size={32}/>
-        </div>
-
-        <h3>
-          Live Projects
-        </h3>
-
-        <p>
-          Work on real projects and build your
-          professional portfolio.
-        </p>
-
-      </div>
-
-
-
-      <div className="training-card">
-
-        <div className="training-icon">
-          <Users size={32}/>
-        </div>
-
-        <h3>
-          Expert Mentorship
-        </h3>
-
-        <p>
-          Get guidance from experienced professionals
-          and industry experts.
-        </p>
-
-      </div>
-
-
-
-      <div className="training-card">
-
-        <div className="training-icon">
-          <Award size={32}/>
-        </div>
-
-        <h3>
-          Internship Certificate
-        </h3>
-
-        <p>
-          Receive certification that supports your
-          career growth.
-        </p>
-
-      </div>
-
-
-
-      <div className="training-card">
-
-        <div className="training-icon">
-          <Target size={32}/>
-        </div>
-
-        <h3>
-          Career Guidance
-        </h3>
-
-        <p>
-          Improve your skills with interview preparation
-          and career support.
-        </p>
-
-      </div>
-
-
-
-      <div className="training-card">
-
-        <div className="training-icon">
-          <Rocket size={32}/>
-        </div>
-
-        <h3>
-          Placement Support
-        </h3>
-
-        <p>
-          Build confidence and prepare for digital
-          career opportunities.
-        </p>
-
-      </div>
-
-
-    </div>
-
-
-  </div>
-
-</section> */}
-{/* <section className="internship-section">
-
-  <div className="container">
-
-    <div className="internship-header">
-
-      <span className="section-tag">
-        Internship & Training
-      </span>
-
-      <h2>
-        Learn.
-        <br />
-        <span>Build. Grow.</span>
-      </h2>
-
-      <p>
-        A structured internship program designed to help students
-        gain real-world experience through live projects,
-        expert mentorship, and industry-focused training.
-      </p>
-
-    </div>
-
-
-    <div className="internship-grid">
-
-<div className="internship-grid">
-
-{internships.map((item,index)=>(
-  <div className="internship-card" key={index}>
-
-    <div className="internship-icon">
-      <Rocket size={28}/>
-    </div>
-
-    <small>{item.type}</small>
-
-    <h3>{item.title}</h3>
-
-    <p>
-      {item.description}
-    </p>
-
-  </div>
-))}
-
-</div>
-
-
-
-      <div className="internship-card">
-
-        <div className="internship-icon">
-          <Clock size={28}/>
-        </div>
-
-        <div>
-          <small>SCHEDULE</small>
-          <h3>
-            5 Days a Week
-          </h3>
-        </div>
-
-      </div>
-
-
-
-      <div className="internship-card">
-
-        <div className="internship-icon">
-          <BriefcaseBusiness size={28}/>
-        </div>
-
-        <div>
-          <small>PROJECTS</small>
-          <h3>
-            Real Client Projects
-          </h3>
-        </div>
-
-      </div>
-
-
-
-      <div className="internship-card">
-
-        <div className="internship-icon">
-          <Users size={28}/>
-        </div>
-
-        <div>
-          <small>MENTORSHIP</small>
-          <h3>
-            Industry Experts
-          </h3>
-        </div>
-
-      </div>
-
-
-
-      <div className="internship-card">
-
-        <div className="internship-icon">
-          <Award size={28}/>
-        </div>
-
-        <div>
-          <small>CERTIFICATE</small>
-          <h3>
-            Internship Certificate
-          </h3>
-        </div>
-
-      </div>
-
-
-
-      <div className="internship-card">
-
-        <div className="internship-icon">
-          <Rocket size={28}/>
-        </div>
-
-        <div>
-          <small>CAREER</small>
-          <h3>
-            Placement Support
-          </h3>
-        </div>
-
-      </div>
-
-
-    </div>
-
-
-  </div>
-
-</section> */}
 <section className="internship-section">
 
   <div className="container">
@@ -887,7 +404,7 @@ alt={service.title}
 
 
 
-    {/* MAIN PROGRAMS */}
+   
 
     <div className="program-grid">
 
@@ -925,7 +442,7 @@ alt={service.title}
 
 
 
-    {/* FEATURES */}
+
 
     <div className="training-features">
 
@@ -989,166 +506,6 @@ alt={service.title}
 
 
 </section>
-{/* <section className="courses-section">
-
-  <div className="container">
-
-
-    <div className="courses-header">
-
-      <span className="section-tag">
-        Professional Courses
-      </span>
-
-
-      <h2>
-        Build Skills.
-        <br />
-        <span>Create Your Future.</span>
-      </h2>
-
-
-      <p>
-        Learn industry-focused skills through practical courses
-        designed for students, creators, and future digital
-        professionals.
-      </p>
-
-    </div>
-
-
-
-    <div className="courses-grid">
-
-
-   
-
-      <div className="course-card">
-
-        <div className="course-icon">
-          <Bot size={34}/>
-        </div>
-
-
-        <h3>
-          Artificial Intelligence
-        </h3>
-
-
-        <p>
-          Learn AI tools, prompt engineering, automation,
-          content creation, and business AI applications.
-        </p>
-
-
-        <ul>
-          <li>Prompt Engineering</li>
-          <li>AI Tools</li>
-          <li>Automation</li>
-        </ul>
-
-      </div>
-
-
-
-
-
-      <div className="course-card">
-
-        <div className="course-icon">
-          <Megaphone size={34}/>
-        </div>
-
-
-        <h3>
-          Digital Marketing
-        </h3>
-
-
-        <p>
-          Master online marketing strategies to grow
-          brands and businesses digitally.
-        </p>
-
-
-        <ul>
-          <li>SEO</li>
-          <li>Google Ads</li>
-          <li>Social Media Marketing</li>
-        </ul>
-
-      </div>
-
-
-
-
-   
-
-      <div className="course-card">
-
-        <div className="course-icon">
-          <Palette size={34}/>
-        </div>
-
-
-        <h3>
-          Graphic Design
-        </h3>
-
-
-        <p>
-          Develop creative design skills for branding
-          and digital media.
-        </p>
-
-
-        <ul>
-          <li>Photoshop</li>
-          <li>Illustrator</li>
-          <li>Canva Design</li>
-        </ul>
-
-      </div>
-
-
-
-
-   
-
-      <div className="course-card">
-
-        <div className="course-icon">
-          <Video size={34}/>
-        </div>
-
-
-        <h3>
-          Video Editing
-        </h3>
-
-
-        <p>
-          Create professional videos for YouTube,
-          social media, and business promotions.
-        </p>
-
-
-        <ul>
-          <li>Premiere Pro</li>
-          <li>After Effects</li>
-          <li>Reels Editing</li>
-        </ul>
-
-      </div>
-
-
-
-    </div>
-
-
-  </div>
-
-</section> */}
 
 <section className="courses-section">
 
@@ -1328,264 +685,53 @@ alt={service.title}
 
 </section>
 
-{/* <section className="why-choose-section">
+
+{/* <section className="cta-section">
 
   <div className="container">
 
+    <div className="cta-box">
 
-    <div className="why-choose-header">
+      <div className="cta-icon">
+        <Sparkles size={32}/>
+      </div>
 
-      <span className="section-tag amber">
-        Why Idea Media
+
+      <span className="cta-tag">
+        Ready To Grow?
       </span>
 
 
       <h2>
-        Where Creativity
+        Build Your Brand.
         <br />
-        <span>Meets Growth</span>
+        <span>Build Your Career.</span>
       </h2>
 
 
       <p>
-        We combine industry expertise, practical learning,
-        and creative solutions to help students build careers
-        and businesses achieve digital success.
+        Whether you are a business looking for digital growth
+        or a student preparing for a successful career,
+        Idea Media is here to help you move forward.
       </p>
 
-    </div>
+
+      <div className="cta-buttons">
+
+        <a href="/contact" className="cta-primary">
+          Book A Free Consultation
+          <ArrowRight size={18}/>
+        </a>
 
 
-
-    <div className="choose-grid">
-
-
-      <div className="choose-card">
-
-        <div className="choose-icon">
-          <UsersRound size={32}/>
-        </div>
-
-        <h3>
-          Industry Experts
-        </h3>
-
-        <p>
-          Learn from experienced professionals with
-          real-world industry knowledge.
-        </p>
-
-      </div>
-
-
-
-      <div className="choose-card">
-
-        <div className="choose-icon">
-          <Briefcase size={32}/>
-        </div>
-
-        <h3>
-          Real Client Projects
-        </h3>
-
-        <p>
-          Gain practical experience by working on
-          real business projects.
-        </p>
-
-      </div>
-
-
-
-      <div className="choose-card">
-
-        <div className="choose-icon">
-          <Lightbulb size={32}/>
-        </div>
-
-        <h3>
-          Modern Learning
-        </h3>
-
-        <p>
-          Learn updated tools, technologies, and
-          industry-focused skills.
-        </p>
-
-      </div>
-
-
-
-      <div className="choose-card">
-
-        <div className="choose-icon">
-          <Rocket size={32}/>
-        </div>
-
-        <h3>
-          Career Support
-        </h3>
-
-        <p>
-          Get guidance, portfolio support, and
-          career preparation.
-        </p>
+        <a href="/internship" className="cta-secondary">
+          Join Free Workshop
+        </a>
 
       </div>
 
 
     </div>
-
-
-
-    
-
-   <div className="process-wrapper">
-
-  <div className="process-heading">
-
-    <span className="process-tag">
-      Our Journey
-    </span>
-
-    <h3 className="process-title">
-      From Learning
-      <br />
-      <span>To Career Growth</span>
-    </h3>
-
-    <p className="process-description">
-      Our structured process helps students gain skills,
-      practical experience, and confidence to build a
-      successful digital career.
-    </p>
-
-  </div>
-
-
-
-  <div className="process-grid">
-
-
-    <div className="process-item">
-
-      <span className="process-number">
-        01
-      </span>
-
-      <div className="process-icon">
-        <GraduationCap size={30}/>
-      </div>
-
-      <h4>
-        Learn
-      </h4>
-
-      <p>
-        Build strong fundamentals with industry-focused training.
-      </p>
-
-    </div>
-
-
-
-
-    <div className="process-item">
-
-      <span className="process-number">
-        02
-      </span>
-
-      <div className="process-icon">
-        <Code2 size={30}/>
-      </div>
-
-      <h4>
-        Practice
-      </h4>
-
-      <p>
-        Improve skills through assignments and practical exercises.
-      </p>
-
-    </div>
-
-
-
-
-    <div className="process-item">
-
-      <span className="process-number">
-        03
-      </span>
-
-      <div className="process-icon">
-        <Lightbulb size={30}/>
-      </div>
-
-      <h4>
-        Create
-      </h4>
-
-      <p>
-        Work on creative ideas and real-world projects.
-      </p>
-
-    </div>
-
-
-
-
-    <div className="process-item">
-
-      <span className="process-number">
-        04
-      </span>
-
-      <div className="process-icon">
-        <Target size={30}/>
-      </div>
-
-      <h4>
-        Experience
-      </h4>
-
-      <p>
-        Gain client exposure and industry experience.
-      </p>
-
-    </div>
-
-
-
-
-    <div className="process-item">
-
-      <span className="process-number">
-        05
-      </span>
-
-      <div className="process-icon">
-        <Trophy size={30}/>
-      </div>
-
-      <h4>
-        Get Hired
-      </h4>
-
-      <p>
-        Build your portfolio and move towards career success.
-      </p>
-
-    </div>
-
-
-
-  </div>
-
-</div>
-
 
   </div>
 
@@ -1595,109 +741,97 @@ alt={service.title}
 
   <div className="container">
 
-    <div className="cta-box">
+    <div className="cta-card">
 
+      <div className="cta-left">
 
-      <div className="cta-icon">
-        <Sparkles size={32}/>
-      </div>
+        <span className="cta-badge">
+          ✦ LET'S BUILD SOMETHING GREAT
+        </span>
 
+        <h2>
+          Turn Your Ideas Into
+          <span> Digital Success.</span>
+        </h2>
 
-
-      <span className="cta-tag">
-        Ready To Grow?
-      </span>
-
-
-
-      <h2>
-        Build Your Brand.
-        <br />
-        <span>Build Your Career.</span>
-      </h2>
-
-
-
-      <p>
-        Whether you are a business looking for digital growth
-        or a student preparing for a successful career,
-        Idea Media is here to help you move forward.
-      </p>
-
-
-
-      <div className="cta-buttons">
-
-
-        <a href="/contact" className="cta-primary">
-          Book A Free Consultation
-          <ArrowRight size={18}/>
-        </a>
-
-
-
-        <a href="/internship" className="cta-secondary">
-          Join Free Workshop
-        </a>
-
+        <p>
+          From branding and digital marketing to web development and
+          career-focused internships, we help businesses and students
+          achieve real growth with innovative solutions.
+        </p>
 
       </div>
 
+      <div className="cta-right">
+
+        <div className="cta-icon">
+          <Sparkles size={38} />
+        </div>
+
+        <h3>Ready to Start?</h3>
+
+        <p>
+          Let's discuss your next project or help you begin your
+          professional journey.
+        </p>
+
+        <div className="cta-buttons">
+
+          <a href="/contact" className="cta-primary">
+            Start Your Project
+            <ArrowRight size={18}/>
+          </a>
+
+          <a href="/internship" className="cta-secondary">
+            Explore Internship
+          </a>
+
+        </div>
+
+      </div>
 
     </div>
 
   </div>
 
 </section> */}
-<section className="cta-section">
 
+<section className="cta-section">
   <div className="container">
 
-    <div className="cta-box">
-
-      <div className="cta-icon">
-        <Sparkles size={32}/>
-      </div>
-
+    <div className="cta-card">
 
       <span className="cta-tag">
-        Ready To Grow?
+        LET'S WORK TOGETHER
       </span>
 
-
       <h2>
-        Build Your Brand.
-        <br />
-        <span>Build Your Career.</span>
+        Ready to Grow Your Business
+        <span> With Idea Media?</span>
       </h2>
 
-
       <p>
-        Whether you are a business looking for digital growth
-        or a student preparing for a successful career,
-        Idea Media is here to help you move forward.
+        Whether you're looking for branding, digital marketing, web
+        development, or internship opportunities, our team is ready to
+        help you achieve your goals.
       </p>
-
 
       <div className="cta-buttons">
 
         <a href="/contact" className="cta-primary">
-          Book A Free Consultation
-          <ArrowRight size={18}/>
+          Get Started
+          <ArrowRight size={18} />
         </a>
 
-
         <a href="/internship" className="cta-secondary">
-          Join Free Workshop
+          Explore Internship
         </a>
 
       </div>
 
-
     </div>
 
   </div>
-
 </section>
     </main>
   );
